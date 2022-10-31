@@ -16,7 +16,6 @@ module.exports.removeCity = removeCity;
  */
 async function getAll(req, res) {
     try {
-        console.log('1111');
         const cities = await cityService.getAllCities()
         res.json(utils.formatResponse(1, cities));
     } catch (err) {

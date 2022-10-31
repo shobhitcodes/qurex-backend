@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const User = require('./user');
 
-
 // sub schemas
 const professionalDetail = {
     degree: String,
@@ -48,13 +47,18 @@ const affiliation = {
 };
 
 const availableSlots = {
-    from: Date,
-    to: Date,
+    from: String,
+    to: String,
 };
 
 const blockSlots = {
     from: Date,
     to: Date,
+};
+
+const businessHours = {
+    day: String,
+    slots: [availableSlots],
 };
 
 const doctorDetailSchema = new Schema(
@@ -69,7 +73,6 @@ const doctorDetailSchema = new Schema(
         satisfactionCount: Number,
         punctualCount: Number,
         rating: Number,
-        availableSlots,
         blockSlots,
         consultationCount: Number,
         moneyStats: {
@@ -84,6 +87,7 @@ const doctorDetailSchema = new Schema(
         feeCharge: Number,
         sessionDuration: Number, // in mins
         verified: { type: Boolean, default: false },
+        businessHours: [businessHours],
     },
     { timestamps: true, collection: 'doctor_detail' }
 );

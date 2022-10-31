@@ -14,6 +14,7 @@ const sessionSchema = new Schema(
         expectedDuration: Number, // in mins doctor session
         actualDuration: Number,
         bumpUp: { type: Number, default: 0 },
+        activationTime: Date,
     },
     { timestamps: true, collection: 'session' }
 );

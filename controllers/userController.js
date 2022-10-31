@@ -31,7 +31,7 @@ async function register(req, res) {
         const user = await userService.register(name, email, password, mobile, role);
         const token = user.generateAuthToken();
         res.header('x-auth-token', token);
-        res.json(utils.formatResponse(1));
+        res.json(utils.formatResponse(1, user._id));
     } catch (err) {
         console.error('Error on register handler: ', err);
         res.json(utils.formatResponse(0, err));
@@ -50,7 +50,7 @@ async function auth(req, res) {
         const user = await userService.auth(mobile, password);
         const token = user.generateAuthToken();
         res.header('x-auth-token', token);
-        res.json(utils.formatResponse(1));
+        res.json(utils.formatResponse(1, user._id));
     } catch (err) {
         console.error('Error on register handler: ', err);
         res.json(utils.formatResponse(0, err));

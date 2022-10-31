@@ -18,6 +18,7 @@ module.exports.getBookingsByFromAndToTime = getBookingsByFromAndToTime;
 module.exports.updateAppointmentStatus = updateAppointmentStatus;
 module.exports.getUnverified = getUnverified;
 module.exports.verify = verify;
+module.exports.availableSlots = availableSlots;
 
 /**
  * @async
@@ -241,6 +242,17 @@ async function verify(req, res) {
         const { id } = req.params;
         doctor = await doctorService.verify(id);
         res.json(utils.formatResponse(1, doctor));
+    } catch (err) {
+        console.error('Error on doctor verify handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}
+
+async function availableSlots(req, res) {
+    try {
+        const { id } = req.params;
+        availableSlots = await doctorService.availableSlots(id);
+        res.json(utils.formatResponse(1, availableSlots));
     } catch (err) {
         console.error('Error on doctor verify handler: ', err);
         res.json(utils.formatResponse(0, err));
