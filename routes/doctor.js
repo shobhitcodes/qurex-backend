@@ -26,6 +26,7 @@ router.get('/getByUserId/:id', doctorController.getByUserId);
 router.put('/:id', doctorController.update);
 router.delete('/:id', doctorController.deleteOne);
 router.get('/availableSlots/:id', doctorController.availableSlots);
+router.get('/bookings/:id', doctorController.getBookings);
 
 module.exports = router;
 

@@ -76,6 +76,7 @@ async function verifySuccess(razorpay_order_id, razorpay_payment_id, razorpay_si
         );
         const bookingUpdate = await Booking.updateOne({ _id: bookingId }, {
             isPaid: true,
+            status: 'Confirm',
             payment: {
                 razorPayPaymentId: razorpay_payment_id,
             }

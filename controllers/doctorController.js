@@ -19,6 +19,7 @@ module.exports.updateAppointmentStatus = updateAppointmentStatus;
 module.exports.getUnverified = getUnverified;
 module.exports.verify = verify;
 module.exports.availableSlots = availableSlots;
+module.exports.getBookings = getBookings;
 
 /**
  * @async
@@ -255,6 +256,17 @@ async function availableSlots(req, res) {
         res.json(utils.formatResponse(1, availableSlots));
     } catch (err) {
         console.error('Error on doctor availableSlots handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}
+
+async function getBookings(req, res) {
+    try {
+        const { id } = req.params;
+        const bookings = await doctorService.getBookings(id);
+        res.json(utils.formatResponse(1, bookings));
+    } catch (err) {
+        console.error('Error on doctor getBookings handler: ', err);
         res.json(utils.formatResponse(0, err));
     }
 }
