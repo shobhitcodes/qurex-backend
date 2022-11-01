@@ -28,4 +28,9 @@ const bookingSchema = new Schema(
     { timestamps: true, collection: 'booking' }
 );
 
+bookingSchema.pre('save', function (next) {
+	this.bookingId = 'BK_' + Math.floor(100000 + Math.random() * 900000);
+	next();
+});
+
 module.exports = mongoose.model('Booking', bookingSchema);

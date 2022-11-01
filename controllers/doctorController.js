@@ -45,7 +45,6 @@ async function getById(req, res) {
  */
 async function getByUserId(req, res) {
     try {
-        console.log('here010');
         const { id } = req.params;
         const doctor = await doctorService.getByUserId(id);
         res.json(utils.formatResponse(1, doctor));
@@ -155,9 +154,8 @@ async function register(req, res) {
  */
 async function bookAppointment(req, res) {
     try {
-        const { bookingId, patientId, doctorId, meta, from, to } = req.body;
+        const { patientId, doctorId, meta, from, to } = req.body;
         const newBooking = await bookingService.bookAppointment(
-            bookingId,
             patientId,
             doctorId,
             meta,
@@ -250,11 +248,13 @@ async function verify(req, res) {
 
 async function availableSlots(req, res) {
     try {
+        console.log('here101');
         const { id } = req.params;
-        availableSlots = await doctorService.availableSlots(id);
+        console.log('availableSlots handler');
+        const availableSlots = await doctorService.availableSlots(id);
         res.json(utils.formatResponse(1, availableSlots));
     } catch (err) {
-        console.error('Error on doctor verify handler: ', err);
+        console.error('Error on doctor availableSlots handler: ', err);
         res.json(utils.formatResponse(0, err));
     }
 }

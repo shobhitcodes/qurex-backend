@@ -6,6 +6,10 @@ const defaultDoctorBusinessHours = [
                 from: '18:00',
                 to: '19:00',
             },
+            {
+                from: '20:00',
+                to: '22:00',
+            },
         ],
     },
     {

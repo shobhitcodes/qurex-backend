@@ -2,7 +2,8 @@ const User = require('../models/user');
 const DoctorDetail = require('../models/doctorDetail');
 const Booking = require('../models/booking');
 const moment = require('moment');
-const PaymentService = require('./payment.service')
+const PaymentService = require('./payment.service');
+const DoctorService = require('./doctorService');
 
 module.exports.bookAppointment = bookAppointment;
 module.exports.getBookingsByDate = getBookingsByDate;
@@ -13,7 +14,6 @@ module.exports.getBookingsByFromAndToTime = getBookingsByFromAndToTime;
 /**
  * @async
  * @description booking appointment
- * @param {*} bookingId
  * @param {*} patientId
  * @param {*} doctorId
  * @param {*} meta
@@ -22,7 +22,6 @@ module.exports.getBookingsByFromAndToTime = getBookingsByFromAndToTime;
  * @returns
  */
 async function bookAppointment(
-    bookingId,
     patientId,
     doctorId,
     meta,
@@ -31,18 +30,18 @@ async function bookAppointment(
 ) {
     try {
         // todo : check if timings fit doc time slot
-        const docDetail = await DoctorDetail.findById(doctorId);
-        if(docDetail && docDetail.availableSlots) {
-            if(
-                moment(from).utc().isBefore(moment(docDetail.availableSlots.from).utc()) || 
-                moment(from).utc().isAfter(moment(docDetail.availableSlots.to).utc()) ||
-                moment(to).utc().isBefore(moment(docDetail.availableSlots.from).utc()) ||
-                moment(to).utc().isAfter(moment(docDetail.availableSlots.to).utc()) 
-            ){
-                throw 'No Available slots for current timings.';
+        const docDetail = await DoctorService.getByUserId(doctorId);
+        // if(docDetail && docDetail.availableSlots) {
+        //     if(
+        //         moment(from).utc().isBefore(moment(docDetail.availableSlots.from).utc()) || 
+        //         moment(from).utc().isAfter(moment(docDetail.availableSlots.to).utc()) ||
+        //         moment(to).utc().isBefore(moment(docDetail.availableSlots.from).utc()) ||
+        //         moment(to).utc().isAfter(moment(docDetail.availableSlots.to).utc()) 
+        //     ){
+        //         throw 'No Available slots for current timings.';
     
-            }
-        }
+        //     }
+        // }
 
         
         const query = {
@@ -68,7 +67,6 @@ async function bookAppointment(
 
         
         let booking = new Booking({
-            bookingId,
             patientId,
             doctorId,
             meta,
