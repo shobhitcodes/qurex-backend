@@ -138,23 +138,13 @@ async function availableSlots(id) {
         let doctor = await getByUserId(id);
         if (!doctor) throw 'doctor not found';
 
-        const availableSlots = [];
-
         const today = moment().utc();
-
-        console.log(doctor.businessHours);
-        console.log(today);
-
-        const dateMap = {};
-
         const nextWeek = moment().utc().add(6, 'd');
-        console.log(nextWeek);
+        const dateMap = {};
 
         for (let i = 0; i <= 6; i++) {
             dateMap[moment().utc().add(i, 'd').format('DD-MM-YYYY')] = [];
         }
-
-        console.log({ dateMap });
 
         for (const key in dateMap) {
             let currentDay = moment(key, 'DD-MM-YYYY')
@@ -165,37 +155,19 @@ async function availableSlots(id) {
             ).slots;
         }
 
-        Object.keys(dateMap).forEach((key) => console.log(dateMap[key]));
-
         const availableSlotsMap = {};
 
         Object.keys(dateMap).forEach((key) => {
             const availableChunks = dateMap[key];
             const slots = [];
 
-            availableChunks.forEach(chunk => {
+            availableChunks.forEach((chunk) => {
                 const _slots = getTimeSlots(chunk.from, chunk.to);
                 slots.push(..._slots);
-            });   
-            
+            });
+
             availableSlotsMap[key] = slots;
         });
-
-        console.log('availableSlotsMap: ');
-
-        Object.keys(availableSlotsMap).forEach((key) => console.log(key, ' ----- ', availableSlotsMap[key]));
-
-        // console.log('m101: ', today.startOf('d'));
-
-
-        // Object.keys(dateMap).forEach((key) => console.log(dateMap[key]));
-
-        // console.log('m101: ', today.startOf('d'));
-        // // console.log('m101: ', today.add(6, 'd').endOf('d'));
-
-        // console.log('m101: ', today.startOf('d').toDate());
-        // console.log('m101: ', nextWeek.endOf('d').toDate());
-        // console.log('m33: ', doctor._id);
 
         const doctorQuery = {
             doctorId: id,
@@ -209,30 +181,19 @@ async function availableSlots(id) {
 
         const doctorBookings = await Booking.find(doctorQuery);
 
-        console.log({ doctorBookings });
-
         const doctorBookingMap = {};
 
         Object.keys(dateMap).forEach((key) => (doctorBookingMap[key] = []));
 
         doctorBookings.forEach((booking) => {
             let bookingDate = moment(booking.from).utc().format('DD-MM-YYYY');
-            console.log({ bookingDate });
 
             if (doctorBookingMap[bookingDate]) {
-                // const bookedSlot = {};
-                console.log(moment(booking.from));
-                console.log(moment(booking.to));
-                console.log(moment(booking.from).utc().format('HH:mm'));
-                console.log(moment(booking.to).utc().format('HH:mm'));
                 let from = moment(booking.from).utc().format('HH:mm');
                 let to = moment(booking.to).utc().format('HH:mm');
-                doctorBookingMap[bookingDate].push({from, to})
+                doctorBookingMap[bookingDate].push({ from, to });
             }
         });
-
-        Object.keys(availableSlotsMap).forEach((key) => console.log(key, ' ----- ', availableSlotsMap[key]));
-        Object.keys(doctorBookingMap).forEach((key) => console.log(key, ' ----- ', doctorBookingMap[key]));
 
         const bookedSlotsMap = {};
 
@@ -240,50 +201,36 @@ async function availableSlots(id) {
             const bookedChunks = doctorBookingMap[key];
             const slots = [];
 
-            bookedChunks.forEach(chunk => {
+            bookedChunks.forEach((chunk) => {
                 const _slots = getTimeSlots(chunk.from, chunk.to);
                 slots.push(..._slots);
-            });   
-            
+            });
+
             bookedSlotsMap[key] = slots;
         });
-
-        Object.keys(bookedSlotsMap).forEach((key) => console.log(key, ' ----- ', bookedSlotsMap[key]));
 
         const finalMap = {};
 
         Object.keys(availableSlotsMap).forEach((key) => {
             finalMap[key] = [];
 
-            availableSlotsMap[key].forEach(time => finalMap[key].push({ time, isAvailable: true }));
+            availableSlotsMap[key].forEach((time) =>
+                finalMap[key].push({ time, isAvailable: true })
+            );
         });
 
         Object.keys(finalMap).forEach((key) => {
             if (bookedSlotsMap[key]) {
+                finalMap[key].forEach((slot) => {
+                    if (bookedSlotsMap[key].includes(slot.time))
+                        slot.isAvailable = false;
+                });
             }
         });
 
-        Object.keys(finalMap).forEach((key) => console.log(key, ' ----- ', finalMap[key]));
-
-
-
-        // from booking fetch all booking for 7 days
-        // reduce available slots cosiudering bookings
-
-        // today = Date()
-
-        // console.log({ availableSlots });
-
-        // 2 pm  - 4 pm
-        // 30mins
-
-        // availableSlots
-        // 2- 4
-
-        // 2nd 2:00 2:15 2:30 2:45
-        return availableSlots;
+        return finalMap;
     } catch (err) {
-        console.error('Error on verify doctor service: ', err);
+        console.error('Error on availableSlots doctor service: ', err);
         throw err;
     }
 }
