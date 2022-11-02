@@ -155,13 +155,12 @@ async function register(req, res) {
  */
 async function bookAppointment(req, res) {
     try {
-        const { patientId, doctorId, meta, from, to } = req.body;
+        const { patientId, doctorId, meta, from } = req.body;
         const newBooking = await bookingService.bookAppointment(
             patientId,
             doctorId,
             meta,
-            from,
-            to
+            from
         );
         res.json(utils.formatResponse(1, newBooking));
     } catch (err) {
