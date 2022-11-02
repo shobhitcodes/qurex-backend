@@ -5,9 +5,8 @@ const crypto = require('crypto');
 const Booking = require('../models/booking');
 var instance = new Razorpay({
     key_id: process.env.RAZORPAY_KEY,
-    key_secret: process.env.RAZORPAY_SECRET
+    key_secret: process.env.RAZORPAY_SECRET,
 });
-
 
 module.exports.createOrder = createOrder;
 module.exports.verifySuccess = verifySuccess;
@@ -25,10 +24,10 @@ module.exports.getAllPaymentForDoctor = getAllPaymentForDoctor;
  * @param {*} receipt or invoiceId
  * @param {*} userId
  * @param {*} currency in INR
- * 
+ *
  * @returns
  */
-async function createOrder(amount, receipt, userId, currency = "INR") {
+async function createOrder(amount, receipt, userId, currency = 'INR') {
     try {
         const order = await _doCreateOrder(amount, receipt, currency);
         const user = await User.findById(userId);
@@ -42,9 +41,9 @@ async function createOrder(amount, receipt, userId, currency = "INR") {
             prefillName: user.name,
             prefillContact: user.mobile,
             prefillEmail: user.email,
-            status: 'pending'
-        }
-        const paymentReq = await Payment.create(paymentObj)
+            status: 'pending',
+        };
+        const paymentReq = await Payment.create(paymentObj);
         return paymentReq;
     } catch (err) {
         console.error('Error on Payment service: ', err);
@@ -52,13 +51,16 @@ async function createOrder(amount, receipt, userId, currency = "INR") {
     }
 }
 
-async function verifySuccess(razorpay_order_id, razorpay_payment_id, razorpay_signature, bookingId) {
+async function verifySuccess(
+    razorpay_order_id,
+    razorpay_payment_id,
+    razorpay_signature,
+    bookingId
+) {
     try {
         let generatedSignature = crypto
-            .createHmac(
-                "SHA256",
-                process.env.RAZORPAY_SECRET
-            ).update(razorpay_order_id + '|' + razorpay_payment_id)
+            .createHmac('SHA256', process.env.RAZORPAY_SECRET)
+            .update(razorpay_order_id + '|' + razorpay_payment_id)
             .digest('hex');
 
         let isSignatureValid = generatedSignature == razorpay_signature;
@@ -70,24 +72,24 @@ async function verifySuccess(razorpay_order_id, razorpay_payment_id, razorpay_si
                 razorPaySignature: razorpay_signature,
                 isVerified: isSignatureValid,
                 isSuccess: true,
-                status: 'success'
-
+                status: 'success',
             }
         );
-        const bookingUpdate = await Booking.updateOne({ _id: bookingId }, {
-            isPaid: true,
-            status: 'Confirm',
-            payment: {
-                razorPayPaymentId: razorpay_payment_id,
+        const bookingUpdate = await Booking.updateOne(
+            { _id: bookingId },
+            {
+                isPaid: true,
+                status: 'Confirm',
+                payment: {
+                    razorPayPaymentId: razorpay_payment_id,
+                },
             }
-        });
+        );
         if (update && update.modifiedCount) {
             return isSignatureValid;
         } else {
             throw update;
         }
-
-
     } catch (err) {
         console.error('Error on Payment service: ', err);
         throw err;
@@ -104,9 +106,18 @@ async function logPaymentError(errorLog) {
                 razorPayPaymentId: razorPayPaymentId,
                 isFailed: true,
                 failError: errorLog,
-                status: 'failed'
+                status: 'failed',
             }
         );
+
+        const booking = await Booking.updateOne(
+            { 'payment.razorPayOrderId': orderId },
+            {
+                status: 'Cancelled',
+                active: false,
+            }
+        );
+
         if (payment && payment.modifiedCount) {
             return orderId;
         } else {
@@ -122,11 +133,12 @@ async function getAllPayments(limit, offset) {
     try {
         const payments = await Payment.find({
             isSuccess: true,
-            isVerified: true
-        }).sort({ _id: -1 })
+            isVerified: true,
+        })
+            .sort({ _id: -1 })
             .limit(limit)
             .skip(offset)
-            .populate('userid')
+            .populate('userid');
 
         return payments;
     } catch (error) {
@@ -135,16 +147,15 @@ async function getAllPayments(limit, offset) {
     }
 }
 
-
 async function getAllPatientPayments(patientId, limit, offset) {
     try {
         const payments = await Payment.find({
             isFailed: true,
-            userid: patientId
-        }).sort({ _id: -1 })
+            userid: patientId,
+        })
+            .sort({ _id: -1 })
             .limit(limit)
-            .skip(offset)
-
+            .skip(offset);
 
         return payments;
     } catch (error) {
@@ -155,17 +166,21 @@ async function getAllPatientPayments(patientId, limit, offset) {
 
 async function getAllPaymentForDoctor(doctorId, limit, offset) {
     try {
-        const doctorPaidBookings = await Booking.find({ doctorId, isPaid: true });
-        const razorPayPaymentIds = []
-        doctorPaidBookings.forEach(x => {
-            razorPayPaymentIds.push(x.payment.razorPayPaymentId)
-        })
+        const doctorPaidBookings = await Booking.find({
+            doctorId,
+            isPaid: true,
+        });
+        const razorPayPaymentIds = [];
+        doctorPaidBookings.forEach((x) => {
+            razorPayPaymentIds.push(x.payment.razorPayPaymentId);
+        });
 
         const payments = await Payment.find({
-            razorPayPaymentId: { $in: razorPayPaymentIds }
-        }).sort({ _id: -1 })
+            razorPayPaymentId: { $in: razorPayPaymentIds },
+        })
+            .sort({ _id: -1 })
             .limit(limit)
-            .skip(offset)
+            .skip(offset);
         return payments;
     } catch (error) {
         console.error('Error on Payment service: ', error);
@@ -176,11 +191,12 @@ async function getAllPaymentForDoctor(doctorId, limit, offset) {
 async function getAllFailedPayments(limit, offset) {
     try {
         const payments = await Payment.find({
-            isFailed: true
-        }).sort({ _id: -1 })
+            isFailed: true,
+        })
+            .sort({ _id: -1 })
             .limit(limit)
             .skip(offset)
-            .populate('userid')
+            .populate('userid');
 
         return payments;
     } catch (error) {
@@ -191,9 +207,12 @@ async function getAllFailedPayments(limit, offset) {
 
 async function addPaymentDispute(paymentId, disputeReason) {
     try {
-        const paymentUpdate = await Payment.updateOne({ _id: paymentId }, { isDisputed: true, disputeReason });
+        const paymentUpdate = await Payment.updateOne(
+            { _id: paymentId },
+            { isDisputed: true, disputeReason }
+        );
         if (paymentUpdate && paymentUpdate.modifiedCount) {
-            return paymentId
+            return paymentId;
         } else {
             throw paymentUpdate;
         }
@@ -208,14 +227,13 @@ function _doCreateOrder(amount, reciept, currency) {
         const orderOption = {
             amount: amount,
             currency: currency,
-            receipt: reciept
-        }
+            receipt: reciept,
+        };
         instance.orders.create(orderOption, (err, order) => {
             if (err) {
                 reject(err);
             }
-            resolve(order)
-        })
-    })
-
+            resolve(order);
+        });
+    });
 }

@@ -95,6 +95,10 @@ async function bookAppointment(patientId, doctorId, meta, from) {
         });
         session = await session.save();
 
+        booking.sessionId = session._id;
+        booking = await booking.save();
+        console.log({booking});
+
         return booking;
     } catch (error) {
         console.error('Error on Booking service: ', error);

@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 const user = require('./user');
 const payment = require('./payment');
+const session = require('./session');
 const Schema = mongoose.Schema;
 
 // const bookingStatus = ['PendingConfirmation', 'Confirm', 'Cancelled', 'Completed'];
@@ -24,6 +25,7 @@ const bookingSchema = new Schema(
         },
         status: { type: String, enum: ['PendingConfirmation', 'Confirm', 'Cancelled', 'Completed'], default: 'PendingConfirmation' },
         active: { type: Boolean, default: true },
+        sessionId: { type: mongoose.Types.ObjectId, ref: session },
     },
     { timestamps: true, collection: 'booking' }
 );

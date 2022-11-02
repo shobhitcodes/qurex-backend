@@ -18,6 +18,7 @@ module.exports.getUnverified = getUnverified;
 module.exports.verify = verify;
 module.exports.availableSlots = availableSlots;
 module.exports.getBookings = getBookings;
+module.exports.getBookingById = getBookingById;
 
 async function getById(id) {
     try {
@@ -177,7 +178,7 @@ async function availableSlots(id) {
                 $lte: nextWeek.endOf('d').toDate(),
             },
             active: true,
-            status: { $nin: ['Cancelled', 'Completed'] },
+            status: { $nin: ['Cancelled', 'Completed', 'PendingConfirmation'] },
         };
 
         const doctorBookings = await Booking.find(doctorQuery);
@@ -261,11 +262,25 @@ async function getBookings(id) {
             active: true,
         };
 
-        const doctorBookings = await Booking.find(bookingQuery);
+        const doctorBookings = await Booking.find(bookingQuery).populate(
+            'sessionId'
+        );
         console.log({ doctorBookings });
         return doctorBookings;
     } catch (err) {
         console.error('Error on getBookings doctor service: ', err);
+        throw err;
+    }
+}
+
+async function getBookingById(id) {
+    try {
+        if (!id) throw 'id missing';
+
+        const booking = await Booking.findById(id).populate('sessionId');
+        return booking;
+    } catch (err) {
+        console.error('Error on getBookingById doctor service: ', err);
         throw err;
     }
 }

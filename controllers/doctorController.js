@@ -20,6 +20,7 @@ module.exports.getUnverified = getUnverified;
 module.exports.verify = verify;
 module.exports.availableSlots = availableSlots;
 module.exports.getBookings = getBookings;
+module.exports.getBookingById = getBookingById;
 
 /**
  * @async
@@ -266,6 +267,19 @@ async function getBookings(req, res) {
         res.json(utils.formatResponse(1, bookings));
     } catch (err) {
         console.error('Error on doctor getBookings handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}
+
+
+async function getBookingById(req, res) {
+    try {
+        console.log('here101');
+        const { id } = req.params;
+        const booking = await doctorService.getBookingById(id);
+        res.json(utils.formatResponse(1, booking));
+    } catch (err) {
+        console.error('Error on doctor getBookingById handler: ', err);
         res.json(utils.formatResponse(0, err));
     }
 }
