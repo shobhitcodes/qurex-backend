@@ -9,7 +9,7 @@ const { auth } = require('../middlewares/auth');
 // router.get('/', doctorController.getAll);
 // router.post('/', doctorController.create);
 router.get('/:id', doctorController.getBookingById);
-// router.get('/getByUserId/:id', doctorController.getByUserId);
+router.get('/getByUserId/:id', doctorController.getBookingByUserId);
 // router.put('/:id', doctorController.update);
 // router.delete('/:id', doctorController.deleteOne);
 // router.get('/availableSlots/:id', doctorController.availableSlots);

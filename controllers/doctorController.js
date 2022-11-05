@@ -21,6 +21,7 @@ module.exports.verify = verify;
 module.exports.availableSlots = availableSlots;
 module.exports.getBookings = getBookings;
 module.exports.getBookingById = getBookingById;
+module.exports.getBookingByUserId = getBookingByUserId;
 
 /**
  * @async
@@ -280,6 +281,17 @@ async function getBookingById(req, res) {
         res.json(utils.formatResponse(1, booking));
     } catch (err) {
         console.error('Error on doctor getBookingById handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}
+
+async function getBookingByUserId(req, res) {
+    try {
+        const { id } = req.params;
+        const bookings = await bookingService.getByUserId(id);
+        res.json(utils.formatResponse(1, bookings));
+    } catch (err) {
+        console.error('Error on booking getByUserId handler: ', err);
         res.json(utils.formatResponse(0, err));
     }
 }

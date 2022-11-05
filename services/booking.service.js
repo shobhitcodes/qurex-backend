@@ -10,6 +10,7 @@ module.exports.bookAppointment = bookAppointment;
 module.exports.getBookingsByDate = getBookingsByDate;
 module.exports.updateBookingStatus = updateBookingStatus;
 module.exports.getBookingsByFromAndToTime = getBookingsByFromAndToTime;
+module.exports.getByUserId = getByUserId;
 
 /**
  * @async
@@ -180,5 +181,17 @@ async function updateBookingStatus(bookingId, status) {
     } catch (error) {
         console.error('Error on Booking service: ', error);
         throw error;
+    }
+}
+
+async function getByUserId(id) {
+    try {
+        if (!id) throw 'id missing';
+
+        const bookings = await Booking.find({ $or: [ { patientId: id }, { doctorId: id } ] }).populate('sessionId');
+        return bookings;
+    } catch (err) {
+        console.error('Error on getByUserId doctor service: ', err);
+        throw err;
     }
 }
