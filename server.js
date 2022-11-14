@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(
     cors({
         origin: '*',
+        exposedHeaders: 'x-auth-token',
     })
 );
 
