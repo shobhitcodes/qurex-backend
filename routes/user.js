@@ -12,6 +12,9 @@ router.post('/generateOTP', userController.generateOTP);
 router.post('/loginViaOTP', userController.loginViaOTP);
 router.post('/resendOTP', userController.resendOTP);
 
+router.post('/generateSignUpOTP', userController.generateSignUpOTP);
+router.post('/signUpViaOTP', userController.signUpViaOTP);
+
 router.post('/forgotPass', userController.forgotPass);
 router.post('/changePassword', userController.changePassword);
 router.get('/getAllDoctors',auth,admin, userController.getAllDoctors);

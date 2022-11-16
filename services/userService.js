@@ -25,6 +25,8 @@ module.exports.generateOTP = generateOTP;
 module.exports.resendOTP = resendOTP;
 module.exports.loginViaOTP = loginViaOTP;
 module.exports.getById = getById;
+module.exports.generateSignUpOTP = generateSignUpOTP;
+module.exports.signUpViaOTP = signUpViaOTP;
 
 /**
  * @async
@@ -92,12 +94,45 @@ async function auth(mobile, password) {
     }
 }
 
+async function generateSignUpOTP(mobile, email, name, role = 'patient') {
+    try {
+        let emailFound = email && (await User.findOne({ email }));
+        let mobileFound = mobile && (await User.findOne({ mobile }));
+
+        if (emailFound || mobileFound) throw 'User already registered';
+
+        let otp = parseInt(Math.random() * 10000) + '';
+
+        if (otp.length < 4) {
+            otp = '0' + otp;
+        }
+
+        await userAuth.create({
+            otpUsed: true,
+            otp: otp,
+            otpType: 'register',
+            mobileNo: mobile,
+            meta: { name, email, role },
+        });
+
+        let template = 'otp-registration';
+
+        await sendOTP(mobile, otp, template);
+
+        return true;
+    } catch (err) {
+        console.error('Error on generateSignUpOTP service: ', err);
+        throw err;
+    }
+}
+
 async function generateOTP(mobileNo, type = 'Login') {
     try {
         let user = await User.findOne({ mobile: mobileNo });
         if (!user) throw 'Invalid mobile number';
 
         let otp = parseInt(Math.random() * 10000) + '';
+
         if (otp.length < 4) {
             otp = '0' + otp;
         }
@@ -172,6 +207,38 @@ async function loginViaOTP(otp, mobileNo) {
         const user = await User.findOne({ mobile: mobileNo, active: true });
         if (!user) throw 'Invalid User';
         delete user.password;
+        return user;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+async function signUpViaOTP(otp, mobile) {
+    try {
+        const _userAuth = await userAuth
+            .find({ mobileNo: mobile, active: true, otpType: 'register' })
+            .sort({ _id: -1 })
+            .limit(1);
+
+        if (!_userAuth) throw 'Invalid Mobile Number Or OTP';
+        if (!_userAuth[0]) throw 'Invalid Mobile Number Or OTP';
+        if (_userAuth[0].otp !== otp) throw 'Invalid OTP';
+
+        await userAuth.updateOne({ _id: _userAuth[0]._id }, { active: false });
+
+        // creating new user
+        let user = new User({
+            mobile,
+            ..._userAuth.meta,
+        });
+
+        user = await user.save();
+
+        if (role === 'doctor') {
+            await doctorService.create({ userId: user._id });
+        }
+
         return user;
     } catch (error) {
         console.error(error);

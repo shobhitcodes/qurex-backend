@@ -17,6 +17,8 @@ module.exports.getAllPatients = getAllPatients;
 module.exports.getAllDoctors = getAllDoctors;
 module.exports.update = update;
 module.exports.getById = getById;
+module.exports.generateSignUpOTP = generateSignUpOTP;
+module.exports.signUpViaOTP = signUpViaOTP;
 
 
 /**
@@ -68,12 +70,23 @@ async function generateOTP(req, res) {
         const { mobileNo } = req.body;
         const otpGenerated = await userService.generateOTP(mobileNo);
         res.json(utils.formatResponse(1, otpGenerated));
-
     } catch (err) {
         console.error('Error on login handler: ', err);
         res.json(utils.formatResponse(0, err));
     }
 }
+
+async function generateSignUpOTP(req, res) {
+    try {
+        const { mobile, email, name, role } = req.body;
+        const otpGenerated = await userService.generateSignUpOTP(mobile, email, name, role);
+        res.json(utils.formatResponse(1, otpGenerated));
+    } catch (err) {
+        console.error('Error on generateSignUpOTP handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}
+
 /**
  * @async
  * @description Request handler for user login verification
@@ -92,6 +105,20 @@ async function loginViaOTP(req, res) {
         res.json(utils.formatResponse(0, err));
     }
 }
+
+async function signUpViaOTP(req, res) {
+    try {
+        const { mobile, otp } = req.body;
+        const user = await userService.signUpViaOTP(otp, mobile);
+        const token = user.generateAuthToken();
+        res.header('x-auth-token', token);
+        res.json(utils.formatResponse(1, user));
+    } catch (err) {
+        console.error('Error on generateSignUpOTP handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}
+
 /**
  * @async
  * @description Request handler for user login otp verification
