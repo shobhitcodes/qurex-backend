@@ -9,7 +9,7 @@ const userAuthSchema = new Schema(
         otpUsed: { type: Boolean, default: false },
         otp: String,
         mobileNo: String,
-        otpType: { type: String, enum: ['Login', 'PasswordChange'], default: 'Login' },
+        otpType: { type: String, enum: ['Login', 'PasswordChange', 'register'], default: 'Login' },
         active: { type: Boolean, default: true },
         meta: Schema.Types.Mixed
     },
