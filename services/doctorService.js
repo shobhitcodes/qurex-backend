@@ -263,7 +263,7 @@ async function getBookings(id) {
         };
 
         const doctorBookings = await Booking.find(bookingQuery).populate(
-            'sessionId'
+            ['sessionId', 'patientId', 'doctorId']
         );
         console.log({ doctorBookings });
         return doctorBookings;
