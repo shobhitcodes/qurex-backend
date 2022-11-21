@@ -84,7 +84,7 @@ const doctorDetailSchema = new Schema(
         //     remaning: Number,
         //     missed: Number,
         // },
-        feeCharge: Number,
+        feeCharge: { type: Number, default: 500 },
         sessionDuration: Number, // in mins
         verified: { type: Boolean, default: false },
         businessHours: [businessHours],
