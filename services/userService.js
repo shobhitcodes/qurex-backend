@@ -235,7 +235,7 @@ async function signUpViaOTP(otp, mobile) {
 
         user = await user.save();
 
-        if (role === 'doctor') {
+        if (user.role === 'doctor') {
             await doctorService.create({ userId: user._id });
         }
 
