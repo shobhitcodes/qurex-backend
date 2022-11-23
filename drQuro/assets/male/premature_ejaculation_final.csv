@@ -1,0 +1,97 @@
+﻿node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|2|3,Are you aware around 35% of men across the world experience premature ejaculation.. <br><br>Please tell me about your age range?,gq,null,null,null,null,null,null,null,null,null,null,null
+1,4,18-30 Years,r,null,null,18-30 Years,null,null,null,null,null,null,null,null
+2,4,30-45 Years,r,null,null,30-45 Years,null,null,null,null,null,null,null,null
+3,4,Above 45 years,r,null,null,Above 45 years,null,null,null,null,null,null,null,null
+4,5|6|8,Alright.. <br><br>Can you help me understand how difficult it gets generally for you to hold your ejaculation?,gq,null,null,null,null,null,null,null,null,null,null,null
+5,9,Extremely difficult,or,null,Ejaculation extremely difficult,null,null,null,null,null,null,null,null,null
+6,9,Moderately difficult,or,null,Ejaculation moderately difficult,null,null,null,null,null,null,null,null,null
+8,9,Not difficult at all,r,null,Ejaculation not difficult,null,null,null,null,null,null,null,null,null
+9,10|11|13|14,I get that.. <br><br>And does ejaculation always happen before you want it to?,gq,null,null,null,null,null,null,null,null,null,null,null
+10,15,Always ,or,null,Ejaculation happens before desired,null,null,null,null,null,null,null,null,null
+11,15,Mostly,or,null,Ejaculation happens before desired,null,null,null,null,null,null,null,null,null
+13,15,Only sometimes ,r,null,Ejaculation happens normally,null,null,null,null,null,null,null,null,null
+14,15,Never,r,null,Ejaculation happens normally,null,null,null,null,null,null,null,null,null
+15,16|17|19|20,Understood!.. <br><br>Do you feel that you always ejaculate with very little stimulation only?,gq,null,null,null,null,null,null,null,null,null,null,null
+16,21,I Always ejaculate with little stimulation ,or,null,Ejaculation happens with little stimulation,null,null,null,null,null,null,null,null,null
+17,21,Mostly I ejaculate with little stimulation ,or,null,Ejaculation happens with little stimulation,null,null,null,null,null,null,null,null,null
+19,21,Only sometimes otherwise it's fine ,r,null,Ejaculation happens normally,null,null,null,null,null,null,null,null,null
+20,21,Never,r,null,Ejaculation happens normally,null,null,null,null,null,null,null,null,null
+21,22|23|24,"hmm.. <br><br>It will me understand if you can tell which one of the following, you think is your experience.",aq,null,null,null,null,null,null,null,null,null,null,null
+22,30,I ejaculate before sexual activity (foreplay/oral sex/masturbation/penetration) starts,ar,null,Ejaculation happens before sexual activity,null,null,null,null,null,null,null,null,null
+23,30,"I ejaculate just at the start of sexual activity (foreplay, oral sex, masturbation, partner masturbation)",ar,null,Ejaculation happens at start of sexual activity,null,null,null,null,null,null,null,null,null
+24,25,I ejaculate after penetration or masturbation,ar,null,null,null,null,null,null,null,null,null,null,null
+25,27|28|29,Ok.. <br><br>And how long does it generally take for you to ejaculate after you penetrate or masturbate?,aq,null,null,null,null,null,null,null,null,null,null,null
+27,30,Less than 30 seconds ,ar,null,Ejaculation happens within 30 seconds of sexual activity,null,null,null,null,null,null,null,null,null
+28,30,30 seconds - 1 minute,ar,null,Ejaculation happens within 30 seconds to 1 minute of sexual activity,null,null,null,null,null,null,null,null,null
+29,30,More than 1 minute,r,null,Ejaculation happens after 1 minute of sexual activity,null,null,null,null,null,null,null,null,null
+30,31|32,hmm.. <br><br> Do you think that this problem exists forever?,gq,null,null,null,null,null,null,null,null,null,null,null
+31,33,"Yes, The problem has been present ever since you became sexually active",r,null,The symptom has been present ever since patient became sexually active,null,null,null,null,null,null,null,null,null
+32,33,"No, The problem has started recently, earlier I used to have  normal sexual function",r,null,The symptom began after a period of normal sexual function,null,null,null,null,null,null,null,null,null
+33,34|35|36,"No, The problem has started recently, earlier I used to have  normal sexual function",aq,null,null,null,null,null,null,null,null,null,null,null
+34,39,More than 6 months,ar,null,The symptom exists since more than 6 months,null,null,null,null,null,null,null,null,null
+35,39,Around 6 months,ar,null,The symptom exists since 6 months,null,null,null,null,null,null,null,null,null
+36,39,Less than 6 months ,r,null,The symptom exists since 1-6 months,null,null,null,null,null,null,null,null,null
+39,40|41|42,Ok.. <br><br>Is the problem causing a lot of stress in your life?,aq,null,null,null,null,null,null,null,null,null,null,null
+40,44,A lot of stress,ar,null,Problem causing a lot of stress,null,null,null,null,null,null,null,null,null
+41,43,To some extent,r,null,Problem causing some stress,null,null,null,null,null,null,null,null,null
+42,43,Not at all,r,null,Problem causing no stress,null,null,null,null,null,null,null,null,null
+43,null,null,d,Premature ejaculation,null,null,You seem to be fine as the symptoms are not causing significant stress in you. If the problem persists kindly consult the recommended doctor,null,Psychiatrist (Sexology),null,"Some self-help techniques for dealing with premature ejaculation:|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.|Using thick condoms to reduce sensation|Masturbating 1- 2 hours before sex",null,null,null
+44,45|46,"Can you confirm please, if you have a sexual partner?",gq,null,null,null,null,null,null,null,null,null,null,null
+45,50,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+46,56,No,r,null,null,null,null,null,null,null,null,null,null,null
+50,51|52,"Understood!.. <br><br>While having intercourse with your partner, do you worry about ejaculating too early?",gq,null,null,null,null,null,null,null,null,null,null,null
+51,53,Yes,dr,null,Worries about early ejaculation during sexual activity,null,null,null,null,null,null,null,null,null
+52,53,No,r,null,null,null,null,null,null,null,null,null,null,null
+53,54|55,"I get that.. <br><br>Please help me understand, are you happy with your partner in your relationship?",gq,null,null,null,null,null,null,null,null,null,null,null
+54,56,"Yes, I am happy",r,null,null,null,null,null,null,null,null,null,null,null
+55,56,No or I am not sure ,dr,null,Not happy with partner,null,null,null,null,null,null,null,null,null
+56,57|58,We are almost there.. <br><br>Do you feel that at times you forcefully stimulate/aroused yourself instead of getting aroused and excited yourself?,gq,null,null,null,null,null,null,null,null,null,null,null
+57,59,"Yes, I do not get aroused or stimulated from foreplay ",dr,null,Forceful stimulation,null,null,null,null,null,null,null,null,null
+58,59,"No, I am generally aroused and stimulated ",r,null,null,null,null,null,null,null,null,null,null,null
+59,60|61,Thanks for sharing.. <br><br>Do you remember if you ever used to ejaculate quickly to avoid being caught masturbating when you were younger?,gq,null,null,null,null,null,null,null,null,null,null,null
+60,65,"Yes, I used to ejaculate quickly",dr,null,Quick ejaculation at young age,null,null,null,null,null,null,null,null,null
+61,65,No or I am not sure ,r,null,null,null,null,null,null,null,null,null,null,null
+65,66|67|68|69,You are doing good.. <br><br>Can you please help me understand how you feel recently about yourself?,gq,null,null,null,null,null,null,null,null,null,null,null
+66,70,I continuously felt sadness since more than 2 weeks,dr,null,Sadness feeling since last 2 weeks,null,null,null,null,null,null,null,null,null
+67,70,I do not enjoy activities which I used to earlier,dr,null,Doesn't enjoy activities of interest,null,null,null,null,null,null,null,null,null
+68,70,I feel I am not attractive ,dr,null,Sadness feeling since last 2 weeks,null,null,null,null,null,null,null,null,null
+69,70,None of these,r,null,null,null,null,null,null,null,null,null,null,null
+70,71|72|73,We all go through some or other stress in our lives.. <br><br> To what extent are you experiencing stress in your life?,gq,null,null,null,null,null,null,null,null,null,null,null
+71,74,A lot,dr,null,A lot of stress,null,null,null,null,null,null,null,null,null
+72,74,To some extent,dr,null,Some stress,null,null,null,null,null,null,null,null,null
+73,74,Not at all,r,null,null,null,null,null,null,null,null,null,null,null
+74,75|76,"Hope you are comfortable answering my questions, I am your friend only.. <br><br>Please tell me if you have ever been sexually abused in your life?",gq,null,null,null,null,null,null,null,null,null,null,null
+75,77,"Yes, I have been sexually abused in my life",dr,null,Sexually abused,null,null,null,null,null,null,null,null,null
+76,77,"No, I have not been sexually abused ",r,null,null,null,null,null,null,null,null,null,null,null
+77,78|79,Do you generally feel that sex is a bad thing and should not be done?,gq,null,null,null,null,null,null,null,null,null,null,null
+78,999|997,"Yes, I think sex is a bad thing ",gchk|dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+999,81,null,g0|d1,null,null,null,null,null,null,null,null,null,null,null
+998,82,null,g0|d0,null,null,null,null,null,null,null,null,null,null,null
+997,83,null,g1|d1,null,null,null,null,null,null,null,null,null,null,null
+996,84,null,g1|d0,null,null,null,null,null,null,null,null,null,null,null
+79,999|998|997|996,"No, sex is not a bad thing ",gchk|drchk,null,null,null,null,null,null,null,null,null,null,null
+81,null,null,d,Premature ejaculation,null,null,You are most likely not suffering from premature ejaculation,null,null,null,"Some self-help techniques for dealing with premature ejaculation:|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.|Using thick condoms to reduce sensation|Masturbating 1- 2 hours before sex",null,null,null
+82,null,null,d,Premature ejaculation,null,null,You are most likely not suffering from premature ejaculation,null,null,null,"Some self-help techniques for dealing with premature ejaculation:|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.|Using thick condoms to reduce sensation|Masturbating 1- 2 hours before sex",null,null,null
+83,null,null,d,Premature ejaculation,null,null,Moderate risk of premature ejaculation,null,Psychiatrist (Sexology),null,"Some self-help techniques for dealing with premature ejaculation:|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.|Using thick condoms to reduce sensation|Masturbating 1- 2 hours before sex",null,null,null
+84,85|86,just a few more questions to go.. <br><br>Have you ever suffered from prostate inflammation?,gq,null,null,null,null,null,null,null,null,null,null,null
+85,87,Yes,dr,null,Prostate inflammation,null,null,null,null,null,null,null,null,null
+86,87,No,r,null,null,null,null,null,null,null,null,null,null,null
+87,88|89,Ok.. <br><br> And do you generally feel a burning sensation while ejaculating?,gq,null,null,null,null,null,null,null,null,null,null,null
+88,90,Yes,dr,null,Burning sensation with ejaculation,null,null,null,null,null,null,null,null,null
+89,90,No ,r,null,null,null,null,null,null,null,null,null,null,null
+90,91|92|93,Understood!.. <br><br>Can you tell me if your testosterone level is normal?,gq,null,null,null,null,null,null,null,null,null,null,null
+91,995|994,Yes,drchk,null,null,null,null,null,null,null,null,null,null,null
+92,995|994,Not sure,drchk,null,null,null,null,null,null,null,null,null,null,null
+93,995|994,No,dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+995,94,null,d1,null,null,null,null,null,null,null,null,null,null,null
+994,95,null,d0,null,null,null,null,null,null,null,null,null,null,null
+94,null,null,d,Premature ejaculation,null,null,Moderate risk of premature ejaculation,null,Urologist/Adrologist,Testesterone,"Some self-help techniques for dealing with premature ejaculation:|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.|Using thick condoms to reduce sensation|Masturbating 1- 2 hours before sex",null,null,null
+95,96|97,hmm.. <br><br>Are you suffering from high diabetes?,gq,null,null,null,null,null,null,null,null,null,null,null
+96,101,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+97,101,No,r,null,null,null,null,null,null,null,null,null,null,null
+101,102|103,Alright.. <br><br> Are you suffering from hyperthyroidism (High level of thyroid hormone) or pituitary gland disorder?,gq,null,null,null,null,null,null,null,null,null,null,null
+102,993|992,Yes,dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+993,null,null,d1,Premature ejaculation,null,null,Moderate risk of premature ejaculation,null,Endocrinologist,TSH|Sugar,"Some self-help techniques for dealing with premature ejaculation:|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.|Using thick condoms to reduce sensation|Masturbating 1- 2 hours before sex",null,null,null
+992,null,null,d0,Premature ejaculation,null,null,You seem to be at a moderate risk of  premature ejaculation but the reason is unclear so kindly consult the recommended doctor,null,Psychiatrist (Sexology),null,"Some self-help techniques for dealing with premature ejaculation:|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.|Using thick condoms to reduce sensation|Masturbating 1- 2 hours before sex",null,null,null
+103,993|992,No,drchk,null,null,null,null,null,null,null,null,null,null,null

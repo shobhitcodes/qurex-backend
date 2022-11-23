@@ -1,0 +1,154 @@
+node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|2|3,"Do you know around 50 per cent of men have some form of Erections issue? Do not worry at all, it's normal! <br><br>Please tell me the age range you are in.",gq,null,null,null,null,null,null,null,null,null,null,null
+1,4,18-30,r,null,18-30 years Age,null,null,null,null,null,null,null,null,null
+2,4,31-45,r,null,31-45 years Age,null,null,null,null,null,null,null,null,null
+3,4,45 and above,r,null,Age above 45 years,null,null,null,null,null,null,null,null,null
+4,5|7|9|11,Let's start.. <br><br>Can you tell me how many times you try for an erection?,gq,null,null,null,null,null,null,null,null,null,null,null
+5,6,Once in a few months,r,null,null,null,null,null,null,null,null,null,null,null
+6,null,null,d,Erectile dysfunction,null,"Erectile Dysfunction or ED happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",You are recommended to increase frequency of sexual activity.,null,null,null,Increasing the frequency of your erections may help you in better erections.,"Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+7,12,1 to 3 times a month,r,null,null,null,null,null,null,null,null,null,null,null
+9,12,4 to 6 times a week,r,null,null,null,null,null,null,null,null,null,null,null
+11,12,Multiple times a day,r,null,null,null,null,null,null,null,null,null,null,null
+12,13|14|16,Ok.. <br><br>And since when have you been experiencing the problem with your erection?,gq,null,null,null,null,null,null,null,null,null,null,null
+13,17,A month,r,null,null,null,null,null,null,null,null,null,null,null
+14,17,More than a month but less than 6 month,r,null,null,null,null,null,null,null,null,null,null,null
+16,18,More than 6 months,r,null,null,null,null,null,null,null,null,null,null,null
+17,20|21,"I get that.. <br><br> Please confirm, if you have got your testosterone level measured recently.",gq,null,null,null,null,null,null,null,null,null,null,null
+20,22,"Yes, I have",r,null,null,null,null,null,null,null,null,null,null,null
+22,24|25,"Great.. <br><br>Please help me understand that, how was the report?",gq,null,null,null,null,null,null,null,null,null,null,null
+24,26,The testosterone report was Abnormal,r,null,null,null,null,null,null,null,null,null,null,null
+26,null,null,d,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",You are recommended a detailed examination ,null,Urologist/Andrologist,null,"Exercices like Kegel and yoga can be helpful the cure ED.|Relationship therapy, healthy lifestyle, healthy food habits, and relationship therapy ( if required) are the best advice for ED patients.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+25,23,The testosterone report was Normal,r,null,null,null,null,null,null,null,null,null,null,null
+21,23,"No, I have not",r,null,null,null,null,null,null,null,null,null,null,null
+23,28|29|30,Please help me understand a little bit about yourself.. <br><br> How often do you smoke?,gq,null,null,null,null,null,null,null,null,null,null,null
+28,31,Regularly,dr,null,null,null,null,null,null,null,null,null,null,null
+29,31,Occasionally,r,null,null,null,null,null,null,null,null,null,null,null
+30,31,I do not smoke,r,null,null,null,null,null,null,null,null,null,null,null
+31,32|33|34,"I get that..<br><br> And may I ask that. How often do you consume alcohol, if you consume?",gq,null,null,null,null,null,null,null,null,null,null,null
+32,35,Regularly,dr,null,null,null,null,null,null,null,null,null,null,null
+33,35,Occasionally,r,null,null,null,null,null,null,null,null,null,null,null
+34,35,I do not take alcohol,r,null,null,null,null,null,null,null,null,null,null,null
+35,36|37,"Understood.. You are doing wonderful, thanks for your cooperation <br><br> Do you take recreational drugs like Heroin/Opiates/Marijuana or any other?",gq,null,null,null,null,null,null,null,null,null,null,null
+36,38,"Yes, I do ",dr,null,null,null,null,null,null,null,null,null,null,null
+37,38,"No, I do not ",r,null,null,null,null,null,null,null,null,null,null,null
+38,39|40,Alright.. <br><br>Please tell me if you have a sexual partner.,gq,null,null,null,null,null,null,null,null,null,null,null
+39,41,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+40,999,No,r,null,null,null,null,null,null,null,null,null,null,null
+41,42|43,Great.. <br><br> How is your relationship with your partner?,gq,null,null,null,null,null,null,null,null,null,null,null
+42,44,Great,r,null,null,null,null,null,null,null,null,null,null,null
+43,44,Not too great,dr,null,null,null,null,null,null,null,null,null,null,null
+44,45|46,"Ok.. <br><br> Do you generally experience the fear of hurting your partner, contracting STI, or making your partner pregnant while having intercourse?",gq,null,null,null,null,null,null,null,null,null,null,null
+45,50,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+46,50,No,r,null,null,null,null,null,null,null,null,null,null,null
+50,51|52,Just a few more to go.. <br><br>Do you both have a lack of privacy at your place when it comes to having intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+51,53,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+52,53,No,r,null,null,null,null,null,null,null,null,null,null,null
+53,54|55,Hmm.. <br><br>Do you get nervous or worry about erections while having intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+54,999,Yes ,dr,null,null,null,null,null,null,null,null,null,null,null
+55,999,No,r,null,null,null,null,null,null,null,null,null,null,null
+999,59|60,Just two more to go.. <br><br>Are you consistently experiencing sudden shifts in the mood?,gq,null,null,null,null,null,null,null,null,null,null,null
+59,61,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+60,61,No,r,null,null,null,null,null,null,null,null,null,null,null
+61,66|67,Just the last one.. <br><br>Do you think you are suffering from depression or do you think you are unattractive?,gq,null,null,null,null,null,null,null,null,null,null,null
+66,998|997,Yes,dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+997,null,null,d0,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",You seems to be fine.,You may not be suffering from erectile dysfunction as your symptoms have existed for less than the duration required for making a confirmed diagnosis. Please read articles and content on Erectile Dysfunction to get a better understanding.,null,null,"Exercices like Kegel and yoga can be helpful the cure ED.|Relationship therapy, healthy lifestyle, healthy food habits, and relationship therapy ( if required) are the best advice for ED patients.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+998,null,null,d1,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",Insufficent duration for confirmed diagnosis,You may not be suffering from erectile dysfunction as your symptoms have existed for less than the duration required for making a confirmed diagnosis. Please read articles and content on Erectile Dysfunction to get a better understanding.,Psychiatrist (Sexology),null,"Exercices like Kegel and yoga can help cure ED. Best advised activities for ED patients are Relationship therapy, healthy lifestyle, healthy food habits, and relationship therapy.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+67,998|997,No,drchk,null,null,null,null,null,null,null,null,null,null,null
+18,19|69|70|71|72,"Ok..No worry at all, let us find out do we need any help or if we are perfect.. <br><br>Tell me, how would you rate your confidence that you could get and keep an erection over the past 6 months?",gq,null,null,null,null,null,null,null,null,null,null,null
+19,73,1 - Very Low,sr1,null,null,null,null,null,null,null,null,null,null,null
+69,73,2 - Low,sr2,null,null,null,null,null,null,null,null,null,null,null
+70,73,3 - Moderate,sr3,null,null,null,null,null,null,null,null,null,null,null
+71,73,4 - High,sr4,null,null,null,null,null,null,null,null,null,null,null
+72,73,5 - Very High,sr5,null,null,null,null,null,null,null,null,null,null,null
+73,74|75|76|77|78,Alright.. <br><br> And when you had erections because of sexual stimulation: how often were your erections hard enough for penetration?,gq,null,null,null,null,null,null,null,null,null,null,null
+74,79,1 - Rarely or Never,sr1,null,null,null,null,null,null,null,null,null,null,null
+75,79,2 - A few times (Much less than half of the time),sr2,null,null,null,null,null,null,null,null,null,null,null
+76,79,3 - Sometimes (half of the time),sr3,null,null,null,null,null,null,null,null,null,null,null
+77,79,4 - Most times (Much more than half the time),sr4,null,null,null,null,null,null,null,null,null,null,null
+78,79,5 - Almost Always or Always,sr5,null,null,null,null,null,null,null,null,null,null,null
+79,80|81|82|83|84,"Understood! <br><br> Please tell me that after penetration, how often were you able to maintain your erection for more than a minute?",gq,null,null,null,null,null,null,null,null,null,null,null
+80,85,1 - Rarely or Never,sr1,null,null,null,null,null,null,null,null,null,null,null
+81,85,2 - A few times (Much less than half of the time),sr2,null,null,null,null,null,null,null,null,null,null,null
+82,85,3 - Sometimes (half of the time),sr3,null,null,null,null,null,null,null,null,null,null,null
+83,85,4 - Most times (Much more than half the time),sr4,null,null,null,null,null,null,null,null,null,null,null
+84,85,5 - Almost Always or Always,sr5,null,null,null,null,null,null,null,null,null,null,null
+85,86|87|88|89|90,"hmm.. <br><br> And if I may ask, how difficult was it to maintain your erection till the completion of sexual activity?",gq,null,null,null,null,null,null,null,null,null,null,null
+86,91,1 - Extremely difficult,sr1,null,null,null,null,null,null,null,null,null,null,null
+87,91,2 - Very difficult,sr2,null,null,null,null,null,null,null,null,null,null,null
+88,91,3 - Difficult,sr3,null,null,null,null,null,null,null,null,null,null,null
+89,91,4 - Slightly difficult,sr4,null,null,null,null,null,null,null,null,null,null,null
+90,91,5 - Not difficult at all,sr5,null,null,null,null,null,null,null,null,null,null,null
+91,92|93|94|95|96,"You have been wonderful till now, thank you so much for your frankness, I appreciate it.. <br><br> Can you help me understand that when you attempted sexual activity: how often was it satisfactory for you?",gq,null,null,null,null,null,null,null,null,null,null,null
+92,97,1 - Rarely or Never,sr1,null,null,null,null,null,null,null,null,null,null,null
+93,97,2 - A few times (Much less than half of the time),sr2,null,null,null,null,null,null,null,null,null,null,null
+94,97,3 - Sometimes (half of the time),sr3,null,null,null,null,null,null,null,null,null,null,null
+95,97,4 - Most times (Much more than half the time),sr4,null,null,null,null,null,null,null,null,null,null,null
+96,97,5 - Almost Always or Always,sr5,null,null,null,null,null,null,null,null,null,null,null
+97,98|99,"Just a few more questions to go.. <br><br> Do you think, that the onset of the erection problem happened after any major life event like the death of near and dear ones/loss of job/change of workplace etc.?",gq,null,null,null,null,null,null,null,null,null,null,null
+98,100,"Yes, maybe ",dr,null,null,null,null,null,null,null,null,null,null,null
+99,100,Not at all ,r,null,null,null,null,null,null,null,null,null,null,null
+100,101|102,"Ok.. <br><br>Kindly confirm, if you have a sexual partner.",gq,null,null,null,null,null,null,null,null,null,null,null
+101,103,"Yes, I do ",r,null,null,null,null,null,null,null,null,null,null,null
+102,127,"No, I do not ",r,null,null,null,null,null,null,null,null,null,null,null
+103,104|105,Great.. <br><br> How is your relationship with your partner?,gq,null,null,null,null,null,null,null,null,null,null,null
+104,106,Great,r,null,null,null,null,null,null,null,null,null,null,null
+105,106,Not too great,dr,null,null,null,null,null,null,null,null,null,null,null
+106,107|108,"Ok.. <br><br> Do you generally experience the fear of hurting your partner, contracting STI, or making your partner pregnant while having intercourse?",gq,null,null,null,null,null,null,null,null,null,null,null
+107,109,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+108,109,No,r,null,null,null,null,null,null,null,null,null,null,null
+109,110|111,Hmm.. <br><br>Do you get nervous or worry about erections while having intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+110,112,Yes ,dr,null,null,null,null,null,null,null,null,null,null,null
+111,112,No,r,null,null,null,null,null,null,null,null,null,null,null
+112,113|114|115|116|117,Understood! <br><br>What is generally the duration of your foreplay?,gq,null,null,null,null,null,null,null,null,null,null,null
+113,124,No foreplay - we directly proceed to sexual intercourse?,dr,null,null,null,null,null,null,null,null,null,null,null
+114,124,Under 5 minutes,dr,null,null,null,null,null,null,null,null,null,null,null
+115,124,5 to 10 minutes,r,null,null,null,null,null,null,null,null,null,null,null
+116,124,10 to 20 minutes,r,null,null,null,null,null,null,null,null,null,null,null
+117,124,Over 20 minutes,r,null,null,null,null,null,null,null,null,null,null,null
+124,125|126,Just a few more to go.. <br><br> Please confirm if there Is any lack of privacy at your place when it comes to having intercourse with your partner?,gq,null,null,null,null,null,null,null,null,null,null,null
+125,127,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+126,127,No,r,null,null,null,null,null,null,null,null,null,null,null
+127,128|129,"You are doing great, I am proud of you.. <br><br> Please tell me if you are experiencing sudden shifts in the mood.",gq,null,null,null,null,null,null,null,null,null,null,null
+128,133,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+129,133,No,r,null,null,null,null,null,null,null,null,null,null,null
+133,135|136,Alright..thanks for opening up.. I appreciate <br><br> Do you think you are suffering from depression or anxiety disorder?,gq,null,null,null,null,null,null,null,null,null,null,null
+135,142,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+136,142,No,r,null,null,null,null,null,null,null,null,null,null,null
+142,143|144|145,Please help me understand a little bit about yourself.. <br><br> How often do you smoke?,gq,null,null,null,null,null,null,null,null,null,null,null
+143,146,Regularly,dr,null,null,null,null,null,null,null,null,null,null,null
+144,146,Occasionally,r,null,null,null,null,null,null,null,null,null,null,null
+145,146,I do not smoke,r,null,null,null,null,null,null,null,null,null,null,null
+146,147|148|149,"I get that.. <br><br> And may I ask how often you consume alcohol, if you consume?",gq,null,null,null,null,null,null,null,null,null,null,null
+147,150,Regularly,dr,null,null,null,null,null,null,null,null,null,null,null
+148,150,Occasionally,r,null,null,null,null,null,null,null,null,null,null,null
+149,150,I do not take alcohol,r,null,null,null,null,null,null,null,null,null,null,null
+150,151|152,"Understood.. You are doing wonderful, thanks for your cooperation <br><br> Do you take recreational drugs like heroin/Opiates/Marijuana or any other?",gq,null,null,null,null,null,null,null,null,null,null,null
+151,153|154,"Yes, I do ",dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+153,null,null,d1,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",<score_based_triaging> case of Erectile Dysfunction,You have a <score_based_triaging> case of Erectile Dysfunction. Most likely the root cause of your issue is psychological/relationship issues/lifestyle related.,Psychiatrist (Sexology),null,"Exercices like Kegel and yoga can help to cure ED. Relationship therapy, healthy lifestyle, healthy food habits, and relationship therapy ( if required) are best advised for ED patients.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+885,154,null,d0,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",null,null,null,null,"Exercices like Kegel and yoga can help to cure ED. Relationship therapy, healthy lifestyle, healthy food habits, and relationship therapy ( if required) are best advised for ED patients.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+152,153|885,No,drchk,null,null,null,null,null,null,null,null,null,null,null
+154,155|156,Just a few more to go.. Please help me understand your health now.. <br><br>By any chance was the erection problem you think you are facing started after any injury to the penis or your spinal cord?,gq,null,null,null,null,null,null,null,null,null,null,null
+155,160,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+156,160,No,r,null,null,null,null,null,null,null,null,null,null,null
+160,161|162,I get that.. We are almost there <br><br> Have you undergone prostrate surgery or radiation therapy recently?,gq,null,null,null,null,null,null,null,null,null,null,null
+161,169,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+162,169,No,r,null,null,null,null,null,null,null,null,null,null,null
+169,170|171,Please confirm.. <br><br> Have you been suffering from high blood pressure or any heart-related problem or brain-related problem?,gq,null,null,null,null,null,null,null,null,null,null,null
+170,181,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+171,181,No,r,null,null,null,null,null,null,null,null,null,null,null
+181,182|183,We are almost there now.. <br><br> Have you got your testosterone level measured recently?,gq,null,null,null,null,null,null,null,null,null,null,null
+182,184,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+184,185|186,"Great.. <br><br> So, what was the result of the report?",gq,null,null,null,null,null,null,null,null,null,null,null
+186,187|188,Abnormal,dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+187,null,null,d1,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",<score_based_triaging> case of Erectile Dysfunction,You have a <score_based_triaging> case of Erectile Dysfunction. Further lab tests are required to confirm the diagnosis. ,Urologist/Andrologist,Complete Blood Count Test|Urine Test|Fasting Blood Glucode Test|Serum Creatinine Test|Lipid Profile|Morning Serum Testosterone Test|Prolactin Level Test,"Exercices like Kegel and yoga can be very helpful to cure ED. Relationship therapy, healthy lifestyle, healthy food habits and relationship therapy ( if required) are best advised for ED patients.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+995,188,null,d0,null,null,null,null,null,null,null,null,null,null,null
+185,188,Normal,r,null,null,null,null,null,null,null,null,null,null,null
+183,187|995,No,drchk,null,null,null,null,null,null,null,null,null,null,null
+188,189|190,Thanks for being patient enough.. Just last two questions<br><br> Are you suffering from Diabetes?,gq,null,null,null,null,null,null,null,null,null,null,null
+189,191,Yes,dr,null,null,null,null,null,null,null,null,null,null,null
+190,191,No,r,null,null,null,null,null,null,null,null,null,null,null
+191,192|193,And are you suffering from thyroid problem?,gq,null,null,null,null,null,null,null,null,null,null,null
+192,194|996,Yes,dr|drchk,null,Suffering from Thyroid,null,null,null,null,null,null,null,null,null
+194,null,null,d1,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",<score_based_triaging> case of Erectile Dysfunction,You have a <score_based_triaging> case of Erectile Dysfunction. Most likely your issue is due to physical or hormonal causes. ,Endocrinologist,null,"Exercices like Kegel and yoga can be very helpful to cure ED. Relationship therapy, healthy lifestyle, healthy food habits and relationship therapy ( if required) are best advised for ED patients.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+996,null,null,d0,Erectile Dysfunction,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",<score_based_triaging> case of Erectile Dysfunction,null,null,null,"Exercices like Kegel and yoga can be very helpful to cure ED. Relationship therapy, healthy lifestyle, healthy food habits and relationship therapy ( if required) are best advised for ED patients.","Some of the common causes of erectile dysfunction may include- Injury in the penis • Prostrate surgery • Surgery in the spinal cord • Diabetes • Low testosterone • High blood pressure • Neurological disorders • Cardiovascular disorder • Psychological factors like depression, anxiety, performance anxiety, stress poor self-concept, relationship issue with partner • Lack of privacy • Side-effect of certain medication for treating depression, anxiety and high blood pressure • Lifestyle factors- drug abuse, alcohol abuse and smoking.",null,null
+193,194|996,No,dr|drchk,null,null,null,null,null,null,null,null,null,null,null

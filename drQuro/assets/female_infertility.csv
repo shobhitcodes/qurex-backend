@@ -1,0 +1,79 @@
+﻿node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|3,"You should not this that, if you are not able to conceive, this never means you are infertile. <br><br>Please tell me your age? 
+  Below 18 years should not this that, if you are not able to conceive, this never means you are infertile. <br><br>Please tell me your age?",gq,null,null,null,null,null,null,null,null,null,null,null
+1,2,Below 18 years,r,null,Under 18 years of age,null,null,null,null,null,null,null,null,null
+2,null,null,d,Infertility,null,null,It is not the right age to plan babies,null,null,null,null,null,null,null
+3,4,Above 18 years,r,null,Age above 18 years,null,null,null,null,null,null,null,null,null
+4,5|7,Ok.. <br><br>Have you already had your menopause (Has your period cycle stopped )?,gq,null,null,null,null,null,null,null,null,null,null,null
+5,6,Yes,r,null,Reached menopause,null,null,null,null,null,null,null,null,null
+6,null,null,d,Infertility,null,null,After menopause not possible to concieve in natural way,null,Gynaecologist,null,Please read about artificial reproductive techniques|IVFor In Vitro fertilization,null,null,null
+7,8,No,r,null,null,null,null,null,null,null,"For single women, it involves the fertilization of the egg by donor sperm in an incubator outside the body, followed by the transfer of the embryo back into the uterus.?Before this can happen, a woman needs to go through a full IVF cycle, including the egg retrieval process, after which any spare eggs can be kept frozen or fertilized with donor sperm and frozen as embryos. | Egg freezing: If you are looking to have a baby in the future but are unsure of the circumstances, you have the option to freeze your eggs which can be later retrieved and used for IVF. | Surrogate: If for any reason you cannot carry a child, you may have someone you know carry your child for you, but this has to be for altruistic reasons and cannot be a commercial exchange.| Adoption: if you want to have a baby, the option for adoption is always open which will not only give you the desired child but also give",null,null,null
+8,9|11,below 18 years,gq,null,null,null,null,null,null,null,the baby a family.,null,null,null
+9,10,No,r,null,No sexual partner,null,null,null,null,null,null,null,null,null
+10,null,null,d,Infertility,null,null,Single women can plan babies with the help of artificial reproductive techniques,null,null,null,null,null,null,null
+11,12,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+12,13|14,"Great.. <br><br> May I know, since how long are you both trying to conceive?",gq,null,null,null,null,null,null,null,Please read about artificial reproductive techniques|IVF or In Vitro fertilization,null,null,null
+13,15,Less than 1 year,r,null,Trying for less than 1 year,null,null,null,null,null,"For single women, it involves the fertilization of the egg by donor sperm in an incubator outside the body, followed by the transfer of the embryo back into the uterus.?Before this can happen, a woman needs to go through a full IVF cycle, including the egg retrieval process, after which any spare eggs can be kept frozen or fertilized with donor sperm and frozen as embryos. | Egg freezing: If you are looking to have a baby in the future but are unsure of the circumstances, you have the option to freeze your eggs which can be later retrieved and used for IVF. | Surrogate: If for any reason you cannot carry a child, you may have someone you know carry your child for you, but this has to be for altruistic reasons and cannot be a commercial exchange.| Adoption: if you want to have a baby, the option for adoption is always open which will not only give you the desired child but also give",null,null,null
+15,null,null,d,Infertility,null,null,It's early to go for any testing,null,null,null,the baby a family.,null,null,null
+14,16,More than 1 year,r,null,Trying for more than 1 year,null,null,null,null,null,null,null,null,null
+16,17|18|19|20,"Understood!.. <br><br>And, how is your period cycle?",gq,null,null,null,null,null,null,null,null,null,null,null
+17,45,Delayed and scanty periods,r,null,Delayed and scanty periods,null,null,null,null,null,null,null,null,null
+45,46|999|998|997|996,Please help me understand a little about yourself and select what you think you relate to.,mrq,null,null,null,null,null,null,null,Infertility is when a couple cannot get pregnant (conceive) despite having regular unprotected sex.,null,null,null
+46,47,Any mental stress,mr,null,Mental stress,null,null,null,null,null,Around 1 in 7 couples may have difficulty conceiving. If you have been trying naturally for a baby for less than 1 year and you are less than 35 years old you may continue for a total of one year.|Please continue to have a healthy lifestyle and avoid smoking and alcohol consumption.,null,null,null
+999,47,Sudden weight loss,mr,null,Sudden weight loss,null,null,null,null,null,null,null,null,null
+998,47,Sudden weight gain,mr,null,Sudden weight gain,null,null,null,null,null,null,null,null,null
+997,47,Excessive exercise recently,mr,null,Excessive exercise recently,null,null,null,null,null,null,null,null,null
+996,49,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+47,null,null,d,Infertility,null,null,Moderate risk of hormonal immbalance,null,Endocrinologist,null,null,null,null,null
+49,50|51,Have you ever had a DNC (surgical procedure in which the cervix is expanded to remove abnormal tissues)?,gq,null,null,null,null,null,null,null,null,null,null,null
+52,null,null,d,Infertility,null,null,Moderate risk of intrauterine cohesions,null,Gynaecologist,null,null,null,null,null
+50,52,Yes,r,null,DNC history,null,null,null,null,null,null,null,null,null
+51,53,No,r,null,null,null,null,null,null,null,null,null,null,null
+53,54|995|994|993|992|991,Please help me understand a little about yourself and select what you think you relate to.,mrq,null,null,null,null,null,null,null,null,null,null,null
+54,55|57,Excessive hair growth on face,mr2chk1,null,Excessive hair growth on face,null,null,null,null,null,null,null,null,null
+995,55|57,Excessive acne on face,mr2chk1,null,Excessive acne on face,null,null,null,null,null,null,null,null,null
+994,55|57,Dark skin patches on neck/armpits/face,mr2chk1,null,Dark skin patches on neck/armpits/face,null,null,null,null,null,null,null,null,null
+993,55|57,Sudden weight gain,mr2chk1,null,Sudden weight gain,null,null,null,null,null,null,null,null,null
+992,55|57,Any genetic history of PCOS,mr2chk1,null,Genetic history of PCOS,null,null,null,null,null,null,null,null,null
+991,57,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+55,null,null,d,Infertility,null,null,Moderate risk of PCOS,null,Gynaecologist,null,null,null,null,null
+57,58|990|989|988,Please help me understand a little about yourself and select what you think you relate to.,mrq,null,null,null,null,null,null,null,null,null,null,null
+58,59|61,I sweat a lot at the night,mr2chk2,null,Night sweats|Hot flashes|Irritability,null,null,null,null,null,null,null,null,null
+990,59|61,I get hot flashes very often,mr2chk2,null,null,null,null,null,null,null,null,null,null,null
+989,59|61,I get irritated easily,mr2chk2,null,null,null,null,null,null,null,null,null,null,null
+988,61,None of the above,r,null,null,null,null,null,null,null,Regular exercise| Healthy food recommended.,null,null,null
+61,null,null,d|mr0,Infertility,null,null,Reason of your symptom is unclear,null,Gynaecologist,null,null,null,null,null
+59,null,null,d|mr1,Infertility,null,null,You might be at your menopausal stage,null,Gynaecologist,null,null,null,null,null
+18,40,Heavy and painful periods,r,null,Heavy and painful periods,null,null,null,null,null,null,null,null,null
+40,41|987|986|985,Please help me understand a little about yourself and select what you think you relate to.,mrq,null,null,null,null,null,null,null,null,null,null,null
+41,42,Painful intercourse/sex,mr,null,Painful intercourse/sex|Lowerback ache|Pain on deep penetration,null,null,null,null,null,null,null,null,null
+987,42,Lower backache,mr,null,null,null,null,null,null,null,null,null,null,null
+986,42,Pain on deep penetration during sexual activity (intercourse/masturbation),mr,null,null,null,null,null,null,null,"When the ovaries stop producing eggs, the periods gradually stop, and that is also known as menopause. once the body stops making eggs a woman can't have babies the natural way. please consider Artificial Reproductive techniques.",null,null,null
+985,44,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+44,null,null,d,Infertility,null,null,Reason of your symptom is unclear,null,Gynaecologist,null,null,null,null,null
+42,null,null,d,Infertility,null,null,Low risk of endometriosis,null,Gynaecologist,null,null,null,null,null
+19,22,Regular and normal periods,r,null,Normal periods,null,null,null,null,null,null,null,null,null
+22,23|24,Have you had any sexually transmitted disease/infection ever,gq,null,null,null,null,null,null,null,null,null,null,null
+23,25,Yes,r,null,STI history,null,null,null,null,null,null,null,null,null
+25,null,null,d,Infertility,null,null,Please get yourself checked for STI,null,Gynaecologist,null,null,null,null,null
+24,26,No,r,null,null,null,null,null,null,null,null,null,null,null
+26,27|28|29|30|31,Do you face any problems during sexual intercourse,gq,null,null,null,null,null,null,null,null,null,null,null
+28,34,I or my partner do not ejaculate,r,null,Patient or partner does not ejaculate,null,null,null,null,null,null,null,null,null
+29,34,I or my partner do not enjoy sex with each other,r,null,Unenjoyed sex life,null,null,null,null,null,null,null,null,null
+30,34,My partner has a problem with erection,r,null,Erection problem,null,null,null,null,null,null,null,null,null
+34,null,null,d,Infertility,null,null,You seem to have intimacy issues,null,Relationship Therapist,null,null,null,null,null
+31,32,I am not sure whether you are doing the sexual activity properly,r,null,Improper sexual activity,null,null,null,null,null,null,null,null,null
+32,null,null,d,Infertility,null,null,Need Counselling on proper way of doing sexual activity,null,Relationship Therapist,null,null,null,null,null
+27,35,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+35,36|37,Do you have pain during intercourse,gq,null,null,null,null,null,null,null,null,null,null,null
+36,38,Yes,r,null,Pain during intercourse,null,null,null,null,null,null,null,null,null
+38,null,null,d,Infertility,null,null,You are at a low risk of vaginusmus,null,Gynaecologist,null,null,null,null,null
+37,39,No,r,null,null,null,null,null,null,null,"Make sure both you and your partner have consented to have sex with each other.| Be comfortable and make your partner feel the same. |Communicate about each other feelings, during and after intercourse.| Don't take it as a task.| Avoid trying new positions because that can lead to undue anxiety and no certain position is known to increase the chance of pregnancy. |If sex is too painful or dry try using a water-based lubricant",null,null,null
+39,null,null,d,Infertility,null,null,You and your partner are recommended to get evaluated by the recommended doctors,null,Gynaecologist,null,null,null,null,null
+20,21,I have not got my periods yet,r,null,Periods still not started,null,null,null,null,null,null,null,null,null
+21,null,null,d,Infertility,null,null,You are recommended to get evaluated for periods not starting yet,null,Gynaecologist,null,null,null,null,null
+,,,,,,,,,,,null,,,
+,,,,,,,,,,,null,,,
+,,,,,,,,,,,null,,,
+,,,,,,,,,,,null,,,
+,,,,,,,,,,,null,,,

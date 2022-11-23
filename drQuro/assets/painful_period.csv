@@ -1,0 +1,55 @@
+﻿node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|2|3,"Pain during periods is common, nothing to worry about.. <br><br>Please help me understand, when does the pain/cramps in the stomach start?",gq,null,null,null,null,null,null,null,null,null,null,null
+1,4,With the starting of the periods,r,null,Pain starts with starting of periods,null,null,null,null,null,null,null,null,null
+2,4,One day before the period starts,r,null,Pain starts one day before the periods,null,null,null,null,null,null,null,null,null
+4,5|6,Thank you.. <br><br> And how long does the pain last?,gq,null,null,null,null,null,null,null,null,null,null,null
+5,8,Pain stays throughout my period cycle or remains for first 1-2 days.,r,null,Pain stays throughout your period cycle or remains for first 1-2 days.,null,null,null,null,null,null,null,null,null
+8,9|10|11|12,I get that.. <br><br> Is the pain accompanied by any of the following?,gq,null,null,null,null,null,null,null,null,null,null,null
+9,26,Nausea/Vomiting,r,null,Nausea/Vomiting during pain,null,null,null,null,null,null,null,null,null
+10,26,Headache,r,null,Headache with pain,null,null,null,null,null,null,null,null,null
+11,26,Loose Motions,r,null,Loose Motions with pain,null,null,null,null,null,null,null,null,null
+3,7,Pain starts 3-5 days before the period starts,r,null,Pain starts 3-5 days before the period starts,null,null,null,null,null,null,null,null,null
+7,19|20,I get that.. <br><br> Does pain stops with the starting of the period?,gq,null,null,null,null,null,null,null,null,null,null,null
+19,21,Yes,r,null,Pain stops with starting of the period,null,null,null,null,null,null,null,null,null
+21,22|23|24|25,Is the pain accompanied by any of the following,gq,null,null,null,null,null,null,null,null,null,null,null
+22,26,Nausea/Vomiting,r,null,Nausea/Vomiting,null,null,null,null,null,null,null,null,null
+23,26,Headache,r,null,Headache,null,null,null,null,null,null,null,null,null
+24,26,Loose Motions,r,null,Loose Motions,null,null,null,null,null,null,null,null,null
+26,28|29|30,"Ok.. <br><br>Can you tell me, how severe is the pain?",gq,null,null,null,null,null,null,null,null,null,null,null
+28,31,I can do daily activities but with little difficulty,r,null,Little difficulty in doing daily activities,null,null,null,null,null,null,null,null,null
+31,null,null,d,Painful Periods,null,null,"You seem to be absolutely fine, no need to worry!",null,null,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+29,32,I can not do daily activities at all,r,null,Difficulty in doing daily activities,null,null,null,null,null,null,null,null,null
+30,32,I am bedridden during periods,r,null,Completely bedridden during periods,null,null,null,null,null,null,null,null,null
+32,null,null,d,Painful Periods,null,null,You are at a moderate risk of primary dysmenorrhoea,null,Gynaecologist,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+25,27,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+27,33|35|36,"Ok.. <br><br>Can you tell me, how severe is the pain?",gq,null,null,null,null,null,null,null,null,null,null,null
+33,34,I can do daily activities but with little difficulty,r,null,Little difficulty in doing daily activities,null,null,null,null,null,null,null,null,null
+34,null,null,d,Painful Periods,null,null,"You seem to be absolutely fine, no need to worry!",null,null,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+35,37,I can not do daily activities at all,r,null,Difficulty in doing daily activities,null,null,null,null,null,null,null,null,null
+36,37,I am bedridden during periods,r,null,Completely bedridden during periods,null,null,null,null,null,null,null,null,null
+37,38|39|40|41|43,Understood!.. <br><br>Please also tell me about the associated problems by selecting them.,mrq,null,null,null,null,null,null,null,null,null,null,null
+38,42,I am facing infertility issues,mr,null,Infertility,null,null,null,null,null,null,null,null,null
+39,42,I experience pain during deep penetration while doing sexual activity,mr,null,Pain during deep penetration while doing sexual activity,null,null,null,null,null,null,null,null,null
+40,42,I experience lower back pain,mr,null,Pain in lower back,null,null,null,null,null,null,null,null,null
+41,42,I experience pain during passing urine or stool,mr,null,Pain during urine/stool,null,null,null,null,null,null,null,null,null
+42,null,null,d,Painful Periods,null,null,You are at a moderate risk of endometreosis,null,Gynaecologist,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+43,44,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+44,45|47,We are almost there.. <br><br>Do you experience heavy bleeding during your periods?,gq,null,null,null,null,null,null,null,null,null,null,null
+45,48,Yes,r,null,Heavy bleeding during periods,null,null,null,null,null,null,null,null,null
+46,null,null,d,Painful Periods,null,null,The cause of your pain is unclear,null,Gynaecologist,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+47,46,No,r,null,Heavy bleeding during periods,null,null,null,null,null,null,null,null,null
+48,49|50,Ok.. <br><br>Have you noticed any lump in your stomach?,gq,null,null,null,null,null,null,null,null,null,null,null
+50,51,No,r,null,null,null,null,null,null,null,null,null,null,null
+51,52|54,"Also, have you ever undergone delivery procedure from your vagina?",gq,null,null,null,null,null,null,null,null,null,null,null
+52,53,No,r,null,null,null,null,null,null,null,null,null,null,null
+53,null,null,d,Painful Periods,null,null,The cause of your pain is unclear,null,Gynaecologist,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+54,55,Yes,r,null,Delivered baby in past,null,null,null,null,null,null,null,null,null
+55,null,null,d,Painful Periods,null,null,You are at moderate risk of Adenomyosis,null,Gynaecologist,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+49,56,Yes,r,null,Lump in the stomach,null,null,null,null,null,null,null,null,null
+56,57|58,Do you face any difficulty while passing urine or stool?,gq,null,null,null,null,null,null,null,null,null,null,null
+57,59,Yes,r,null,Difficulty while passing urine or stool,null,null,null,null,null,null,null,null,null
+58,59,No,r,null,null,null,null,null,null,null,null,null,null,null
+59,null,null,d,Painful Periods,null,null,You are at moderate risk of having Fibroid,null,Gynaecologist,null,Rest and relax|Keep yourself hydrated|Gentle massage to abdominal and lower back|Do gentle exercise to improve flow of blood to pelvic area,null,null,null
+12,7,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+20,26,No,r,null,null,null,null,null,null,null,null,null,null,null
+6,7,Pain gets better with the starting of periods,r,null,null,null,null,null,null,null,null,null,null,null

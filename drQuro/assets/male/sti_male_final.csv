@@ -1,0 +1,161 @@
+﻿node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional details,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|2|3|4|5,"Ok, That’s Normal, in India 3 crore people suffer from STI every year. <br><br>Can you tell me about your one primary symptom?",gq,null,null,null,null,null,null,null,null,null,null,null
+1,6,Discharge from the penis,r,null,Discharge from the urethra,null,null,null,null,null,null,null,null,null
+2,7,Swelling of the testicles,r,null,Swelling of the testicles,null,null,null,null,null,null,null,null,null
+3,8,Lump/Swelling on the penis,r,null,Lump/Swelling on the penis,null,null,null,null,null,null,null,null,null
+4,9,Rash or redness on/around the penis,r,null,Rash on/around the penis,null,null,null,null,null,null,null,null,null
+5,10,Itching on/around the penis,r,null,Itching on/around the penis,null,null,null,null,null,null,null,null,null
+6,135|136,I get it.. <br><br>Can you tell me a little about the type of discharge?,gq,null,null,null,null,null,null,null,null,null,null,null
+135,137,Thick white or yellow/Pus-like discharge,r,null,Thick white or yellow/Pus-like discharge,null,null,null,null,null,null,null,null,null
+136,138,Clear and watery discharge,r,null,"Clear, watery discharge",null,null,null,null,null,null,null,null,null
+138,139|140,Ok..  <br><br>Do you also feel a burning sensation when you pass urine?,gq,null,null,null,null,null,null,null,null,null,null,null
+137,141|142,Ok..  <br><br>Do you also feel a burning sensation when you pass urine?,gq,null,null,null,null,null,null,null,null,null,null,null
+139,154,Yes,r,null,Burning sensation while passing urine,null,null,null,null,null,null,null,null,null
+140,154,No,r,null,null,null,null,null,null,null,null,null,null,null
+154,149|150,Understood.. We are almost there. <br><br>Have you also got fever recently?,gq,null,null,null,null,null,null,null,null,null,null,null
+149,155,Yes,r,null,Fever,null,null,null,null,null,null,null,null,null
+150,155,No,r,null,null,null,null,null,null,null,null,null,null,null
+155,151|152,Just the last question.. <br><br>Are your testicles swollen?,gq,null,null,null,null,null,null,null,null,null,null,null
+151,153,Yes,r,null,Swelling of testicles,null,null,null,null,null,null,null,null,null
+152,153,No,r,null,null,null,null,null,null,null,null,null,null,null
+153,null,null,d,STD/STI,null,Nongonococcal urethritis or NGU is inflammation of the urethra. The main cause of NGU is having unprotected sex with an infected person. But there are nonsexual causes of NGU as well including UTIs.,Moderate risk of non-gonococcal urethritis,Nongonococcal urethritis or NGU is inflammation of the urethra. The main cause of NGU is having unprotected sex with an infected person. But there are nonsexual causes of NGU as well including UTIs.,Venereologist,STD swab test,Do not have sex till this gets treated|Make sure to get your partner also tested ,null,null,null
+141,156,Yes,r,null,Burning sensation while passing urine,null,null,null,null,null,null,null,null,null
+142,156,No,r,null,null,null,null,null,null,null,null,null,null,null
+156,143|144,Understood! We are almost there. <br><br>Have you also got fever recently?,gq,null,null,null,null,null,null,null,null,null,null,null
+143,145,Yes,r,null,Fever,null,null,null,null,null,null,null,null,null
+144,145,No,r,null,null,null,null,null,null,null,null,null,null,null
+145,146|147,Just the last question.. <br><br>Are your testicles swollen?,gq,null,null,null,null,null,null,null,null,null,null,null
+146,148,Yes,r,null,Swelling at testicles,null,null,null,null,null,null,null,null,null
+147,148,No,r,null,null,null,null,null,null,null,null,null,null,null
+148,null,null,d,STD/STI,null,"It is a sexually transmitted Infection. If urethritis is caused by gonorrhoea, it is known as gonococcal urethritis. It can have a number of possible causes, such as an infection, irritation or damage to the urethra.",Moderate risk of gonococcal urethritis,null,Venereologist,STD swab test,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+7,121|122,I get it.. <br><br>Do you feel any pain while passing urine?,gq,null,null,null,null,null,null,null,null,null,null,null
+121,123,Yes,r,null,Pain while passing urine,null,null,null,null,null,null,null,null,null
+122,123,No,r,null,null,null,null,null,null,null,null,null,null,null
+123,124|125,Hmm.. <br><br>Have you recently had fever also?,gq,null,null,null,null,null,null,null,null,null,null,null
+124,126,Yes,r,null,Fever,null,null,null,null,null,null,null,null,null
+125,126,No,r,null,null,null,null,null,null,null,null,null,null,null
+126,127|128,Understood.. <br><br>Have you recently noticed any abnormal or coloured discharge coming from your penis?,gq,null,null,null,null,null,null,null,null,null,null,null
+127,129,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+129,130|131,Do not worry.. <br><br>Please tell me about the type and colour of the discharge?,gq,null,null,null,null,null,null,null,null,null,null,null
+130,132,Thick white/yellow and pus-like discharge,r,null,Thick white or yellow pus-like discharge from penis,null,null,null,null,null,null,null,null,null
+131,133,Clear discharge,r,null,Clear discharge from penis,null,null,null,null,null,null,null,null,null
+132,null,null,d,STD/STI,null,"It is a sexually transmitted Infection. If urethritis is caused by gonorrhoea, it is known as gonococcal urethritis. It can have a number of possible causes, such as an infection, irritation or damage to the urethra.",Moderate risk of gonococcal urethritis,null,Venereologist,STD swab test,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+133,null,null,d,STD/STI,null,"Nongonococcal urethritis, or NGU, is inflammation of the urethra. The main cause of NGU is having unprotected sex with an infected person. But there are nonsexual causes of NGU as well, including UTIs.",Moderate risk of non-gonococcal urethritis,null,Venereologist,STD swab test,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+128,134,No,r,null,null,null,null,null,null,null,null,null,null,null
+134,null,null,d,STD/STI,null,"Chlamydia infections spread through sexual contact, when vaginal fluid or semen containing the bacteria that causes chlamydia travels from one person to another. Sexual contact includes all kinds of sex, including sex that doesn't involve penetration or ejaculation.",Moderate risk of chlamydial infection,null,Venereologist,STD/STI urine test,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+8,74|86,I get it.. <br><br>And how many lumps have you noted?,gq,null,null,null,null,null,null,null,null,null,null,null
+74,75,Only one,r,null,Single Lump,null,null,null,null,null,null,null,null,null
+75,76|77|999,"It will be helpful for me, if you can tell me how does the lump look like?",imgq,null,null,null,null,null,null,null,null,null,null,null
+76,78,Swelling with ulcers,r|img,null,Swelling with ulcers,null,null,null,null,null,null,null,null,ai_images/sti_male_node_76.png
+77,78,Fleshy swelling,r|img,null,Fleshy swelling,null,null,null,null,null,null,null,null,ai_images/sti_male_node_77.png
+999,78,Fleshy swelling,r|img,null,Fleshy swelling,null,null,null,null,null,null,null,null,ai_images/sti_male_node_999.png
+78,79|80,Ok.. We are almost there.. <br><br>Is there kind of associating pain also?,gq,null,null,null,null,null,null,null,null,null,null,null
+79,81,Yes,dr,null,Pain in/around penis,null,null,null,null,null,null,null,null,null
+80,81,No,r,null,null,null,null,null,null,null,null,null,null,null
+81,82|83,Have you noticed any bloody discharge from penis recently?,gq,null,null,null,null,null,null,null,null,null,null,null
+82,998|997,Yes,dr|drchk,null,Bloody discharge from penis,null,null,null,null,null,null,null,null,null
+998,null,null,d1,STD/STI,null,"Lumps and bumps can appear on your penis and nearby groin areas for many reasons. Most of them are really nothing to give a second thought. But some causes, such as sexually transmitted infections, can cause unusual or painful bumps, sores, or lesions that you’ll need to get checked out by your doctor.
+",The reason of lump/sewlling is not clear but you are advised to meet the recommended doctor,null,Urologist/Andrologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+997,null,null,d0,STD/STI,null,"Syphilis is a bacterial infection usually spread by sexual contact. The disease starts as aSyphilis is a bacterial infection usually spread by sexual contact. The disease starts as a painless sore — typically on the genitals, rectum or mouth. Syphilis spreads from person to person via skin or mucous membrane contact with these sores. After the initial infection, the syphilis bacteria can remain inactive in the body for decades before becoming active again. painless sore — typically on the genitals, rectum or mouth. Syphilis spreads from person to person via skin or mucous membrane contact with these sores.",Moderate risk of syphilis,null,Venereologist,STD/STI blood test,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+83,998|997,No,drchk,null,null,null,null,null,null,null,null,null,null,null
+86,87,Multiple,r,null,Multiple lumps,null,null,null,null,null,null,null,null,null
+87,88|89|90,"It will be helpful for me, if you can tell me how does the lump look like?",imgq,null,null,null,null,null,null,null,null,null,null,null
+88,93,Tiny bumps on penis,r|img,null,Tiny bumps on penis,null,null,null,null,null,null,null,null,ai_images/sti_male_node_88.png
+93,94|95,Do not worry <br><br>Have you noticed any tiny insects/bugs around penis?,gq|img,null,null,null,null,null,null,null,null,null,null,ai_images/sti_male_node_93.png
+94,96,Yes,r,null,Tiny insects in other parts of body,null,null,null,null,null,null,null,null,null
+95,97,No,r,null,null,null,null,null,null,null,null,null,null,null
+96,98|99,We are almost there.. <br><br>Have you noticed bumps in any other areas also (hands/between fingers/face)?,gq|img,null,null,null,null,null,null,null,null,null,null,ai_images/sti_male_node_96.png
+98,100,No,r,null,null,null,null,null,null,null,null,null,null,null
+99,101,Yes,r,null,Bumps in other areas,null,null,null,null,null,null,null,null,null
+100,null,null,d,STD/STI,null,"Pubic lice, commonly called crabs, are tiny insects found in your genital area. They are a different type of louse from head lice and body lice. They measure approx. 1/16 inch (1.6 millimeters) or less.",Moderate risk of having pubic lice,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+101,null,null,d,STD/STI,null,"Scabies rash is a skin condition that is caused by tiny mites called Sarcoptes scabiei. The mites burrow into your skin and cause itching and discomfort. They can cause rashes, redness, and blisters on the skin. Scabies won't go away without treatment and it's highly contagious.",Moderate risk of having scabies,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,"Scabies can spread quickly and is highly contagious. It’s primarily spread through skin-to-skin contact. You can also catch scabies through contact with infected clothing and bedding, but this is less common.",null,null
+97,102|103,We are almost there.. <br><br>Have you noticed bumps in any other areas also (hands/between fingers/face)?,gq|img,null,null,null,null,null,null,null,null,null,null,ai_images/sti_male_node_97.png
+102,104,Yes,r,null,Bumps in other areas,null,null,null,null,null,null,null,null,null
+103,104,No,r,null,null,null,null,null,null,null,null,null,null,null
+104,105|106,Just the last one.. <br><br>Do you get more uncomfortable during the nighttime as compared to daytime?,gq,null,null,null,null,null,null,null,null,null,null,null
+105,101,Yes,r,null,Symptoms worsen at night,null,null,null,null,null,null,null,null,null
+106,107,No,r,null,null,null,null,null,null,null,null,null,null,null
+107,null,null,d,STD/STI,null,"Lumps and bumps can appear on your penis and nearby groin areas for many reasons. Most of them are really nothing to give a second thought. But some causes, such as sexually transmitted infections, can cause unusual or painful bumps, sores, or lesions that you’ll need to get checked out by your doctor.
+",The cause of your lumps/swelling is not clear but you are advised to meet the recommended doctor,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+89,92,Cauliflower like bumps,r|img,null,Cauliflower like bumps,null,null,null,null,null,null,null,null,ai_images/sti_male_node_89.png
+92,108|109,"Oh, I see.. <br><br>Do you also have pain around these lumps",gq,null,null,null,null,null,null,null,null,null,null,null
+108,110,Yes,r,null,Pain around swelling,null,null,null,null,null,null,null,null,null
+110,111|112,hmm..  <br><br>And have you noticed the same lumps anywhere else on your body too?,gq,null,null,null,null,null,null,null,null,null,null,null
+111,113,Yes,r,null,Lumps in other parts of body,null,null,null,null,null,null,null,null,null
+113,null,null,d,STD/STI,null,"Genital warts are one of the most common types of sexually transmitted infections. Nearly all sexually active people will become infected with at least one type of human papillomavirus (HPV), the virus that causes genital warts, at some point during their lives. Vaccines can help protect against certain strains of genital HPV.",Moderate risk of genital warts,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,Genital warts are almost always spread through sexual contact. Your warts don't have to be visible for you to spread the infection to your sexual partner.,null,null
+112,113,No,r,null,null,null,null,null,null,null,null,null,null,null
+109,110,no,r,null,null,null,null,null,null,null,null,null,null,null
+90,91,Fleshy swelling of about 1 cm in size,r|img,null,Fleshy swelling,null,null,null,null,null,null,null,null,ai_images/sti_male_node_90.png
+91,114|115,Ok.. <br><br>Is there any associated  pain also in/around your penis?,gq,null,null,null,null,null,null,null,null,null,null,null
+114,116,Yes,dr,null,Pain around penis,null,null,null,null,null,null,null,null,null
+115,116,No,r,null,null,null,null,null,null,null,null,null,null,null
+116,117|119,We are almost there.. <br><br>Is there any bloody discharge from penis?,gq,null,null,null,null,null,null,null,null,null,null,null
+117,995|996,Yes,dr|drchk,null,Bloody discharge from penis,null,null,null,null,null,null,null,null,null
+995,null,null,d1,STD/STI,null,null,Your symptoms are concerning. Please consult the recommended doctor.,null,Urologist/Andrologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+996,null,null,d0,STD/STI,null,"Syphilis is a bacterial infection usually spread by sexual contact. The disease starts as aSyphilis is a bacterial infection usually spread by sexual contact. The disease starts as a painless sore — typically on the genitals, rectum or mouth. Syphilis spreads from person to person via skin or mucous membrane contact with these sores. After the initial infection, the syphilis bacteria can remain inactive in the body for decades before becoming active again. painless sore — typically on the genitals, rectum or mouth. Syphilis spreads from person to person via skin or mucous membrane contact with these sores.",Moderate risk of Syphilis,"Syphilis is a bacterial infection usually spread by sexual contact. The disease starts as syphilis a bacterial infection usually spread by sexual contact. The disease starts as a painless sore — typically on the genitals, rectum or mouth. Syphilis spreads from person to person via skin or mucous membrane contact with these sores. After the initial infection, the syphilis bacteria can remain inactive in the body for decades before becoming active again. painless sore — typically on the genitals, rectum or mouth. Syphilis spreads from person to person via skin or mucous membrane contact with these sores.",Venereologist,STD/STI blood test,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+119,995|996,No,drchk,null,null,null,null,null,null,null,null,null,null,null
+9,44|45|46,Ok.. Do not worry at all.. <br><br>Can you help me understand the condition of your rash?,imgq,null,null,null,null,null,null,null,null,null,null,null
+44,49,Rash with blisters.,r|img,null,Rash with blisters,null,null,null,null,null,null,null,null,ai_images/sti_male_node_44.png
+49,54|55,I get that.. <br><br>And do you have pain also around the rash?,gq,null,null,null,null,null,null,null,null,null,null,null
+55,58,Yes,r,null,Pain around the rash,null,null,null,null,null,null,null,null,null
+54,58,No,r,null,null,null,null,null,null,null,null,null,null,null
+58,63|64,Just two more questions.. <br><br>Have you recently had fever?,gq,null,null,null,null,null,null,null,null,null,null,null
+63,66,No,r,null,null,null,null,null,null,null,null,null,null,null
+64,66,Yes,r,null,Fever,null,null,null,null,null,null,null,null,null
+66,71|72,We are almost there.. <br><br>Have you noticed the similar rashes in any other parts of your body too?,gq,null,null,null,null,null,null,null,null,null,null,null
+71,73,Yes,r,null,Rashes in other parts of body,null,null,null,null,null,null,null,null,null
+72,73,No,r,null,null,null,null,null,null,null,null,null,null,null
+73,null,null,d,STD/STI,null,"Genital herpes is a common sexually transmitted infection caused by the herpes simplex virus (HSV). Sexual contact is the primary way that the virus spreads. After the initial infection, the virus lies dormant in your body and can reactivate several times a year.",Moderate risk of Herpes,null,Venereologist,STD swab test,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+45,48,Dry rash with scaling or flaking,r|img,null,Dry rash with scaling,null,null,null,null,null,null,null,null,ai_images/sti_male_node_45.png
+48,52|53,I get that.. <br><br>Do you experience itching also around the rash?,gq,null,null,null,null,null,null,null,null,null,null,null
+52,57,No,r,null,null,null,null,null,null,null,null,null,null,null
+53,57,Yes,r,null,Itching around the rash,null,null,null,null,null,null,null,null,null
+57,61|62,We are almost there.. <br><br>Have you noticed similar rashes in any other parts of your body too?,gq,null,null,null,null,null,null,null,null,null,null,null
+61,70,No,r,null,null,null,null,null,null,null,null,null,null,null
+62,70,Yes,r,null,Rashes in other parts of the body,null,null,null,null,null,null,null,null,null
+70,null,null,d,STD/STI,null,"Yes, men can get yeast infections, too, which can lead to a condition known as balanitis — inflammation of the head of the penis. Yeast infections in men are common because the fungus that causes yeast infections (candida) is normally present on skin, especially moist skin",Moderate risk of fungal skin infection (Tinea),null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+46,47,Red rash with curd-like discharge,r|img,null,Red rash with curd-like discharge,null,null,null,null,null,null,null,null,ai_images/sti_male_node_46.png
+47,50|51,I get that.. <br><br>And do you have pain also around the rash?,gq,null,null,null,null,null,null,null,null,null,null,null
+51,56,No,r,null,null,null,null,null,null,null,null,null,null,null
+50,56,Yes,r,null,Pain around the rash,null,null,null,null,null,null,null,null,null
+56,59|60,Just two more questions to go.. <br><br>Have you noticed similar rashes in any other parts of your body too?,gq,null,null,null,null,null,null,null,null,null,null,null
+60,65,No,r,null,null,null,null,null,null,null,null,null,null,null
+59,65,Yes,r,null,Rashes in other parts of the body,null,null,null,null,null,null,null,null,null
+65,67|68,Hmm.. <br><br>Have you recently had fever also?,gq,null,null,null,null,null,null,null,null,null,null,null
+67,69,Yes,r,null,Fever,null,null,null,null,null,null,null,null,null
+68,69,No,r,null,null,null,null,null,null,null,null,null,null,null
+69,null,null,d,STD/STI,null,"Yes, men can get yeast infections, too, which can lead to a condition known as balanitis — inflammation of the head of the penis. Yeast infections in men are common because the fungus that causes yeast infections (candida) is normally present on skin, especially moist skin",Moderate risk of Candidial/Yeast infection,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+10,11|12,Ok.. <br><br>Have you noticed any swelling/bumps also on or around the penis?,gq,null,null,null,null,null,null,null,null,null,null,null
+11,14,Yes,r,null,Swelling/bumps in the genitals,null,null,null,null,null,null,null,null,null
+14,17|18,"Alright, not to worry.. <br><br>Please help me understand, how does the swelling/bumps look like?",imgq,null,null,null,null,null,null,null,null,null,null,null
+17,20,Tiny bumps,r|img,null,Tiny bumps,null,null,null,null,null,null,null,null,ai_images/sti_male_node_17.png
+20,30|31,Good.. <br><br>Then have you noticed tiny insects/bugs around penis?,gq|img,null,null,null,null,null,null,null,null,null,null,ai_images/sti_male_node_20.png
+31,33,No,r,null,null,null,null,null,null,null,null,null,null,null
+30,33,Yes,r,null,Tiny bugs in genital,null,null,null,null,null,null,null,null,null
+33,34|35,"We are almost there.. <br><br>Have you noticed similar bumps in any other parts of your body (hands, between fingers, face) too?",gq,null,null,null,null,null,null,null,null,null,null,null
+35,43,No,r,null,null,null,null,null,null,null,null,null,null,null
+43,null,null,d,STD/STI,null,"Pubic lice, commonly called crabs, are tiny insects found in your genital area. They are a different type of louse from head lice and body lice. They measure approx. 1/16 inch (1.6 millimeters) or less.",Moderate risk of pubic lice,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+34,36,Yes,r,null,Bumps in other areas,,null,null,null,null,null,null,null,null
+36,null,null,d,STD/STI,null,"Scabies rash is a skin condition that is caused by tiny mites called Sarcoptes scabiei. The mites burrow into your skin and cause itching and discomfort. They can cause rashes, redness, and blisters on the skin. Scabies won't go away without treatment and it's highly contagious.",Moderate risk of scabis,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,"Scabies can spread quickly and is highly contagious. It’s primarily spread through skin-to-skin contact. You can also catch scabies through contact with infected clothing and bedding, but this is less common.",null,null
+18,21,Cauliflower like bumps,r|img,null,Cauliflower like bumps,null,null,null,null,null,null,null,null,ai_images/sti_male_node_18.png
+21,28|29,Ok.. <br><br>And do you have pain also around the bumps?,gq,null,null,null,null,null,null,null,null,null,null,null
+29,32,No,r,null,null,null,null,null,null,null,null,null,null,null
+28,32,Yes,r,null,Pain around the bumps,null,null,null,null,null,null,null,null,null
+32,37|38,Thank you! We are almost there.. <br><br>Have you noticed these similar bumps anywhere else also on your body?,gq,null,null,null,null,null,null,null,null,null,null,null
+37,39,No,r,null,null,null,null,null,null,null,null,null,null,null
+38,39,Yes,r,null,Bumps in other parts of bodies,null,null,null,null,null,null,null,null,null
+39,null,null,d,STD/STI,null,"Genital warts are one of the most common types of sexually transmitted infections. Nearly all sexually active people will become infected with at least one type of human papillomavirus (HPV), the virus that causes genital warts, at some point during their lives. Vaccines can help protect against certain strains of genital HPV.",Moderate risk of genital warts,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,Genital warts are almost always spread through sexual contact. Your warts don't have to be visible for you to spread the infection to your sexual partner.,null,null
+12,13,No,r,null,null,null,null,null,null,null,null,null,null,null
+13,15|16,Have you noticed tiny insects/bugs around penis?,gq|img,null,null,null,null,null,null,null,null,null,null,ai_images/sti_male_node_13.png
+16,19,No,r,null,null,null,null,null,null,null,null,null,null,null
+15,19,Yes,r,null,Insectes/bugs around penis,null,null,null,null,null,null,null,null,null
+19,22|23,"Have you noticed similar tiny insects/bugs in other areas of your body (hands, between fingers, face)?",gq|img,null,null,null,null,null,null,null,null,null,null,ai_images/sti_male_node_19.png
+22,27,Yes,r,null,Tiny insects in other parts of body,null,null,null,null,null,null,null,null,null
+27,40|41,"Not to worry, they are completely treatable.. <br><br>Do your symptoms make you more uncomfortable during night as compared to daytime?",gq,null,null,null,null,null,null,null,null,null,null,null
+40,36,Yes,r,null,Symptom get worsen at night,null,null,null,null,null,null,null,null,null
+41,42,No,r,null,null,null,null,null,null,null,null,null,null,null
+42,null,null,d,STD/STI,null,null,The cause of your itching is not clear. Please consult the recommended doctor,null,Venereologist,null,Do not have sex till this gets treated|Make sure to get your partner also tested,null,null,null
+23,24,No,r,null,null,null,null,null,null,null,null,null,null,null
+24,25|26,Just four more questions to go.. <br><br>Do you also have red rash around your penis?,gq,null,null,null,null,null,null,null,null,null,null,null
+26,27,No,r,null,null,null,null,null,null,null,null,null,null,null
+25,9,Yes,r,null,Red rash around penis,null,null,null,null,null,null,null,null,null

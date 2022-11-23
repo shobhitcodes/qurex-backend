@@ -12,6 +12,7 @@ const patientRouter = require('./routes/patient');
 const adminRouter = require('./routes/admin');
 const paymentRouter = require('./routes/payment');
 const bookingRouter = require('./routes/booking');
+const drQuroRouter = require('./routes/doctorQuro');
 
 const app = express();
 const port = process.env.PORT || 3700;
@@ -38,6 +39,7 @@ app.use('/api/patient', patientRouter);
 app.use('/api/admin', adminRouter);
 app.use('/api/payment', paymentRouter);
 app.use('/api/booking', bookingRouter);
+app.use('/api/drQuro', drQuroRouter); 
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);

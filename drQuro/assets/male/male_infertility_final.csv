@@ -1,0 +1,82 @@
+﻿node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|2|3,"Please note..not being able to conceive doesn’t mean you cannot conceive. In today's time, conception is possible in 90 per cent of complicated issues as well.<br><br>Can you first tell me for how long have you and your partner been trying to conceive without any protection?",gq,null,null,null,null,null,null,null,null,null,null,null
+1,4,Less than 6 months,r,null,Trying for less than 6 months,null,null,null,null,null,null,null,null,null
+2,12,More than 6 months but less than a year,r,null,Trying for more than 6 months but less than a year,null,null,null,null,null,null,null,null,null
+3,14,More than 1 year,r,null,Trying for more than 1 year,null,null,null,null,null,null,null,null,null
+4,5|21,Alright.. <br><br>Do you think that your erections during the sexual activity are not as good or long as you want them to be?,gq,null,null,null,null,null,null,null,null,null,null,null
+5,6,"Yes, I think my erections can be better ",r,null,Trouble maintaining an erection during penetration,null,null,null,null,null,null,null,null,null
+6,8|7,"Not to worry at all, most of the time, that’s treatable.. <br><br>Just the last one, do you think that you have firm erections at other times of the day like early morning, right after you wake up, masturbation but not during the sexual intercourse with your partner.",gq,null,null,null,null,null,null,null,null,null,null,null
+7,9,"No, I have similar erections all the time.",r,null,"No,  firm erections at other times too",null,null,null,null,null,null,null,null,null
+9,null,null,d,Infertility,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",Low risk of Erectile Dysfunction,null,Urologist/Andrologist,null,"Exercices like Kegel and yoga can be very helpful to cure ED.|Relationship therapy, healthy lifestyle, healthy food habits and relationship therapy ( if required) are best advised for ED patients.",null,null,null
+8,10,"Yes, I have firm/satisfactory erections during other times or activities in the day.",r,null,Firm erection at other times of the day,null,null,null,null,null,null,null,null,null
+10,null,null,d,Infertility,null,"Erectile Dysfunction (ED) happens when a penis owner has ongoing problems getting and keeping an erection. Without treatment, ED can make sex difficult. The problem is commonly reported by 1 in 5 men and may increase with age.",You seem to have situational erectile dysfunction,null,Psychiatrist (Sexology),null,"Situational ED happens when you face erection issues not always but under some specific circumstances.|Relationship therapy, healthy lifestyle, healthy food habits and relationship therapy ( if required) are best advised for ED patients.",null,null,null
+21,22,"No, I think my erections are absolutely fine ",r,null,null,null,null,null,null,null,null,null,null,null
+22,23|24,Understood!.. Do you feel that you generally have delayed or no ejaculation after the sexual activity with your partner?,gq,null,null,null,null,null,null,null,null,null,null,null
+23,25,"Yes, I think I face some problems in ejaculation ",r,null,Problem in ejaculation,null,null,null,null,null,null,null,null,null
+25,26|28|27,You are doing good.. <br><br>Please help me understand by choosing if you experience either of the following?,gq,null,null,null,null,null,null,null,null,null,null,null
+26,30,I get premature ejaculation (Orgasm happens early)?,r,null,null,null,null,null,null,null,null,null,null,null
+27,31,None of these,r,null,null,null,null,null,null,null,null,null,null,null
+30,null,null,d,Infertility,null,"Ejaculation issues can be of four types, Premature ejaculation, delayed ejaculation, retrograde ejaculation or no ejaculation. All can cause delay/problem in conception. It is mostly treatable with the right medical advise.",Low risk of ejaculation issues ,null,Urologist/Andrologist,null,"Some self-help techniques for dealing with premature ejaculation|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.| Using thick condoms to reduce sensation |Masturbating 1- 2 hours before sex",null,null,null
+28,30,I never ejaculate or face extreme difficulty in ejaculating during intercourse (Anejaculation)?,r,null,null,null,null,null,null,null,null,null,null,null
+24,31,"No, I do not think I face any problem while ejaculating",r,null,null,null,null,null,null,null,null,null,null,null
+31,32|33,"Thanks for sharing.. <br><br>To help my assessment better, please help me understand if you enjoy sexual intercourse with your partner?",gq,null,null,null,null,null,null,null,null,null,null,null
+32,83,"Yes, I enjoy sexual activity with my partner ",r,null,null,null,null,null,null,null,null,null,null,null
+83,35|36,Are you and your partner having intercourse happily to conceive?,gq,null,null,null,null,null,null,null,null,null,null,null
+37,null,null,d,Infertility,null,null,You seem to have relationship/intimacy issues,null,Relationship Therapist,null,A healthy relationship helps one face any challenges together.|Also healthy relationship will bring in more intimacy and is thus always good to increase chances of fertility.,null,null,null
+36,38,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+35,37,No,r,null,Unhappy intercourse,null,null,null,null,null,null,null,null,null
+38,39|40|41|43,"I get that.. <br><br>Please confirm, if you have any of these ever in your medical history. ",gq,null,null,null,null,null,null,null,null,null,null,null
+39,70,Surgery in your groin area (example:- Hernia surgery),r,null,Hernia Surgery in past,null,null,null,null,null,null,null,null,null
+40,70,Surgery on your genitals (Hydrocele/varicocele/testicles surgery),r,null,Genital surgery in past,null,null,null,null,null,null,null,null,null
+41,70,"Diseases involving genitals example STI, genital tuberculosis",r,null,Disease involving genitals in past,null,null,null,null,null,null,null,null,null
+42,70,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+70,71|72|73,hmm. <br><br>Have you got a semen analysis test recently done in last 6 months?,gq,null,null,null,null,null,null,null,null,null,null,null
+73,74,"No, I haven't got the test done recently.",r,null,null,null,null,null,null,null,null,null,null,null
+74,null,null,d,Infertility,null,Semen analysis will provide information on your fertility status,Semen analysis required,null,Urologist/Andrologist,Semen analysis,"Please have unprotected intercourse every other day during your partner's fertile period (time of ovulation).|You can try food or supplements that may increase fertility.| Maintain a healthy lifestyle, appropriate weight and abstain from alcohol and smoking.",null,null,null
+71,75,"Yes,  my semen quality & quantity is good ",r,null,semen analysis normal,null,null,null,null,null,null,null,null,null
+75,79|76,That’s great.. <br><br>And has your partner been checked by a gynaecologist yet?,gq,null,null,null,null,null,null,null,null,null,null,null
+76,77,"No, she has not been examined yet",r,null,null,null,null,null,null,null,null,null,null,null
+77,null,null,d,Infertility,null,Causes of infertility in your partner has to be ruled out,Partner needs to be evaluated,null,Gynaecologist,Female Infertility,"Please have unprotected intercourse every other day during your partner's fertile period (time of ovulation).|You can try food or supplements that may increase fertility.| Maintain a healthy lifestyle, appropriate weight and abstain from alcohol and smoking.",null,null,null
+72,78,"Yes, but my semen quality/quantity is not good.",r,null,abnormal semen analysis,null,null,null,null,null,null,null,null,null
+78,null,null,d,Infertility,null,"Rest assured, most couples take up to 6 months to conceive, some up to a year.",Semen health to be improved,null,Urologist/Andrologist,null,"Please have unprotected intercourse every other day during your partner's fertile period (time of ovulation).|You can try food or supplements that may increase fertility.| Maintain a healthy lifestyle, appropriate weight and abstain from alcohol and smoking.| your partner should be evaluated by a Gynecologist with a Specialization in the treatment of Infertility",null,null,null
+79,80,"Yes, she has been examined too",r,null,null,null,null,null,null,null,null,null,null,null
+80,999|81,Good to hear that.. <br><br>And what was the evaluation of the report?,gq,null,null,null,null,null,null,null,null,null,null,null
+999,82,Her evaluation was normal,r,null,Partner healthy for conception,null,null,null,null,null,null,null,null,null
+81,47,Her evaluation was not normal,r,null,Partner not healthy for conception,null,null,null,null,null,null,null,null,null
+82,null,null,d,Infertility,null,null,Cause of infertility unknown,null,Gynaecologist,Female Infertility,"Sometimes, the cause of infertility is not obvious, but guided by an Infertility specialist (Gynecologist) with medication to boost fertility can assist you and your partner to conceive.|Rest assured, most couples take up to 6 months to conceive, and some up to a year.|Please have unprotected intercourse every other day during your partners fertile period (time of ovulation).|You can try food or supplements that may increase fertility.| Maintain a healthy lifestyle, and appropriate weight and abstain from alcohol and smoking.",null,null,null
+47,null,null,d,Infertility,null,null,Partner needs to be evaluated,null,Gynaecologist,Female Infertility,"Rest assured, most couples take up to 6 months to conceive, some up to a year.|Please have unprotected intercourse every other day during your partner's fertile period (time of ovulation).|You can try food or supplements that may increase fertility.| Maintain a healthy lifestyle, and appropriate weight and abstain from alcohol and smoking.",null,null,null
+43,44,None of these,r,null,null,null,null,null,null,null,null,null,null,null
+44,45|46,Ok.. <br><br>Does your partner have regular menstrual cycle?,gq,null,null,null,null,null,null,null,null,null,null,null
+45,998,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+46,47,No,r,null,Irregular menstrual cycle of partner,null,null,null,null,null,null,null,null,null
+998,48|49,And has your partner ever had any gynecologic surgery (reproductive organs) ?,gq,null,null,null,null,null,null,null,null,null,null,null
+48,47,Yes,r,null,Gynaecologic surgery in past,null,null,null,null,null,null,null,null,null
+49,50,No,r,null,null,null,null,null,null,null,null,null,null,null
+50,51|52,"I get that.. <br><br>I wanted to know, Do you smoke/consume alcohol/take recreational drugs regularly?",gq,null,null,null,null,null,null,null,null,null,null,null
+51,54,Yes,r,null,Regular consumption of drugs/smoke/alcohol,null,null,null,null,null,null,null,null,null
+54,null,null,d,Infertility,null,"A healthy lifestyle, appropriate weight and abstain from alcohol and smoking is helpful in conception",Lifestyle change required,null,Psychiatrist (Sexology),null,"Please have unprotected intercourse every other day during your partner's fertile period (time of ovulation).|You can try food or supplements that may increase fertility.| Maintain a healthy lifestyle, appropriate weight and abstain from alcohol and smoking.| your partner should be evaluated by a Gynecologist with a Specialization in the treatment of Infertility",null,null,null
+52,53,No,r,null,null,null,null,null,null,null,null,null,null,null
+53,null,null,d,Infertility,null,null,You seem to be fine. In case the situation bothers you can consult the recommended doctor,null,Gynaecologist,null,"Please have unprotected intercourse every other day during your partner's fertile period (time of ovulation).|You can try food or supplements that may increase fertility.| Maintain a healthy lifestyle, appropriate weight and abstain from alcohol and smoking.| your partner should be evaluated by a Gynecologist with a Specialization in the treatment of Infertility",null,null,null
+33,34,No or I am not sure ,r,null,Does/May not enjoy sexual intercourse with partner,null,null,null,null,null,null,null,null,null
+34,null,null,d,Infertility,null,null,You seem to have relationship issues,null,Relationship Therapist,null,A healthy relationship helps one face any challenges together.|Also healthy relationship will bring in more intimacy and is thus always good to increase chances of fertility.,null,null,null
+12,13|11,We are almost there.. <br><br>Are you or your partner above 35 years of age or have any chronic illness?,gq,null,null,null,null,null,null,null,null,null,null,null
+13,14,Yes,r,null,Age above 35 years/chronic illness,null,null,null,null,null,null,null,null,null
+11,4,No,r,null,null,null,null,null,null,null,null,null,null,null
+14,15|55,Alright.. <br><br>Do you feel that you face problems in maintaining erection while doing intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+15,6,Yes or maybe ,r,null,Problem in maintaining erection,null,null,null,null,null,null,null,null,null
+55,56,"No, not at all ",r,null,null,null,null,null,null,null,null,null,null,null
+56,57|61,Great.. <br><br>But do you ever feel that you are facing problems in achieving orgasm/ejaculation?,gq,null,null,null,null,null,null,null,null,null,null,null
+57,58,Yes,r,null,Problem in ejaculation,null,null,null,null,null,null,null,null,null
+58,59|60|63,Do you feel you may have either of the following issues?,gq,null,null,null,null,null,null,null,null,null,null,null
+59,65,I ejaculate early (premature ejaculation),r,null,Early ejaculation,null,null,null,null,null,null,null,null,null
+60,65,I face difficulty in ejaculating (delayed/no ejaculation),r,null,Difficulty in ejaculation,null,null,null,null,null,null,null,null,null
+63,62,None of these,r,null,null,null,null,null,null,null,null,null,null,null
+65,null,null,d,Infertility,null,"Ejaculation issues can be of four types, Premature ejaculation, delayed ejaculation, retrograde ejaculation or no ejaculation. All can cause delay/problem in conception. It is mostly treatable with the right medical advise.",You seem to have Ejaculation issues,null,Urologist/Andrologist,null,"Some self-help techniques for dealing with premature ejaculation|Exercising regularly|Consuming food rich in zinc and magnesium, as they may help increase the time to climax.| Using thick condoms to reduce sensation |Masturbating 1- 2 hours before sex",null,null,null
+61,62,No,r,null,null,null,null,null,null,null,null,null,null,null
+62,66|67,"You did well, just last two questions.. <br><br>Do you enjoy having sexual intercourse with your partner?",gq,null,null,null,null,null,null,null,null,null,null,null
+66,997,"Yes,  I enjoy",r,null,null,null,null,null,null,null,null,null,null,null
+67,996,No or I am not sure ,r,null,Does/May not enjoy sexual intercourse with the partner,null,null,null,null,null,null,null,null,null
+997,68|69,Are you both planning and having intercourse during your partner's ovulation period?,gq,null,null,null,null,null,null,null,null,null,null,null
+68,70,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+69,70,No or I am not sure ,r,null,null,null,null,null,null,null,null,null,null,null
+996,null,null,d,Infertility,null,null,You seem to have Intimacy issues,null,Relationship Therapist,null,A healthy relationship helps one face any challenges together.|Also healthy relationship will bring in more intimacy and is thus always good to increase chances of fertility.,null,null,null

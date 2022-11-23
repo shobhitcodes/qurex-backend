@@ -1,0 +1,108 @@
+﻿node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|23|65,"Pain during sex is normal and is treatable in most cases. <br><br>Can you please tell me, how long have you had pain during sex?",gq,null,null,null,null,null,null,null,null,null,null,null
+1,2,Since I became sexually active,r,null,Pain since I became sexually active,null,null,null,null,null,null,null,null,null
+2,3|5,I get that.. <br><br> Do you have difficulty retracting the prepuce (foreskin),gq,null,null,null,null,null,null,null,null,null,null,null
+3,4,Yes,r,null,Difficulty in retracting prepuce (foreskin),null,null,null,null,null,null,null,null,null
+4,null,null,d,Pain during sex,null,"Phimosis is a condition of the penis that occurs in some adults and children who aren’t circumcised. If you have phimosis, your foreskin can’t be pulled back (retracted).",Moderate risk of Phimosis,null,Urologist/Andrologist,null,Your healthcare provider will probably suggest a steroid cream to apply to the skin of your penis.|you gently start stretching the foreskin after about two weeks of using the steroid cream.|You may gently start stretching the foreskin after about two weeks of using the steroid cream.,null,null,null
+5,6,No,r,null,null,null,null,null,null,null,null,null,null,null
+6,7|8,And.. <br><br>Have you ever noticed curvature in the penis (penis not straight) during erection?,gq,null,null,null,null,null,null,null,null,null,null,null
+7,10,Yes,r,null,Curvature noticed in the penis during erection,null,null,null,null,null,null,null,null,null
+10,null,null,d,Pain during sex,null,"Penile deformity is a condition where scar tissue causes the penis to curve or lose length or girth. In some cases, it can cause pain and prevent the penis owner from having sex",Moderate risk of Penile Deformity,null,Urologist/Andrologist,null,"If you have very little penis curvature with no pain and no problems with sex, you may not need to be treated at all.| In some cases, the curvature might go away without treatment.",null,null,null
+8,9,No,r,null,null,null,null,null,null,null,null,null,null,null
+9,11|12,Ok.. <br><br>Do you feel it is not easy for you to initiate or maintain an erection during intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+11,13,"Yes, it's difficult for me ",r,null,Difficulty initiating or maintaining an erection during intercourse,null,null,null,null,null,null,null,null,null
+13,null,null,d,Pain during sex,null,null,Moderate risk of Erectile Dysfunction,"Attempting penetration without sufficient rigidity can result in repeated trauma to the penis, which results in pain",Urologist/Andrologist,null,null,null,null,null
+12,14,No or I am not sure ,r,null,null,null,null,null,null,null,null,null,null,null
+14,15|16,Understood!.. Do you feel that your and your partner's genitals are lubricated enough while having intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+15,18,"Yes, we are lubricated.",r,null,null,null,null,null,null,null,null,null,null,null
+17,null,null,d,Pain during sex,null,null,Looks like there is Insufficient Lubrication,"Lubrication is essential for easy penetration. Although the male and female partners produce fluids naturally to assist penetration, sometimes this may be insufficient",Psychiatrist (Sexology),You may use lubricants which are easily available in pharmacies,null,null,null,null
+16,17,"No, we feel dry down there.",r,null,Insufficient lubrication during intercourse,null,null,null,null,null,null,null,null,null
+18,19|20,Great!.. <br><br>Do you enjoy having sex with your partner?,gq,null,null,null,null,null,null,null,null,null,null,null
+19,22,"Yes, I enjoy",r,null,null,null,null,null,null,null,null,null,null,null
+22,null,null,d,Pain during sex,null,null,The Issue remains Unidentified,The cause of your symptoms is not clear,Urologist/Andrologist,null,null,null,null,null
+20,21,No or I am not sure ,r,null,May not be enjoying sex with partner,null,null,null,null,null,null,null,null,null
+21,null,null,d,Pain during sex,null,null,The reason seems to be psychological/relationship based,null,Psychiatrist (Sexology),null,null,null,null,null
+23,24,It's been more than a month now ,r,null,"More than 1 month, I was fine before that",null,null,null,null,null,null,null,null,null
+24,25|26,I get that.. <br><br> Do you have difficulty retracting the prepuce (foreskin),gq,null,null,null,null,null,null,null,null,null,null,null
+25,27,"Yes, I find it difficult",r,null,Developed inability to retract the prepuce (foreskin),null,null,null,null,null,null,null,null,null
+27,null,null,d,Pain during sex,null,null,Moderate risk of Phimosis,Phimosis is the inability to completely retract the prepuce (foreskin),null,null,Your healthcare provider will probably suggest a steroid cream to apply to the skin of your penis.|you gently start stretching the foreskin after about two weeks of using the steroid cream.|You may gently start stretching the foreskin after about two weeks of using the steroid cream.,null,null,null
+26,28,"No, I don’t think it's difficult",r,null,null,null,null,null,null,null,null,null,null,null
+28,29|30,Ok.. <br><br>Do you feel it's not easy for you to initiate or maintain an erection during intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+29,31,"Yes, it is difficult for me ",r,null,Difficulty initiating or maintaining an erection during intercourse,null,null,null,null,null,null,null,null,null
+31,null,null,d,Pain during sex,null,null,Moderate risk of Erectile Dysfunction,"Attempting penetration without sufficient rigidity can result in repeated trauma to the penis, which results in pain",Urologist/Andrologist,null,null,null,null,null
+30,32,No or I am not sure ,r,null,null,null,null,null,null,null,null,null,null,null
+32,33|34,And.. <br><br>Have you ever noticed curvature in the penis (penis not straight) during erection?,gq,null,null,null,null,null,null,null,null,null,null,null
+33,35,Yes,r,null,Curvature noticed in the penis during erection,null,null,null,null,null,null,null,null,null
+35,null,null,d,Pain during sex,null,null,Moderate risk of Peyronie's Disease,"Attempting penetration without sufficient rigidity can result in repeated trauma to the penis, with resultant scarring and development of curvature",Urologist/Andrologist,null,"If you have very little penis curvature with no pain and no problems with sex, you may not need to be treated at all.| In some cases, the curvature might go away without treatment.",null,null,null
+34,36,No,r,null,null,null,null,null,null,null,null,null,null,null
+36,37|38,hmm.. <br><br>Have you also noticed any unusual growth or ulcer on the penis recently?,gq,null,null,null,null,null,null,null,null,null,null,null
+37,39,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+39,null,null,d,Pain during sex,Unusual growth or ulcer on the penis,null,Moderate risk of Ulcer on the penis,null,Urologist/Andrologist,null,"If your symptoms are concerning, please consult a Urologist/Andrologist for further management",null,null,null
+38,40,No,r,null,null,null,null,null,null,null,null,null,null,null
+40,41|42,"We are almost there.. <br><br> Do you think your erections last more than 4 hours, even after finishing sexual activity?",gq,null,null,null,null,null,null,null,null,null,null,null
+42,44,"Yes, at times ",r,null,null,null,null,null,null,null,null,null,null,null
+44,null,null,d,Pain during sex,"Erection lasts more than 4 hours, even after finishing sexual activity",null,Moderate risk of Priapism,Erection that lasts more than 4 hours after cessation of sexual activity can be indicative of pathologic processes in the penis or other systemic diseases,Urologist/Andrologist,Hemogram|Clotting Profile|Ultrasonogram of Penis,null,null,null,null
+41,43,"No, never ",r,null,null,null,null,null,null,null,null,null,null,null
+43,45|46,"You are doing good.. <br><br>Have you noticed any discharge from penis, even at times other than during sexual activity, like pus or bloody discharge?",gq,null,null,null,null,null,null,null,null,null,null,null
+45,47,Yes,r,null,Discharge from Penis,null,null,null,null,null,null,null,null,null
+47,61|62,"Not to worry.. <br><br>Have you recently noticed anything like a rash around penis, lumps, low fever, or recent unprotected intercourse?",gq,null,null,null,null,null,null,null,null,null,null,null
+61,63,Yes,r,null,"rash, lumps, low fever, or recent unprotected intercourse",null,null,null,null,null,null,null,null,null
+63,null,null,d,Pain during sex,null,null,Moderate risk of Sexually Transmitted Infection,null,Urologist/Andrologist,STI Basic|STI Advanced,null,null,null,null
+62,64,No,r,null,null,null,null,null,null,null,null,null,null,null
+64,null,null,d,Pain during sex,null,null,Moderate risk of Acute Prostatitis,null,Urologist/Andrologist,Urine Culture|Semen Culture,Physical examination with a doctor is likely needed,null,null,null
+46,48,No,r,null,null,null,null,null,null,null,null,null,null,null
+48,49|50,Have you also noticed any kind of rash on/around your penis?,gq,null,null,null,null,null,null,null,null,null,null,null
+50,51,Yes,r,null,rash over your penis|Allergc reaction,null,null,null,null,null,null,null,null,null
+52,null,null,d,Pain during sex,null,null,The Issue remains Unidentified,The cause of your symptom is not clear,Psychiatrist (Sexology),null,null,null,null,null
+49,52,No,r,null,null,null,null,null,null,null,null,null,null,null
+51,53|54,Have you recently used new brands of lubricants or condoms?,gq,null,null,null,null,null,null,null,null,null,null,null
+53,55,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+55,null,null,d,Pain During Sex,null,null,Moderate risk of Allergic reaction,Certain chemicals in lubricants and condoms can cause irritation due to allergic reactions to penile skin.,Urologist/Andrologist,null,Do not use these products for 1-2 weeks to see if it improves.,null,null,null
+54,56,No,r,null,null,null,null,null,null,null,null,null,null,null
+56,57|58,"Not to worry.. <br><br>Have you recently noticed anything like a rash around penis, lumps, low fever, or recent unprotected intercourse?",gq,null,null,null,null,null,null,null,null,null,null,null
+57,59,Yes,r,null,"rash, lumps, low fever, or recent unprotected intercourse",null,null,null,null,null,null,null,null,null
+59,null,null,d,Pain during sex,null,null,Moderate risk of Sexually Transmitted Disease,null,Urologist/Andrologist,STI Basic|STI Advanced,null,null,null,null
+58,60,No,r,null,null,null,null,null,null,null,null,null,null,null
+60,null,null,d,Pain During Sex,null,null,The Issue remains Unidentified,The cause of your symptoms is not clear,Psychiatrist (Sexology),null,null,null,null,null
+65,66,"For less than 1 month, I was fine before that.",r,null,null,null,null,null,null,null,null,null,null,null
+66,67|68,Have you noticed cuts or tears in the prepuce (foreskin) or penis after intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+67,69,Yes,r,null,Cuts or tears in the prepuce(foreskin)|Insufficient lubrication during intercourse,null,null,null,null,null,null,null,null,null
+69,99|100,Understood!.. Do you feel that your and your partner's genitals are lubricated enough while having intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+99,101,"Yes, we are lubricated.",r,null,null,null,null,null,null,null,null,null,null,null
+102,null,null,d,Pain During Sex,null,null,Insufficient Lubrication,"Lubrication is essential for easy penetration. Although the male and female partners produce fluids naturally to assist penetration, sometimes these may be insufficient.",Psychiatrist (Sexology),null,You may use lubricants which are easily available In pharmacies.,null,null,null
+100,102,"No, we feel dry down there.",r,null,Insufficient Lubrication during intercourse,null,null,null,null,null,null,null,null,null
+101,103|104,Have you recently developed an inability to retract the prepuce (foreskin)?,gq,null,null,null,null,null,null,null,null,null,null,null
+103,105,Yes,r,null,Difficulty Retracting Prepuce(Foreskin),null,null,null,null,null,null,null,null,null
+105,null,null,d,Pain During Sex,null,null,Moderate risk of Phimosis,Phimosis is the inability to completely retract prepuce (foreskin),Urologist/Andrologist,null,"If you have very little penis curvature with no pain and no problems with sex, you may not need to be treated at all.|In some cases the curvature might go away without treatment.",null,null,null
+104,106,No,r,null,null,null,null,null,null,null,null,null,null,null
+106,null,null,d,Pain During Sex,Trauma/ tears in the foreskin (prepuce) or  penis,null,A Moderate risk of Trauma/ tears,"Trauma/ tears in the foreskin (prepuce) or penis ÔøΩ These can occur after intercourse, especially if there is inadequate lubrication.",null,null,A week without sexual activity will allow these to heal,null,null,null
+68,70,No,r,null,null,null,null,null,null,null,null,null,null,null
+70,71|72,Have you recently developed an inability to retract the prepuce(Foreskin)?,gq,null,null,null,null,null,null,null,null,null,null,null
+71,73,Yes,r,null,Difficulty Retracting Prepuce(Foreskin),null,null,null,null,null,null,null,null,null
+73,null,null,d,Pain During Sex,null,null,A Moderate risk of Phimosis,Phimosis is the inability to completely retract prepuce (foreskin),Urologist/Andrologist,null,"If you have very little penis curvature with no pain and no problems with sex, you may not need to be treated at all.| In some cases, the curvature might go away without treatment.",null,null,null
+72,74,No,r,null,null,null,null,null,null,null,null,null,null,null
+74,75|76,Ok.. <br><br>Do you feel it's not easy for you to initiate or maintain an erection during intercourse?,gq,null,null,null,null,null,null,null,null,null,null,null
+75,77,"Yes, it is difficult for me ",r,null,Difficulty initiating or maintaining an erection during intercourse,null,null,null,null,null,null,null,null,null
+77,null,null,d,Pain During Sex,null,null,A Moderate risk of Erectile Dysfunction,"Attempting penetration without sufficient rigidity can result in repeated trauma to the penis, with resultant pain.",Urologist/Andrologist,null,null,null,null,null
+76,78,No or I am not sure ,r,null,null,null,null,null,null,null,null,null,null,null
+78,79|80,"You are doing good.. <br><br>Have you noticed any discharge from penis, even at times other than during sexual activity, like pus or bloody discharge?",gq,null,null,null,null,null,null,null,null,null,null,null
+79,81,Yes,r,null,"Discharge from urethra, even at times other than during sexual activity",null,null,null,null,null,null,null,null,null
+81,95|96,"Not to worry.. <br><br>Have you recently noticed anything like a rash around penis, lumps, low fever, or recent unprotected intercourse?",gq,null,null,null,null,null,null,null,null,null,null,null
+95,97,Yes,r,null,"rash, lumps, low fever, or recent unprotected intercourse",null,null,null,null,null,null,null,null,null
+97,null,null,d,Pain During Sex,null,null,A Moderate risk of Sexually Transmitted Disease,null,Urologist/Andrologist,STI Basic|STI Advanced,null,null,null,null
+96,98,No,r,null,null,null,null,null,null,null,null,null,null,null
+98,null,null,d,Pain During Sex,null,null,A Moderate risk of Acute Prostatitis,null,Urologist/Andrologist,Urine Culture|Semen Culture,physical examination with a doctor is likely needed.,null,null,null
+80,82,No,r,null,null,null,null,null,null,null,null,null,null,null
+82,83|84,Have you noticed a rash over your penis?,gq,null,null,null,null,null,null,null,null,null,null,null
+83,85,Yes,r,null,rash over your genitalia|Allergc reaction,null,null,null,null,null,null,null,null,null
+86,null,null,d,Pain During Sex,null,null,The Issue Remains  Unidentified,The cause of your symptoms is not clear,Psychiatrist (Sexology),null,null,null,null,null
+84,86,No,r,null,null,null,null,null,null,null,null,null,null,null
+85,87|88,Have you recently started using any new brands of lubricants or condoms?,gq,null,null,null,null,null,null,null,null,null,null,null
+87,89,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+89,null,null,d,Pain During Sex,null,null,A Moderate risk of Allergic reaction,Certain chemicals in lubricants and condoms can cause irritation due to allergic reactions to penile skin.,Urologist/Andrologist,null,Do not use these products for 1-2 weeks to see if it improves.,null,null,null
+88,90,No,r,null,null,null,null,null,null,null,null,null,null,null
+90,91|92,"Not to worry.. <br><br>Have you recently noticed anything like a rash around penis, lumps, low fever, or recent unprotected intercourse?",gq,null,null,null,null,null,null,null,null,null,null,null
+91,93,Yes,r,null,"rash, lumps, low fever, or recent unprotected intercourse",null,null,null,null,null,null,null,null,null
+93,null,null,d,Pain During Sex,null,null,A Moderate risk of Sexually Transmitted Disease,null,Urologist/Andrologist,null,"A urethral swab, urine and semen cultures are likely required.",null,null,null
+92,94,No,r,null,null,null,null,null,null,null,null,null,null,null
+94,null,null,d,Pain During Sex,null,null,The Issue remains Unidentified,The cause of your symptoms is not clear,Psychiatrist (Sexology),null,null,null,null,null
