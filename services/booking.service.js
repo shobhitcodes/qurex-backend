@@ -41,25 +41,25 @@ async function bookAppointment(patientId, doctorId, meta, from) {
         //     }
         // }
 
-        const query = {
-            doctorId,
-            $or: [
-                {
-                    from: {
-                        $gte: moment(from).utc(),
-                        $lt: moment(to).utc().toDate(),
-                    },
-                },
-                { to: { $gte: moment(from).utc(), $lt: moment(to).utc() } },
-            ],
-            active: true,
-            status: { $ne: 'Cancelled' },
-        };
-        const isPreBooked = await Booking.find(query);
+        // const query = {
+        //     doctorId,
+        //     $or: [
+        //         {
+        //             from: {
+        //                 $gte: moment(from).utc(),
+        //                 $lt: moment(to).utc().toDate(),
+        //             },
+        //         },
+        //         { to: { $gte: moment(from).utc(), $lt: moment(to).utc() } },
+        //     ],
+        //     active: true,
+        //     status: { $ne: 'Cancelled' },
+        // };
+        // const isPreBooked = await Booking.find(query);
 
-        if (isPreBooked && isPreBooked.length > 0) {
-            throw 'Booking Colliding with Current Booking Timings';
-        }
+        // if (isPreBooked && isPreBooked.length > 0) {
+        //     throw 'Booking Colliding with Current Booking Timings';
+        // }
 
         const reciept = `PatientBooking-${moment(from).format('DD-MM-YYYY')}-${
             docDetail.feeCharge
