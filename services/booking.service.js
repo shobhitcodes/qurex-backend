@@ -64,6 +64,7 @@ async function bookAppointment(patientId, doctorId, meta, from) {
         const reciept = `PatientBooking-${moment(from).format('DD-MM-YYYY')}-${
             docDetail.feeCharge
         }`;
+        
         const paymentOrder = await PaymentService.createOrder(
             docDetail.feeCharge,
             reciept,

@@ -178,7 +178,8 @@ async function availableSlots(id) {
                 $lte: nextWeek.endOf('d').toDate(),
             },
             active: true,
-            status: { $nin: ['Cancelled', 'Completed', 'PendingConfirmation'] },
+            status: { $nin: ['Cancelled', 'Completed'] },
+            // , 'PendingConfirmation'
         };
 
         const doctorBookings = await Booking.find(doctorQuery);
