@@ -227,13 +227,17 @@ async function signUpViaOTP(otp, mobile) {
 
         await userAuth.updateOne({ _id: _userAuth[0]._id }, { active: false });
 
+        console.log({_userAuth});
+
         // creating new user
         let user = new User({
             mobile,
-            ..._userAuth.meta,
+            ..._userAuth[0].meta,
         });
 
         user = await user.save();
+
+        console.log({user});
 
         if (user.role === 'doctor') {
             await doctorService.create({ userId: user._id });
