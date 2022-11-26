@@ -21,6 +21,7 @@ router.put('/verify/:id', doctorController.verify);
 // crud
 router.get('/', doctorController.getAll);
 router.post('/', doctorController.create);
+router.get('/getAllDocForHomePage', doctorController.getAllDocForHomePage)
 router.get('/:id', doctorController.getById);
 router.get('/getByUserId/:id', doctorController.getByUserId);
 router.put('/:id', doctorController.update);

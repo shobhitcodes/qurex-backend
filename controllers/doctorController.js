@@ -22,6 +22,7 @@ module.exports.availableSlots = availableSlots;
 module.exports.getBookings = getBookings;
 module.exports.getBookingById = getBookingById;
 module.exports.getBookingByUserId = getBookingByUserId;
+module.exports.getAllDocForHomePage = getAllDocForHomePage;
 
 /**
  * @async
@@ -295,3 +296,16 @@ async function getBookingByUserId(req, res) {
         res.json(utils.formatResponse(0, err));
     }
 }
+
+async function getAllDocForHomePage(req, res) {
+    try {
+        const doctors = await doctorService.getAllDocForHomePage();
+        res.json(utils.formatResponse(1, doctors));
+
+    } catch (error) {
+        console.error('Error on booking getByUserId handler: ', error);
+        res.json(utils.formatResponse(0, error));
+    }
+}
+
+

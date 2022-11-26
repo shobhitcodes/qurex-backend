@@ -19,6 +19,7 @@ module.exports.verify = verify;
 module.exports.availableSlots = availableSlots;
 module.exports.getBookings = getBookings;
 module.exports.getBookingById = getBookingById;
+module.exports.getAllDocForHomePage = getAllDocForHomePage;
 
 async function getById(id) {
     try {
@@ -283,5 +284,23 @@ async function getBookingById(id) {
     } catch (err) {
         console.error('Error on getBookingById doctor service: ', err);
         throw err;
+    }
+}
+
+
+async function getAllDocForHomePage() {
+    try {
+        const doctors = await DoctorDetail.find({ verified: true}, {
+            professionalDetail : 1,
+            education : 1,
+            experience : 1,
+            awards : 1,
+            rating : 1
+        })
+        .populate('userId', 'name salutation profilePic')
+        return doctors;
+    } catch (error) {
+        console.error('Error on getByUserId doctor service: ', error);
+        throw error;
     }
 }
