@@ -52,7 +52,7 @@ async function auth(req, res) {
         const user = await userService.auth(mobile, email, password);
         const token = user.generateAuthToken();
         res.header('x-auth-token', token);
-        res.json(utils.formatResponse(1, user._id));
+        res.json(utils.formatResponse(1, user));
     } catch (err) {
         console.error('Error on register handler: ', err);
         res.json(utils.formatResponse(0, err));
