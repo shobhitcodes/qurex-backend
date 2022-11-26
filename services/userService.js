@@ -76,9 +76,12 @@ async function register(name, email, password, mobile, role = 'patient') {
  * @param {*} email
  * @param {*} password
  */
-async function auth(mobile, password) {
+async function auth(mobile, email, password) {
     try {
-        let user = await User.findOne({ mobile, active: true });
+        let user = await User.findOne({
+            $or: [{ mobile }, { email }],
+            active: true,
+        });
         console.log({ user });
         if (!user) throw 'Invalid email or password';
 
@@ -227,7 +230,7 @@ async function signUpViaOTP(otp, mobile) {
 
         await userAuth.updateOne({ _id: _userAuth[0]._id }, { active: false });
 
-        console.log({_userAuth});
+        console.log({ _userAuth });
 
         // creating new user
         let user = new User({
@@ -237,7 +240,7 @@ async function signUpViaOTP(otp, mobile) {
 
         user = await user.save();
 
-        console.log({user});
+        console.log({ user });
 
         if (user.role === 'doctor') {
             await doctorService.create({ userId: user._id });

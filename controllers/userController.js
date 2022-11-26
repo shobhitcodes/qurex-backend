@@ -48,8 +48,8 @@ async function register(req, res) {
  */
 async function auth(req, res) {
     try {
-        const { mobile, password } = req.body;
-        const user = await userService.auth(mobile, password);
+        const { mobile, email, password } = req.body;
+        const user = await userService.auth(mobile, email, password);
         const token = user.generateAuthToken();
         res.header('x-auth-token', token);
         res.json(utils.formatResponse(1, user._id));
