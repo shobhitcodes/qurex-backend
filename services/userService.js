@@ -86,15 +86,12 @@ async function auth(mobile, email, password) {
         email && (userQuery.email = email);
 
         let user = await User.findOne(userQuery);
-        console.log({ user });
+        
         if (!user) throw 'Invalid credentials';
-        // if (!user) throw 'Invalid email or password';
 
         const validPass = await bcrypt.compare(password, user.password);
-        console.log({ validPass });
 
         if (!validPass) throw 'Invalid credentials';
-        // if (!validPass) throw 'Invalid email or password';
 
         return user;
     } catch (err) {
