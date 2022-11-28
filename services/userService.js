@@ -78,17 +78,23 @@ async function register(name, email, password, mobile, role = 'patient') {
  */
 async function auth(mobile, email, password) {
     try {
-        let user = await User.findOne({
-            $or: [{ mobile }, { email }],
+        const userQuery = { 
             active: true,
-        });
+        };
+
+        mobile && (userQuery.mobile = mobile);
+        email && (userQuery.email = email);
+
+        let user = await User.findOne(userQuery);
         console.log({ user });
-        if (!user) throw 'Invalid email or password';
+        if (!user) throw 'Invalid credentials';
+        // if (!user) throw 'Invalid email or password';
 
         const validPass = await bcrypt.compare(password, user.password);
         console.log({ validPass });
 
-        if (!validPass) throw 'Invalid email or password';
+        if (!validPass) throw 'Invalid credentials';
+        // if (!validPass) throw 'Invalid email or password';
 
         return user;
     } catch (err) {
