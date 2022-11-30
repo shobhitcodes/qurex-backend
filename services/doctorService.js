@@ -41,7 +41,7 @@ async function getByUserId(id) {
         const doctor = await DoctorDetail.findOne({ userId: id });
         return doctor;
     } catch (err) {
-        console.error('Error on getById doctor service: ', err);
+        console.error('Error on getByUserId doctor service: ', err);
         throw err;
     }
 }

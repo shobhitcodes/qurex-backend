@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const consultationSchema = new Schema(
     {
         consultationId: String, // custom id
+        bookingId: String, // custom id
         patientId: String,
         doctorId: String,
         meta: String,
@@ -16,6 +17,7 @@ const consultationSchema = new Schema(
         labTests: [String],
         doctorAdvice: String,
         status: String,
+        notes: String,
     },
     { timestamps: true, collection: 'consultation' }
 );
