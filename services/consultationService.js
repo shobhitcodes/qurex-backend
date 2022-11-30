@@ -52,7 +52,7 @@ async function create(consultation) {
         if (!consultation) throw 'data missing';
 
         consultation = new Consultation(consultation);
-        consultation = await doctor.save();
+        consultation = await consultation.save();
 
         return consultation;
     } catch (err) {
