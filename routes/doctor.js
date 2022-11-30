@@ -25,6 +25,7 @@ router.get('/getAllDocForHomePage', doctorController.getAllDocForHomePage)
 router.get('/:id', doctorController.getById);
 router.get('/getByUserId/:id', doctorController.getByUserId);
 router.put('/:id', doctorController.update);
+router.put('updateByUserId/:id', doctorController.updateByUserId);
 router.delete('/:id', doctorController.deleteOne);
 router.get('/availableSlots/:id', doctorController.availableSlots);
 router.get('/bookings/:id', doctorController.getBookings);

@@ -20,6 +20,7 @@ module.exports.availableSlots = availableSlots;
 module.exports.getBookings = getBookings;
 module.exports.getBookingById = getBookingById;
 module.exports.getAllDocForHomePage = getAllDocForHomePage;
+module.exports.updateByUserId = updateByUserId;
 
 async function getById(id) {
     try {
@@ -86,7 +87,24 @@ async function update(id, doctor) {
         console.log({ doctor });
         return doctor;
     } catch (err) {
-        console.error('Error on create doctor service: ', err);
+        console.error('Error on update doctor service: ', err);
+        throw err;
+    }
+}
+
+async function updateByUserId(id, doctor) {
+    try {
+        if (!id || !doctor) throw 'required data missing';
+
+        doctor = await DoctorDetail.findOneAndUpdate({ userId: id }, doctor, {
+            new: true,
+        });
+   
+        if (!doctor) throw 'doctor not found';
+
+        return doctor;
+    } catch (err) {
+        console.error('Error on updateByUserId doctor service: ', err);
         throw err;
     }
 }

@@ -23,6 +23,7 @@ module.exports.getBookings = getBookings;
 module.exports.getBookingById = getBookingById;
 module.exports.getBookingByUserId = getBookingByUserId;
 module.exports.getAllDocForHomePage = getAllDocForHomePage;
+module.exports.updateByUserId = updateByUserId;
 
 /**
  * @async
@@ -305,5 +306,17 @@ async function getAllDocForHomePage(req, res) {
     } catch (error) {
         console.error('Error on booking getByUserId handler: ', error);
         res.json(utils.formatResponse(0, error));
+    }
+}
+
+async function updateByUserId(req, res) {
+    try {
+        const { id } = req.params;
+        let doctor = req.body;
+        doctor = await doctorService.updateByUserId(id, doctor);
+        res.json(utils.formatResponse(1, doctor));
+    } catch (err) {
+        console.error('Error on doctor updateByUserId handler: ', err);
+        res.json(utils.formatResponse(0, err));
     }
 }
