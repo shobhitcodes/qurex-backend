@@ -8,7 +8,7 @@ router.get('/', auth, consultationController.getAll);
 router.post('/', auth, consultationController.create);
 router.get('/:id', auth, consultationController.getById);
 router.get('/getByUserId/:id', auth, consultationController.getByUserId);
-router.put('/:id', auth, doctorController.update);
+router.put('/:id', auth, consultationController.update);
 router.delete('/:id', auth, consultationController.deleteOne);
 
 module.exports = router;
