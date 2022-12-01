@@ -1,14 +1,15 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const user = require('./user');
 const Schema = mongoose.Schema;
 
 const consultationSchema = new Schema(
     {
         consultationId: String, // custom id
         bookingId: String, // custom id
-        patientId: String,
-        doctorId: String,
+        patientId: { type: mongoose.Types.ObjectId, ref: user },
+        doctorId: { type: mongoose.Types.ObjectId, ref: user },
         meta: String,
         issue: String,
         diagnosis: String,
