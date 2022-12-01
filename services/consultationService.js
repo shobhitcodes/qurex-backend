@@ -27,7 +27,7 @@ async function getByUserId(id) {
     try {
         if (!id) throw 'id missing';
 
-        const consultations = await Consultation.findOne({
+        const consultations = await Consultation.find({
             $or: [
                 { patientId: id },
                 { doctorId: id },
