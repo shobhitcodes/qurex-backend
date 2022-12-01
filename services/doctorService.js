@@ -39,7 +39,7 @@ async function getByUserId(id) {
     try {
         if (!id) throw 'id missing';
 
-        const doctor = await DoctorDetail.findOne({ userId: id });
+        const doctor = await DoctorDetail.findOne({ userId: id }).populate('userId');;
         return doctor;
     } catch (err) {
         console.error('Error on getByUserId doctor service: ', err);
