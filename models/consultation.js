@@ -19,6 +19,7 @@ const consultationSchema = new Schema(
         doctorAdvice: String,
         status: String,
         notes: String,
+        since: String,
     },
     { timestamps: true, collection: 'consultation' }
 );
