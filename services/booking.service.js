@@ -189,7 +189,7 @@ async function getByUserId(id) {
     try {
         if (!id) throw 'id missing';
 
-        const bookings = await Booking.find({ $or: [ { patientId: id }, { doctorId: id } ] }).populate(['sessionId', 'doctorId']);
+        const bookings = await Booking.find({ $or: [ { patientId: id }, { doctorId: id } ] }).populate(['sessionId', 'doctorId', 'patientId']);
         return bookings;
     } catch (err) {
         console.error('Error on getByUserId doctor service: ', err);

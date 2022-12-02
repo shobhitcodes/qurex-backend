@@ -316,7 +316,7 @@ async function getAllDocForHomePage() {
             feeCharge: 1,
             businessHours: 1,
         })
-        .populate('userId', 'name salutation profilePic')
+        .populate('userId');
         return doctors;
     } catch (error) {
         console.error('Error on getByUserId doctor service: ', error);
