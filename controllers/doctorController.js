@@ -24,6 +24,7 @@ module.exports.getBookingById = getBookingById;
 module.exports.getBookingByUserId = getBookingByUserId;
 module.exports.getAllDocForHomePage = getAllDocForHomePage;
 module.exports.updateByUserId = updateByUserId;
+module.exports.dashDetails = dashDetails;
 
 /**
  * @async
@@ -317,6 +318,17 @@ async function updateByUserId(req, res) {
         res.json(utils.formatResponse(1, doctor));
     } catch (err) {
         console.error('Error on doctor updateByUserId handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}
+
+async function dashDetails(req, res) {
+    try {
+        const { id } = req.params;
+        const details = await doctorService.dashDetails(id);
+        res.json(utils.formatResponse(1, details));
+    } catch (err) {
+        console.error('Error on doctor dashDetails handler: ', err);
         res.json(utils.formatResponse(0, err));
     }
 }

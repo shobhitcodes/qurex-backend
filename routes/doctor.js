@@ -29,6 +29,7 @@ router.put('/updateByUserId/:id', doctorController.updateByUserId);
 router.delete('/:id', doctorController.deleteOne);
 router.get('/availableSlots/:id', doctorController.availableSlots);
 router.get('/bookings/:id', doctorController.getBookings);
+router.get('/praticeDashDetails/:id', doctorController.dashDetails);
 
 module.exports = router;
 

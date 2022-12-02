@@ -21,6 +21,7 @@ module.exports.getBookings = getBookings;
 module.exports.getBookingById = getBookingById;
 module.exports.getAllDocForHomePage = getAllDocForHomePage;
 module.exports.updateByUserId = updateByUserId;
+module.exports.dashDetails = dashDetails;
 
 async function getById(id) {
     try {
@@ -320,6 +321,78 @@ async function getAllDocForHomePage() {
         return doctors;
     } catch (error) {
         console.error('Error on getByUserId doctor service: ', error);
+        throw error;
+    }
+}
+
+async function dashDetails(id) {
+    try {
+        if (!id) throw 'id missing';
+
+        const dashDetails = {};
+
+        const today = moment().utc();
+
+        let bookingQuery = {
+            doctorId: id,
+            from: {
+                $gte: today.startOf('d').toDate(),
+                $lte: today.endOf('d').toDate(),
+            },
+            active: true,
+            status: { $nin: ['Cancelled'] },
+        };
+
+        let doctorBookings = await Booking.find(bookingQuery).lean();
+
+        dashDetails.todayBookings = doctorBookings.length;
+        dashDetails.nextBookingStart = (doctorBookings.length && doctorBookings[0].from) || null;
+
+        bookingQuery = {
+            doctorId: id,
+            from: {
+                $gte: today.toDate(),
+                $lte: today.add(24, 'hours').toDate(),
+            },
+            active: true,
+            status: { $nin: ['Cancelled'] },
+        };
+
+        doctorBookings = await Booking.find(bookingQuery).lean();
+
+        dashDetails.upcoming24H = doctorBookings.length;
+
+        bookingQuery = {
+            doctorId: id,
+            from: {
+                $gte: today.toDate(),
+                $lte: today.add('1', 'weeks').toDate(),
+            },
+            active: true,
+            status: { $nin: ['Cancelled'] },
+        };
+
+        doctorBookings = await Booking.find(bookingQuery).lean();
+
+        dashDetails.upcoming1W = doctorBookings.length;
+
+        bookingQuery = {
+            doctorId: id,
+            from: {
+                $gte: today.toDate(),
+                $lte: today.add('2', 'weeks').toDate(),
+            },
+            active: true,
+            status: { $nin: ['Cancelled'] },
+        };
+
+        doctorBookings = await Booking.find(bookingQuery).lean();
+
+        dashDetails.upcoming2W = doctorBookings.length;
+
+        return dashDetails;
+    } catch (error) {
+        console.error('Error on dashDetails doctor service: ', error);
         throw error;
     }
 }
