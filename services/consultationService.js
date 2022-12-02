@@ -32,7 +32,7 @@ async function getByUserId(id) {
                 { patientId: id },
                 { doctorId: id },
             ],
-        });
+        }).populate(['doctorId', 'patientId']);
         return consultations;
     } catch (err) {
         console.error('Error on getByUserId consultation service: ', err);
