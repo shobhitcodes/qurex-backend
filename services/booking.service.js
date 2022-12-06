@@ -11,6 +11,8 @@ module.exports.getBookingsByDate = getBookingsByDate;
 module.exports.updateBookingStatus = updateBookingStatus;
 module.exports.getBookingsByFromAndToTime = getBookingsByFromAndToTime;
 module.exports.getByUserId = getByUserId;
+module.exports.update = update;
+module.exports.cancel = cancel;
 
 /**
  * @async
@@ -193,6 +195,40 @@ async function getByUserId(id) {
         return bookings;
     } catch (err) {
         console.error('Error on getByUserId doctor service: ', err);
+        throw err;
+    }
+}
+
+async function update(id, booking) {
+    try {
+        if (!id || !booking) throw 'required data missing';
+
+        booking = await Booking.findByIdAndUpdate(id, booking, {
+            new: true,
+        });
+
+        if (!booking) throw 'booking not found';
+
+        return booking;
+    } catch (err) {
+        console.error('Error on update booking service: ', err);
+        throw err;
+    }
+}
+
+async function cancel(id) {
+    try {
+        if (!id) throw 'id missing';
+
+        booking = await Booking.findByIdAndUpdate(id, { status: 'Cancelled'}, {
+            new: true,
+        });
+
+        if (!booking) throw 'booking not found';
+
+        return booking;
+    } catch (err) {
+        console.error('Error on cancel booking service: ', err);
         throw err;
     }
 }
