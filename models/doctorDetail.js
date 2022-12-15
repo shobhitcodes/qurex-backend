@@ -14,6 +14,7 @@ const professionalDetail = {
         enum: ['Men', 'Women', 'Both men and women'],
     },
     about: String,
+    videoURL: String,
 };
 
 const education = {
