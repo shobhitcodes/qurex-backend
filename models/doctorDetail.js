@@ -62,6 +62,13 @@ const businessHours = {
     slots: [availableSlots],
 };
 
+const bankDetail = {
+    accountName: String,
+    accountNumber: String,
+    ifsc: String,
+    bankName: String,
+};
+
 const doctorDetailSchema = new Schema(
     {
         userId: { type: Schema.Types.ObjectId, ref: 'User' },
@@ -89,6 +96,7 @@ const doctorDetailSchema = new Schema(
         sessionDuration: Number, // in mins
         verified: { type: Boolean, default: false },
         businessHours: [businessHours],
+        bankDetail,
     },
     { timestamps: true, collection: 'doctor_detail' }
 );
