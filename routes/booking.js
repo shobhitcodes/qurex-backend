@@ -12,7 +12,7 @@ const { auth } = require('../middlewares/auth');
 router.get('/:id', doctorController.getBookingById);
 router.get('/getByUserId/:id', doctorController.getBookingByUserId);
 router.put('/:id', bookingController.update);
-router.put('cancel/:id', bookingController.cancel);
+router.put('/cancel/:id', bookingController.cancel);
 // router.delete('/:id', doctorController.deleteOne);
 // router.get('/availableSlots/:id', doctorController.availableSlots);
 // router.get('/bookings/:id', doctorController.getBookings);
