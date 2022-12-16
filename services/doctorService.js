@@ -50,7 +50,7 @@ async function getByUserId(id) {
 
 async function getAll() {
     try {
-        const doctors = await DoctorDetail.find();
+        const doctors = await DoctorDetail.find().populate('userId');
         console.log({ doctors });
         return doctors;
     } catch (err) {
