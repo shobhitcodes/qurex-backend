@@ -308,8 +308,8 @@ async function getBookingById(id) {
 
 async function getAllDocForHomePage() {
     try {
-        // const doctors = await DoctorDetail.find({ verified: true }, {
-        const doctors = await DoctorDetail.find({}, {
+        const doctors = await DoctorDetail.find({ verified: true }, {
+        // const doctors = await DoctorDetail.find({}, {
             professionalDetail : 1,
             education : 1,
             experience : 1,
