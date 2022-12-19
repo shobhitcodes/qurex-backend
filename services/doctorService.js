@@ -145,7 +145,6 @@ async function verify(id) {
 
         if (!doctor) throw 'doctor not found';
 
-        console.log({ doctor });
         return doctor;
     } catch (err) {
         console.error('Error on verify doctor service: ', err);

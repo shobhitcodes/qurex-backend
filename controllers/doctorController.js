@@ -243,7 +243,7 @@ async function getUnverified(req, res) {
 async function verify(req, res) {
     try {
         const { id } = req.params;
-        doctor = await doctorService.verify(id);
+        const doctor = await doctorService.verify(id);
         res.json(utils.formatResponse(1, doctor));
     } catch (err) {
         console.error('Error on doctor verify handler: ', err);
