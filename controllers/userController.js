@@ -19,6 +19,7 @@ module.exports.update = update;
 module.exports.getById = getById;
 module.exports.generateSignUpOTP = generateSignUpOTP;
 module.exports.signUpViaOTP = signUpViaOTP;
+module.exports.getAll = getAll;
 
 
 /**
@@ -240,3 +241,12 @@ async function getById(req, res) {
     }
 }
 
+async function getAll(req, res) {
+    try {
+        const users = await userService.getAll();
+        res.json(utils.formatResponse(1, users));
+    } catch (err) {
+        console.error('Error on user getAll handler: ', err);
+        res.json(utils.formatResponse(0, err));
+    }
+}

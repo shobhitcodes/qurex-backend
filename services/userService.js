@@ -27,6 +27,7 @@ module.exports.loginViaOTP = loginViaOTP;
 module.exports.getById = getById;
 module.exports.generateSignUpOTP = generateSignUpOTP;
 module.exports.signUpViaOTP = signUpViaOTP;
+module.exports.getAll = getAll;
 
 /**
  * @async
@@ -378,6 +379,16 @@ async function getById(id) {
         return user;
     } catch (err) {
         console.error('Error on getById user service: ', err);
+        throw err;
+    }
+}
+
+async function getAll() {
+    try {
+        const users = await User.find();
+        return users;
+    } catch (err) {
+        console.error('Error on getAll user service: ', err);
         throw err;
     }
 }

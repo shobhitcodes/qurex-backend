@@ -22,5 +22,6 @@ router.get('/getAllPatients',auth,admin, userController.getAllPatients);
 
 router.put('/:id', auth, userController.update);
 router.get('/:id', userController.getById);
+router.get('/', userController.getAll);
 
 module.exports = router;
