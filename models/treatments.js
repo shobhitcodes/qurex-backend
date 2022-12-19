@@ -11,7 +11,7 @@ const treatmentSchema = new Schema(
         deactivateDt: Date,
         image: { type: String },
         description: {type: String},
-        gender: { type: String, enum: ['M', 'F', 'B'] },
+        gender: { type: String, enum: ['Male', 'Female', 'Other'] },
         category: {type: mongoose.Types.ObjectId, ref: TreatmentCategory}
 
     },
