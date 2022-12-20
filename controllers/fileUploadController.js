@@ -15,7 +15,7 @@ AWS.config = new AWS.Config({
     signatureVersion: 'v4',
 });
 
-const s3 = new AWS.S3({signatureVersion: 'v4'});
+const s3 = new AWS.S3({ signatureVersion: 'v4' });
 
 module.exports.getFileUploadSignedUrl = getFileUploadSignedUrl;
 
@@ -41,7 +41,7 @@ async function getFileUploadSignedUrl(req, res) {
 }
 
 const getS3SignedUrl = (fileName) => {
-    const signedUrl = s3.getSignedUrl('getObject', {
+    const signedUrl = s3.getSignedUrl('putObject', {
         Key: fileName,
         Bucket: S3BucketName,
         ACL: 'public-read',
