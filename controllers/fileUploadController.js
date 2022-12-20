@@ -32,7 +32,7 @@ module.exports.getFileUploadSignedUrl = getFileUploadSignedUrl;
 async function getFileUploadSignedUrl(req, res) {
     try {
         const {collectionName, user, fileName} = req.params;
-        const signedUrl = getS3SignedUrl(`${user}/${collectionName}/${fileName}`);
+        const signedUrl = getS3SignedUrl(`${fileName}`);
         if(signedUrl) {
             res.json(utils.formatResponse(1, signedUrl));
         } else {

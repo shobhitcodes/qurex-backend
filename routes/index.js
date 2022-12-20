@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 });
 
 router.get(
-    '/fileUploader/:collectionName/:user/:fileName',
+    '/fileUploader/:fileName',
     fileUploadController.getFileUploadSignedUrl
 );
 
