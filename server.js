@@ -19,7 +19,7 @@ const app = express();
 const port = process.env.PORT || 3700;
 const mongoString = process.env.DATABASE_URL;
 
-app.use(express.json({ limit: '5mb' }));
+app.use(express.json({ limit: '10mb' }));
 
 app.use(
     cors({
