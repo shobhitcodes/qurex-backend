@@ -253,9 +253,7 @@ async function verify(req, res) {
 
 async function availableSlots(req, res) {
     try {
-        console.log('here101');
         const { id } = req.params;
-        console.log('availableSlots handler');
         const availableSlots = await doctorService.availableSlots(id);
         res.json(utils.formatResponse(1, availableSlots));
     } catch (err) {
