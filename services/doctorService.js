@@ -183,7 +183,7 @@ async function availableSlots(id) {
             const slots = [];
 
             availableChunks.forEach((chunk) => {
-                const _slots = getTimeSlots(chunk.from, chunk.to);
+                const _slots = getTimeSlots(chunk.from, chunk.to, doctor.sessionDuration);
                 slots.push(..._slots);
             });
 
@@ -257,7 +257,7 @@ async function availableSlots(id) {
     }
 }
 
-function getTimeSlots(start, end) {
+function getTimeSlots(start, end, sessionDuration = 15) {
     var startTime = moment(start, 'HH:mm');
     var endTime = moment(end, 'HH:mm');
 
@@ -269,7 +269,7 @@ function getTimeSlots(start, end) {
 
     while (startTime <= endTime) {
         timeStops.push(new moment(startTime).format('HH:mm'));
-        startTime.add(15, 'minutes');
+        startTime.add(sessionDuration, 'minutes');
     }
 
     return timeStops;
