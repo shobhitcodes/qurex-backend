@@ -1,10 +1,7 @@
-
 'use strict';
 
 const utils = require('../helpers/utils');
 const AWS = require('aws-sdk');
-
-
 
 const AWS_REGION = process.env.AWS_REGION;
 const AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
@@ -15,13 +12,12 @@ AWS.config = new AWS.Config({
     region: AWS_REGION,
     accessKeyId: AWS_ACCESS_KEY_ID,
     secretAccessKey: AWS_SECRET_ACCESS_KEY,
-    signatureVersion: "v4",
+    signatureVersion: 'v4',
 });
 
-// const s3 = new AWS.S3()
+const s3 = new AWS.S3({signatureVersion: 'v4'});
 
 module.exports.getFileUploadSignedUrl = getFileUploadSignedUrl;
-
 
 /**
  * @async
@@ -31,31 +27,25 @@ module.exports.getFileUploadSignedUrl = getFileUploadSignedUrl;
  */
 async function getFileUploadSignedUrl(req, res) {
     try {
-        const {collectionName, user, fileName} = req.params;
+        const { fileName } = req.params;
         const signedUrl = getS3SignedUrl(`${fileName}`);
-        if(signedUrl) {
+        if (signedUrl) {
             res.json(utils.formatResponse(1, signedUrl));
         } else {
-            throw 'Unable to upload Image'
+            throw 'Unable to upload Image';
         }
     } catch (error) {
-        console.error('Error on File Upload handler: ', err);
-        res.json(utils.formatResponse(0, err));
+        console.error('Error on File Upload handler: ', error);
+        res.json(utils.formatResponse(0, error));
     }
-   
 }
 
-
-
-
 const getS3SignedUrl = (fileName) => {
-
-    const signedUrl = s3.getSignedUrl("putObject", {
+    const signedUrl = s3.getSignedUrl('getObject', {
         Key: fileName,
         Bucket: S3BucketName,
-
         ACL: 'public-read',
         Expires: 60 * 60 || 900, // S3 default is 900 seconds (15 minutes)
     });
     return signedUrl;
-}
+};
