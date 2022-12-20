@@ -10,6 +10,7 @@ const userSchema = new Schema(
         salutation: { type: String },
         email: { type: String },
         mobile: { type: String },
+        gender: { type: String, enum: ['Male', 'Female', 'Other'] },
         languages: [String],
         city: { type: String },
         profilePic: String,

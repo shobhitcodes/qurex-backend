@@ -15,6 +15,8 @@ const professionalDetail = {
     },
     about: String,
     videoURL: String,
+    feeCharge: { type: String, default: "500" },
+    sessionDuration: String, // in mins
 };
 
 const education = {
@@ -72,7 +74,6 @@ const bankDetail = {
 const doctorDetailSchema = new Schema(
     {
         userId: { type: Schema.Types.ObjectId, ref: 'User' },
-        gender: { type: String, enum: ['Male', 'Female', 'Other'] },
         professionalDetail,
         education: [education],
         experience: [experience],
