@@ -15,8 +15,8 @@ const professionalDetail = {
     },
     about: String,
     videoURL: String,
-    feeCharge: { type: String, default: "500" },
-    sessionDuration: String, // in mins
+    feeCharge: { type: Number, default: 500 },
+    sessionDuration: { type: Number, default: 30 }, // in mins
 };
 
 const education = {
@@ -94,8 +94,6 @@ const doctorDetailSchema = new Schema(
         //     remaning: Number,
         //     missed: Number,
         // },
-        feeCharge: { type: Number, default: 500 },
-        sessionDuration: { type: Number, default: 30 }, // in mins
         verified: { type: Boolean, default: false },
         businessHours: [businessHours],
         bankDetail,

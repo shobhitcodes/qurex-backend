@@ -29,7 +29,7 @@ async function bookAppointment(patientId, doctorId, meta, from) {
         // todo : check if timings fit doc time slot
         const docDetail = await DoctorService.getByUserId(doctorId);
 
-        let to = moment(from).add(docDetail.sessionDuration || 30, 'minutes');
+        let to = moment(from).add(docDetail.professionalDetail.sessionDuration || 30, 'minutes');
 
         // if(docDetail && docDetail.availableSlots) {
         //     if(
@@ -64,11 +64,11 @@ async function bookAppointment(patientId, doctorId, meta, from) {
         // }
 
         const reciept = `PatientBooking-${moment(from).format('DD-MM-YYYY')}-${
-            docDetail.feeCharge
+            docDetail.professionalDetail.feeCharge
         }`;
         
         const paymentOrder = await PaymentService.createOrder(
-            docDetail.feeCharge,
+            docDetail.professionalDetail.feeCharge,
             reciept,
             patientId
         );
@@ -77,7 +77,7 @@ async function bookAppointment(patientId, doctorId, meta, from) {
             patientId,
             doctorId,
             meta,
-            fees: docDetail.feeCharge,
+            fees: docDetail.professionalDetail.feeCharge,
             from: moment(from).utc(),
             to: moment(to).utc(),
             payment: {
@@ -95,7 +95,7 @@ async function bookAppointment(patientId, doctorId, meta, from) {
             channelName: booking.bookingId,
             startTime: moment(from).utc(),
             endTime: moment(to).utc(),
-            expectedDuration: docDetail.sessionDuration,
+            expectedDuration: docDetail.professionalDetail.sessionDuration,
         });
         session = await session.save();
 

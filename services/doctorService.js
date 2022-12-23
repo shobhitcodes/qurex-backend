@@ -183,7 +183,7 @@ async function availableSlots(id) {
             const slots = [];
 
             availableChunks.forEach((chunk) => {
-                const _slots = getTimeSlots(chunk.from, chunk.to, doctor.sessionDuration);
+                const _slots = getTimeSlots(chunk.from, chunk.to, doctor.professionalDetail.sessionDuration);
                 slots.push(..._slots);
             });
 
@@ -314,7 +314,6 @@ async function getAllDocForHomePage() {
             experience : 1,
             awards : 1,
             rating : 1,
-            feeCharge: 1,
             businessHours: 1,
         }).populate('userId');
         return doctors;
