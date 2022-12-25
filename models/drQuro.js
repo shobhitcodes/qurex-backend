@@ -25,7 +25,7 @@ const drQuroSchema = new Schema(
         childrenArr: [{type: mongoose.Types.ObjectId}]
         
     },
-    { timestamps: true, collection: 'drQuro' }
+    { timestamps: true, collection: 'drQuroNew' }
 );
 
 module.exports = mongoose.model('drQuro', drQuroSchema);

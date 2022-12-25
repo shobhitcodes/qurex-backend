@@ -179,7 +179,7 @@ async function availableSlots(id) {
                 $lte: nextWeek.endOf('d').toDate(),
             },
             active: true,
-            status: { $nin: ['Cancelled', 'Completed'] },
+            status: { $nin: ['Cancelled', 'Completed', 'PendingConfirmation'] },
             // , 'PendingConfirmation'
         };
 
