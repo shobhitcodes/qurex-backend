@@ -90,6 +90,8 @@ async function auth(mobile, email, password) {
         
         if (!user) throw 'Invalid credentials';
 
+        if (!user.password) throw 'Please login via OTP, there is no password attached with this user.';
+
         const validPass = await bcrypt.compare(password, user.password);
 
         if (!validPass) throw 'Invalid credentials';
