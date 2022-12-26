@@ -1,0 +1,38 @@
+﻿node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|2|3,Do you know 1 in every 10 women in India has PCOS. <br><br> Please tell me your age.,gq,null,null,null,null,null,null,null,null,null,null,null
+1,4,Less than 15 years,r,null,Age less than 15 years,null,null,null,null,null,null,null,null,null
+2,4,Between 15 - 45 years,r,null,Age between 15 - 49 years,null,null,null,null,null,null,null,null,null
+3,4,More than 45 years,r,null,More than 45 years,null,null,null,null,null,null,null,null,null
+4,5|6|7,Alright.. <br><br>Can you tell me how many days you bleed generally during your period?,gq,null,null,null,null,null,null,null,null,null,null,null
+5,8,Less than 2 complete days,sr5,null,Bleeding for less than 2 complete days,null,null,null,null,null,null,null,null,null
+6,8,2-7 days,r,null,Bleeding for 2-7 days,null,null,null,null,null,null,null,null,null
+7,8,8 or more days,r,null,Bleeding for 8 or more days,null,null,null,null,null,null,null,null,null
+8,999|998,I get that.. <br><br>And have you ever noticed passing any blood clots during your periods?,gq,null,null,null,null,null,null,null,null,null,null,null
+999,9,Yes,r,null,Blood clots with periods,null,null,null,null,null,null,null,null,null
+998,9,No or not sure,r,null,null,null,null,null,null,null,null,null,null,null
+9,10|11,No worries at all.. <br><br>Do you think that you generally take a lot of stress in your life?,gq,null,null,null,null,null,null,null,null,null,null,null
+10,12,"Yes, maybe ",sr5,null,Takes stress,null,null,null,null,null,null,null,null,null
+11,12,"No, not at all",r,null,null,null,null,null,null,null,null,null,null,null
+12,13|14|15,Just a few more questions to go.. <br><br>How many days do you think on average you exercise in a week?,gq,null,null,null,null,null,null,null,null,null,null,null
+13,16,4 or more days in a week,r,null,Physically active,null,null,null,null,null,null,null,null,null
+14,16,2-3 days a week,sr2,null,Moderately physically active,null,null,null,null,null,null,null,null,null
+15,16,Less than 2 days a week,sr3,null,Physically inactive,null,null,null,null,null,null,null,null,null
+16,17|18|19|20,hmm.. <br><br>It will help if you can confirm if you have noticed any dark skin patches at armpits/back of neck/face like these:,mrq|img,null,null,null,null,null,null,null,null,null,null,null
+20,21,null,sr5|mr,null,Dark skin patch around the neck,null,null,null,null,null,null,null,null,ai_images/PCOD_node_20.png
+19,21,null,sr5|mr,null,Dark skin patch at the armpit,null,null,null,null,null,null,null,null,ai_images/PCOD_node_19.png
+18,21,null,sr5|mr,null,Dark skin patch on the face,null,null,null,null,null,null,null,null,ai_images/PCOD_node_18.png
+17,21,None of these,r,null,null,null,null,null,null,null,null,null,null,null
+21,22|23,Understood!.. <br><br>Please tell me your height and weight.,tq,null,null,null,null,null,null,null,null,null,null,null
+22,24,null,tr,null,null,null,null,null,null,null,null,null,null,null
+23,24,null,tr,null,null,null,null,null,null,null,null,null,null,null
+24,25|26,"We are almost there.. <br><br>Do you think you have more facial hair than generally, one has?",gq,null,null,null,null,null,null,null,null,null,null,null
+25,27,Yes,sr5,null,Facial Hair,null,null,null,null,null,null,null,null,null
+26,27,No,r,null,null,null,null,null,null,null,null,null,null,null
+27,28|29,"Alright!.. <br><br>Do you think you have more acne on your face than generally, one has?",gq,null,null,null,null,null,null,null,null,null,null,null
+28,30,"Yes, I think so ",sr5,null,A lot of acne on face,null,null,null,null,null,null,null,null,null
+29,30,"No, I don’t think so",r,null,null,null,null,null,null,null,null,null,null,null
+30,31|32,Just the last question.. <br><br>Do you also experience a lot of hair loss?,gq,null,null,null,null,null,null,null,null,null,null,null
+31,33|34,Yes,sr5|srchk,null,A lot of hair loss,null,null,null,null,null,null,null,null,null
+32,33|34,No,srchk,null,null,null,null,null,null,null,null,null,null,null
+33,null,null,dsr0,PCOD/PCOS,null,PCOS or Polycystic Ovary Syndrome is a hormonal condition that women can get once they start having their period cycle. It is also called as PCOD. One might be more likely to have PCOS if one's sister or mother also has it. It could also be related to problems that make your body produce too much insulin.,You are less likely to have PCOS,null,null,null,Prevention is better than cure. Maintain a healthy weight|remain active|limit carbohydrates|take plenty of fibre in your diet,null,null,null
+34,null,null,dsr1,PCOD/PCOS,null,PCOS or Polycystic Ovary Syndrome is a hormonal condition that women can get once they start having their period cycle. It is also called as PCOD. One might be more likely to have PCOS if one's sister or mother also has it. It could also be related to problems that make your body produce too much insulin.,You are at a moderate risk of having PCOS,null,Gynaecologist,null,Maintain a healthy weight|remain active|limit carbohydrates|take plenty of fibre in your diet,null,null,null

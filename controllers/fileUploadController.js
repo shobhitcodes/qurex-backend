@@ -3,10 +3,15 @@
 const utils = require('../helpers/utils');
 const AWS = require('aws-sdk');
 
-const AWS_REGION = process.env.AWS_REGION;
-const AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
-const AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
-const S3BucketName = process.env.S3BucketName;
+const AWS_ACCESS_KEY_ID = "AKIAUKXOLSUHUS7467N3";
+const AWS_SECRET_ACCESS_KEY = "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";
+const S3BucketName = "comicaislebucketprod";
+const AWS_REGION = "ap-south-1";
+
+// const AWS_REGION = process.env.AWS_REGION;
+// const AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
+// const AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
+// const S3BucketName = process.env.S3BucketName;
 
 AWS.config = new AWS.Config({
     region: AWS_REGION,
@@ -15,7 +20,7 @@ AWS.config = new AWS.Config({
     signatureVersion: 'v4',
 });
 
-const s3 = new AWS.S3({ signatureVersion: 'v4' });
+const s3 = new AWS.S3()
 
 module.exports.getFileUploadSignedUrl = getFileUploadSignedUrl;
 

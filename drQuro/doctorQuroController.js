@@ -90,7 +90,7 @@ const drQuroExcels = [
         files: [
             {
                 name: 'Female Infertility',
-                dist: './assets/female_infertility.csv'
+                dist: './assets/femal_infertility_revised-new.csv'
             },
             {
                 name: 'Pain during Sex',
@@ -102,7 +102,7 @@ const drQuroExcels = [
             },
             {
                 name: 'PCOD',
-                dist: './assets/PCOD_final.csv'
+                dist: './assets/PCOD_final-new.csv'
             },
         ]
     },
@@ -111,7 +111,7 @@ const drQuroExcels = [
         files: [
             {
                 name: 'ED',
-                dist: './assets/male/ED_final_csv_file.csv'
+                dist: './assets/male/ED_final_csv_file-new.csv'
             },
             {
                 name: 'Male Infertility',
@@ -119,11 +119,11 @@ const drQuroExcels = [
             },
             {
                 name: 'Pain during Intercourse',
-                dist: './assets/male/pain_during_intercourse_male_final.csv'
+                dist: './assets/male/pain_during_intercourse_male_final-new.csv'
             },
             {
                 name: 'Premature Ejaculation',
-                dist: './assets/male/premature_ejaculation_final.csv'
+                dist: './assets/male/premature_ejaculation_final-new.csv'
             },
             {
                 name: 'STI',
@@ -216,7 +216,7 @@ async function getInitNode(req, res) {
             {
                 $lookup:
                 {
-                    from: 'drQuro',
+                    from: 'drQuroNew',
                     localField: 'childrenArr',
                     foreignField: '_id',
                     as: 'children'
@@ -241,7 +241,7 @@ async function getChildrenByNode(req, res) {
             {
                 $lookup:
                 {
-                    from: 'drQuro',
+                    from: 'drQuroNew',
                     localField: 'childrenArr',
                     foreignField: '_id',
                     as: 'children'
@@ -259,7 +259,7 @@ async function getChildrenByNode(req, res) {
 async function startConversation(req, res) {
     try {
         const userId = req.user._id;
-        const { gender, issue } = req.body;
+        const { gender, issue, userName, userEmail } = req.body;
 
         const inActivateOldConversations = await drOuroConversation.updateMany({ userId }, { active: false })
 
@@ -270,7 +270,7 @@ async function startConversation(req, res) {
             {
                 $lookup:
                 {
-                    from: 'drQuro',
+                    from: 'drQuroNew',
                     localField: 'childrenArr',
                     foreignField: '_id',
                     as: 'children'
@@ -293,6 +293,8 @@ async function startConversation(req, res) {
             userId,
             gender,
             issue,
+            userEmail,
+            userName,
             conversations: node
         });
 
@@ -389,7 +391,8 @@ async function addToConversation(req, res) {
         }
         
 
-        if(conversation.gender === 'MALE' && (conversation.issue === 'ED' || conversation.issue === 'Premature Ejaculation')) {
+        if(conversation.gender === 'MALE' && 
+        (conversation.issue === 'ED' || conversation.issue === 'Premature Ejaculation' || conversation.issue === 'STI')) {
             if(node.node_type.split('|').some(x => x === 'dr')) {
                 conversation.isDRValue = true;
             }
@@ -418,7 +421,7 @@ async function addToConversation(req, res) {
                     {
                         $lookup:
                         {
-                            from: 'drQuro',
+                            from: 'drQuroNew',
                             localField: 'childrenArr',
                             foreignField: '_id',
                             as: 'children'
@@ -453,8 +456,8 @@ async function addToConversation(req, res) {
 
             if(conversation.gender === 'MALE' && conversation.issue === 'ED') {
                 if(node.node_type.split('|').some(x => x === 'drchk')) {
-                    if(conversation.isDRValue === true) childNodes = childNodes.filter(x => x.node_type.includes('d0'));
-                    else childNodes = childNodes.filter(x => x.node_type.includes('d1'));
+                    if(conversation.isDRValue === true) childNodes = childNodes.filter(x => x.node_type.includes('d1'));
+                    else childNodes = childNodes.filter(x => x.node_type.includes('d0'));
                     childNodes[0].node_type = 'd';
                 }
             }
@@ -463,9 +466,9 @@ async function addToConversation(req, res) {
                 
                 if(node.node_type.split('|').some(x => x === 'gchk')) {
                     if(conversation.isORSelected && conversation.isAndSelected) {
-                        childNodes = childNodes.filter(x => x.node_type.includes('g0'));
-                    } else {
                         childNodes = childNodes.filter(x => x.node_type.includes('g1'));
+                    } else {
+                        childNodes = childNodes.filter(x => x.node_type.includes('g0'));
                     }
                 }
                 if(node.node_type.split('|').some(x => x === 'drchk')) {
@@ -480,6 +483,20 @@ async function addToConversation(req, res) {
                     childNodes = childNodes[0].children
                 }
                 
+            }
+
+            if(conversation.gender === 'MALE' && conversation.issue === 'STI') {
+                if(node.node_type.split('|').some(x => x === 'drchk')) {
+                    if(conversation.isDRValue) {
+                        childNodes = childNodes.filter(x => x.node_type.includes('d1'));  
+                    } else {
+                        childNodes = childNodes.filter(x => x.node_type.includes('d0'));
+                    }
+
+                    conversation.isCompleted = true;
+                    _addNodeToConversationObj(conversation, childNodes[0])
+                    isCompleted = true;
+                }
             }
 
 
@@ -521,8 +538,9 @@ function _getInputType(node) {
         for (let i = 0; i < types.length; i++) {
             const type = types[i];
             if (type === 'mrq') return 'Checkbox'
-            if (type === 'gq' || type === 'dr' || type === 'aq') return 'Radio'
+            if (type === 'gq' || type === 'dr' || type === 'aq' || type === 'imgq') return 'Radio'
             if (type === 'tq') return 'Input'
+           
 
         }
     }
@@ -530,7 +548,7 @@ function _getInputType(node) {
 function _getInputMessageType(node) {
     if (node.node_type) {
         const types = node.node_type.split('|');
-        if (types.includes('img')) return 'Image';
+        if (types.includes('img') || types.includes('imgq')) return 'Image';
         else return 'Text'
         // for (let i = 0; i < types.length; i++) {
         //     const type = types[i];
@@ -553,7 +571,8 @@ function _addNodeToConversationObj(conversationObj, node) {
         'general_advice',
         'causes',
         'blog_url',
-        'media_url'
+        'media_url',
+        'details'
     ]
 
     keys.forEach(key => {
@@ -638,7 +657,7 @@ async function _doGetChildNode(nodeId) {
             {
                 $lookup:
                 {
-                    from: 'drQuro',
+                    from: 'drQuroNew',
                     localField: 'childrenArr',
                     foreignField: '_id',
                     as: 'children'

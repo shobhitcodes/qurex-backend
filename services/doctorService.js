@@ -197,7 +197,7 @@ async function availableSlots(id) {
                 $lte: nextWeek.endOf('d').toDate(),
             },
             active: true,
-            status: { $nin: ['Cancelled', 'Completed'] },
+            status: { $nin: ['Cancelled', 'Completed', 'PendingConfirmation'] },
             // , 'PendingConfirmation'
         };
 
@@ -314,8 +314,9 @@ async function getAllDocForHomePage() {
             experience : 1,
             awards : 1,
             rating : 1,
-            businessHours: 1,
-        }).populate('userId');
+            businessHours: 1
+        })
+        .populate('userId', 'name salutation profilePic')
         return doctors;
     } catch (error) {
         console.error('Error on getByUserId doctor service: ', error);
