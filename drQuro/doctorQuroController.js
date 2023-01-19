@@ -104,6 +104,10 @@ const drQuroExcels = [
                 name: 'PCOD',
                 dist: './assets/PCOD_final-new.csv'
             },
+            {
+                name: "Orgasmic Issues",
+                dist: "./assets/updated_female_orgasmic.csv"
+            }
         ]
     },
     {
@@ -127,7 +131,11 @@ const drQuroExcels = [
             },
             {
                 name: 'STI',
-                dist: './assets/male/sti_male_final.csv'
+                dist: './assets/male/sti_male_final2.csv'
+            },
+            {
+                name: 'Orgasmic Issues',
+                dist: './assets/male/updated_male_orgasmic.csv'
             },
 
         ]
@@ -182,6 +190,8 @@ async function getInit(req, res) {
                         }
                     })
                 }
+
+
 
                 const inserted = await drOuroDB.create({
                     gender: excel.type,
@@ -397,7 +407,12 @@ async function addToConversation(req, res) {
                 conversation.isDRValue = true;
             }
         }
-        if(conversation.gender === 'MALE' && conversation.issue === 'Premature Ejaculation') {
+        if(conversation.issue === "Orgasmic Issues") {
+            if(node.node_type.split('|').some(x => x === 'dr')) {
+                conversation.isDRValue = true;
+            }
+        }
+        if((conversation.gender === 'MALE' && conversation.issue === 'Premature Ejaculation') || conversation.issue === "Orgasmic Issues") {
             if(node.node_type.split('|').some(x => x === 'or')) {
                 conversation.isORSelected = true;
             }
@@ -462,7 +477,7 @@ async function addToConversation(req, res) {
                 }
             }
 
-            if(conversation.gender === 'MALE' && conversation.issue === 'Premature Ejaculation') {
+            if((conversation.gender === 'MALE' && conversation.issue === 'Premature Ejaculation') || conversation.issue === "Orgasmic Issues") {
                 
                 if(node.node_type.split('|').some(x => x === 'gchk')) {
                     if(conversation.isORSelected && conversation.isAndSelected) {
