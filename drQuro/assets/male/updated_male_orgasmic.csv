@@ -1,0 +1,91 @@
+node_id,child_node_id,message,node_type,major_symptom,other_symptoms,additional_information,diagnosis,details,recommended_doctor,recommended_lab_test,general_advice,causes,blog_url,media_url
+0,1|2,In India 30% men experience problem of delayed or no ejaculation at all. Are you aware what ejaculation means?,gq,null,null,null,null,null,null,null,null,null,null,null
+2,3,No,r,null,Do not know what orgasm is.,null,null,null,null,null,null,null,null,null
+3,null,null,d,Difficulty Having Orgasm,null,"An orgasm is when a person reaches peak
+pleasure. Males usually ejaculate (cum) upon
+reaching orgasm and females experience vaginal
+wall contractions.Some females may also ejaculate
+while experiencing an orgasm. During orgasm there
+is intense feeling of pleasure not only in the genitals
+but also throughout the body.It is accompanied by a
+series of physical sensations like involuntary release
+of muscle tension, muscular contractions (the
+muscles in the vagina or penis or anus contract
+about once per 5-8 times), verbal and auditory
+emission of pleasure, increased heart and breathing
+rate so on and so forth. Just after an orgasm, the
+clitoris or the head of the penis (glans of the penis)
+may feel very sensitive or uncomfortable to touch.
+The individual may have ?sex flush?wherein the
+colour of the chest, neck and face changes for a
+short duration.There is also release of endorphins (
+feel-good hormones) because of which an individual
+feels relaxed, happy and sleepy",null,null,null,null,null,null,null,null
+1,4,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+4,5|6|7|8,Good.. <br><br>Please help me understand which of the following  is applicable to your condition?,gq,null,null,null,null,null,null,null,null,null,null,null
+5,12,I used to have orgasam earlier but now I do not achive orgasm.,or,null,Used to have orgasm earlier,null,null,null,null,null,null,null,null,null
+6,9,"I am able to have orgasm only in specific siituations, such as oral sex, masturbation or a specific partner ",or,null,Orgasm happens under specific circumstances,null,null,null,null,null,null,null,null,null
+7,26,I have never had orgasm ever since I have been sexually active,ur,null,Never had orgasm,null,null,null,null,null,null,null,null,null
+8,9,None of the above,r,null,null,null,null,null,null,null,null,null,null,null
+9,10|11,"Ok.. <br>br>When Orgasm happens, Do you feel it is generally delayed than expected?",gq,null,null,null,null,null,null,null,null,null,null,null
+10,12,"Yes, most of the times",or,null,Delayed orgasm,null,null,null,null,null,null,null,null,null
+11,12,"No, I don’t think so",r,null,null,null,null,null,null,null,null,null,null,null
+12,14|16,I understand.. <br><br>Since when do you think you have been experiencing difficulty in achieving orgasm?,aq,null,null,null,null,null,null,null,null,null,null,null
+14,22,More than 6 months,ar,null,Difficulty having orgasm since more than six months,null,null,null,null,null,null,null,null,null
+16,22,Less than 6 months,r,null,Difficulty having orgasm since less than six months,null,null,null,null,null,null,null,null,null
+22,23|24,Thanks for sharing.. <br><br>Is this problem causing lot of stress in your life?,aq,null,null,null,null,null,null,null,null,null,null,null
+23,26,"yes, a lot",ar,null,Problem causing stress in life,null,null,null,null,null,null,null,null,null
+24,25,Not much or I am not sure,r,null,null,null,null,null,null,null,null,null,null,null
+25,null,null,d,Difficulty Having Orgasm,null,null,You seem to be not needing any expert intervention as of now.,Difficulty having orgasm is very common in women. Its important to find the rrot to your own pleasure and thus to find the cause and work on it. ,null,null,Talking to your partner about it can be a good idea | Taking counselling from a relationship therapist can be helpful too | Make sure you are not thinking about anything else at the time of the activity and just try to enjoy the activity as much as possible ,null,null,null
+26,27|28,"If I may ask, do you have a sexual partner?",gq,null,null,null,null,null,null,null,null,null,null,null
+27,29,Yes,r,null,Have sexual partner.,null,null,null,null,null,null,null,null,null
+28,38,No,r,null,Do not have sexual partner,null,null,null,null,null,null,null,null,null
+29,30|31,Great.. <br><br>DO you think you have poor communication between you and your partner regarding sexual needs?,gq,null,null,null,null,null,null,null,null,null,null,null
+30,32,"Yes, we do not talk much about sexual needs and desires ",dr,null,Poor Communication between partners,null,null,null,null,null,null,null,null,null
+31,32,No or I am not sure,r,null,null,null,null,null,null,null,null,null,null,null
+32,33|34,"Ok.. <br><br>While having intercourse, do you generally worry about having successfull orgasm or not?",gq,null,null,null,null,null,null,null,null,null,null,null
+33,35,"Yes, I think so",dr,null,Worried about orgasm while having intercourse,null,null,null,null,null,null,null,null,null
+34,35,No,r,null,null,null,null,null,null,null,null,null,null,null
+35,36|37,I get that.. <br><br>Do you feel strongly connected to your partner?,gq,null,null,null,null,null,null,null,null,null,null,null
+36,38,Yes,r,null,null,null,null,null,null,null,null,null,null,null
+37,38,No or I am not sure,dr,null,Do not feel / not sure about being connected to the partner,null,null,null,null,null,null,null,null,null
+38,39|40,Do you frequently feel that you are not attractive?,gq,null,null,null,null,null,null,null,null,null,null,null
+39,44,Yes or I am not sure,dr,null,Finds herself unattractive,null,null,null,null,null,null,null,null,null
+40,44,No,r,null,null,null,null,null,null,null,null,null,null,null
+44,45|46,You are doing great.. Just few more to go <br><br>Do you think you are suffering from extreme stress/depression in your life?,gq,null,null,null,null,null,null,null,null,null,null,null
+45,53,"Yes, too much stress",dr,null,Depression/Stress in life,null,null,null,null,null,null,null,null,null
+46,53,No or I am not sure,r,null,null,null,null,null,null,null,null,null,null,null
+53,54|55|56,hmm.. <br><br>Do you consume alcholo/smoking/recreational drugs?,gq,null,null,null,null,null,null,null,null,null,null,null
+54,64,"Yes, regularly.",dr,null,Regular consumption of alcohol/cigarrates/drugs,null,null,null,null,null,null,null,null,null
+55,64,"Yes, but occasionally",r,null,null,null,null,null,null,null,null,null,null,null
+56,64,Not at all,r,null,null,null,null,null,null,null,null,null,null,null
+64,65|66,Have you had any experience of sexual abuse earlier in your life?,gq,null,null,null,null,null,null,null,null,null,null,null
+65,999|998|997|996,Yes,gchk|dr|drchk,null,History of sexual abuse,null,null,null,null,null,null,null,null,null
+66,999|998|997|996,No,gchk|drchk,null,null,null,null,null,null,null,null,null,null,null
+999,995,null,g1|d1,null,null,null,null,null,null,null,null,null,null,null
+998,994,null,g0|d1,null,null,null,null,null,null,null,null,null,null,null
+997,993,null,g0|d0,null,null,null,null,null,null,null,null,null,null,null
+996,71,null,g1|d0,null,null,null,null,null,null,null,null,null,null,null
+995,null,null,d,Difficulty Having Orgasm,null,null,You are at modrate risk of having orgasmic difficulty.,Difficulty having orgasm is very common in women. Its important to find the rrot to your own pleasure and thus to find the cause and work on it. ,Psychiatrist (Sexology),null,Talking to your partner about it can be a good idea | Taking counselling from a relationship therapist can be helpful too | Make sure you are not thinking about anything else at the time of the activity and just try to enjoy the activity as much as possible ,null,null,null
+994,null,null,d,Difficulty Having Orgasm,null,null,You are at low risk of having orgasmic difficulty.,Difficulty having orgasm is very common in women. Its important to find the rrot to your own pleasure and thus to find the cause and work on it. ,Relationship Therapist,null,Talking to your partner about it can be a good idea | Taking counselling from a relationship therapist can be helpful too | Make sure you are not thinking about anything else at the time of the activity and just try to enjoy the activity as much as possible ,null,null,null
+993,null,null,d,Difficulty Having Orgasm,null,null,You seem to be fine. You do not need any expert intervention at this stage.,Difficulty having orgasm is very common in women. Its important to find the rrot to your own pleasure and thus to find the cause and work on it. ,null,null,Talking to your partner about it can be a good idea | Taking counselling from a relationship therapist can be helpful too | Make sure you are not thinking about anything else at the time of the activity and just try to enjoy the activity as much as possible ,null,null,null
+71,72|73,We are very close to the diagnosis.. <br><br> Are you suffering from diabetes?,gq,null,null,null,null,null,null,null,null,null,null,null
+72,78,Yes,dr,null,Diabetes,null,null,null,null,null,null,null,null,null
+73,78,No or I am not sure,r,null,null,null,null,null,null,null,null,null,null,null
+78,79|80,And.. Do you have imbalanced thyroid?,gq,null,null,null,null,null,null,null,null,null,null,null
+79,992|991,Yes ,dr,null,Thyroid ,null,null,null,null,null,null,null,null,null
+80,992|991,No or I am not sure,dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+992,82,null,d1,null,null,null,null,null,null,null,null,null,null,null
+991,83,null,d0,null,null,null,null,null,null,null,null,null,null,null
+82,null,null,d,Difficulty Having Orgasm,null,null,You are at low risk of having orgasmic difficulty,Difficulty having orgasm is very common in women. Its important to find the rrot to your own pleasure and thus to find the cause and work on it. ,Endocrinologist,null,Talking to your partner about it can be a good idea | Taking counselling from a relationship therapist can be helpful too | Make sure you are not thinking about anything else at the time of the activity and just try to enjoy the activity as much as possible ,null,null,null
+83,84|85,I am proud of you for sharing so much.. <br><br>Is your testesterone level normal?,gq,null,null,null,null,null,null,null,null,null,null,null
+84,86,Yes or I don’t know ,r,null,null,null,null,null,null,null,null,null,null,null
+85,86,"No, its not normal ",dr,null,Testesterone level imbalanced,null,null,null,null,null,null,null,null,null
+86,87|88,ok.. <br><br>And have you noticed any visible rashes or injury around penis,gq,null,null,null,null,null,null,null,null,null,null,null
+87,89,Yes,dr,null,Injury at penis,null,null,null,null,null,null,null,null,null
+88,89,No,r,null,null,null,null,null,null,null,null,null,null,null
+89,90|91,Just the last question.. <br><br> Have you ever undergone any treatment/surgery of reproductive organs like prostate surgery etc. ?,gq,null,null,null,null,null,null,null,null,null,null,null
+90,990|989,Yes,dr,null,History of treatment of reproductive organs,null,null,null,null,null,null,null,null,null
+91,990|989,No,dr|drchk,null,null,null,null,null,null,null,null,null,null,null
+990,null,null,d1,Difficulty Having Orgasm,null,null,You are at low risk of having orgasmic difficulty,Difficulty having orgasm is very common in women. Its important to find the rrot to your own pleasure and thus to find the cause and work on it. ,Urologist/Andrologist ,null,Talking to your partner about it can be a good idea | Taking counselling from a relationship therapist can be helpful too | Make sure you are not thinking about anything else at the time of the activity and just try to enjoy the activity as much as possible ,null,null,null
+989,null,null,d0,Difficulty Having Orgasm,null,null,You are at low risk of having orgasmic difficulty,Difficulty having orgasm is very common in women. Its important to find the rrot to your own pleasure and thus to find the cause and work on it. ,Psychiatrist (Sexology),null,Talking to your partner about it can be a good idea | Taking counselling from a relationship therapist can be helpful too | Make sure you are not thinking about anything else at the time of the activity and just try to enjoy the activity as much as possible ,null,null,null
