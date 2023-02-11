@@ -14,6 +14,7 @@ const drQuroUserConversationSchema = new Schema(
         userEmail: String,
         srCheckValue: {type:Number, default: 0},
         isDRValue: {type: Boolean, default: false},
+        isUrCheck: {type: Boolean, default: false},
         major_symptom: [String],
         other_symptoms: [String],
         details: [String],
