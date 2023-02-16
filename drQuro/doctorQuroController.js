@@ -15,6 +15,7 @@ module.exports.startConversation = startConversation;
 module.exports.getConversationById = getConversationById;
 module.exports.addToConversation = addToConversation;
 module.exports.generateConversationResult = generateConversationResult;
+module.exports.updateConversation = updateConversation;
 
 /**
  * @async
@@ -547,6 +548,19 @@ async function addToConversation(req, res) {
     }
 }
 
+async function updateConversation(req, res) {
+    try {
+        const conversationId = req.params.id;
+        const userName = req.body.userName;
+        const userEmail = req.body.userEmail;
+        const conversationUpdated = await drOuroConversation.updateOne({_id: conversationId }, {userName,  userEmail});
+        res.send(true);
+
+    } catch (error) {
+        console.error(error)
+        res.json(utils.formatResponse(0, error));
+    }
+}
 
 function _getInputType(node) {
     if (node.node_type) {
