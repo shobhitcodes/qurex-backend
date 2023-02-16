@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles/main-2.css">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+
+<body id="app">
+    <div id="chat" class="chat">
+        <div class="conversation">
+            <div class="head">
+                <div class="logo">
+                    <img src="./images/logo.svg" alt="" srcset="">
+                </div>
+                <div>
+                    <p>Live consultation with Dr. Quro</p>
+                </div>
+
+            </div>
+
+            <div id="messages" class="messages">
+                <div v-for="(conversation, cindex) in conversationArray">
+                    <div class="msg-text " v-if="conversation.type === 'ques'">
+                        <div>
+                            <span class="text question" v-html="conversation.value"></span>
+                        </div>
+                        <div v-if="conversation.messagesObj" class="answer select-group " :id="conversation.messagesObj._id">
+                            <div class="selection" v-for="(child, index) in conversation.messagesObj.children">
+                                <div class="" v-if="conversation.messagesObj.inputType === 'Radio'">
+                                    <input type="radio" :disabled="cindex < (conversationArray.length - 1) " v-on:change="submitResponse" v-model="selectedValue" class="with-gap"
+                                        :id="child._id" :name="conversation.messagesObj._id" :value="child.value">
+                                    <label class="form-check-label" :for="child._id"> 
+                                        <span v-if="child.inputMessageType === 'Text' || !child.inputMessageType ">
+                                        {{child.message}}</span>
+                                        <div class="radio-image" v-if="child.inputMessageType === 'Image'">
+                                            {{child.message}} <br>
+                                            <img class="checkbox-img" :src="child.media_url" alt="" srcset="">
+                                        </div>
+                                    </label><br>
+                                </div>
+                                <div v-if="conversation.messagesObj.inputType === 'Checkbox'" class="flex-display">
+                                    <input type="checkbox" v-model="selectedValue" class="with-gap" :id="child._id"
+                                        :value="child.value">
+                                    <label class="form-check-label" :for="child._id">
+                                        <span v-if="child.inputMessageType === 'Text' || !child.inputMessageType ">
+                                            &nbsp;{{child.message}}</span>
+                                        <div v-if="child.inputMessageType === 'Image'">
+                                            <img class="checkbox-img" :src="child.media_url" alt="" srcset="">
+                                        </div>
+                                    </label><br>
+                
+                                </div>
+                                <div v-if="conversation.messagesObj.inputType === 'Input'">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" :placeholder="child.message"
+                                            v-model="selectedValue[child._id]">
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  v-if="conversation.messagesObj && cindex === (conversationArray.length - 1) &&
+                        (conversation.messagesObj.inputType === 'Checkbox' || 
+                        conversation.messagesObj.inputType === 'Input' )"  
+                    class="check-box-done">
+                        <button v-on:click="submitResponse" class="btn btn-primary check-box-btn">Done</button>
+                    </div>
+                    <div class="msg-text " v-if="conversation.type === 'ans' && conversation.value!==''">
+                        <div class="float-right">
+                            <div v-if="!conversation.ansType">
+                                <span class="text reply" v-html="conversation.value"></span>
+                            </div>
+                            <div v-if="conversation.ansType === 'Image'">
+                                <img v-for="child in conversation.value" class="checkbox-img" :src="child.media_url" alt="" srcset="">
+
+                            </div>
+                            <button class="edit-button" @click="edit(cindex)">
+                                X
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="loading-container" v-if="loading">
+                    <div id="loading-bubble">
+                        <div class="spinner">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="msg-text ">
+                    <div>
+                        <span class="text question" v-html="messagesObj.message"></span>
+                    </div>
+                    <div class="text answer" :id="messagesObj._id">
+                        <div v-for="(child, index) in messagesObj.children">
+                            <div v-if="messagesObj.inputType === 'Radio'">
+                                <input type="radio" v-model="selectedValue" class="with-gap" :id="child._id"
+                                    :name="messagesObj._id" :value="child.value">
+                                <label class="form-check-label" :for="child._id"> &nbsp;{{child.message}}</label><br>
+                            </div>
+                            <div v-if="messagesObj.inputType === 'Checkbox'" class="flex-display">
+                                <input type="checkbox" v-model="selectedValue" class="with-gap" :id="child._id"
+                                     :value="child.value">
+                                <label class="form-check-label" :for="child._id">
+                                    <span v-if="child.inputMessageType === 'Text' || !child.inputMessageType "> &nbsp;{{child.message}}</span>
+                                    <div v-if="child.inputMessageType === 'Image'">
+                                        <img class="img" :src="child.media_url" alt="" srcset="">
+                                    </div>
+                                </label><br>
+                                
+                            </div>
+                            <div v-if="messagesObj.inputType === 'Input'">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" :placeholder="child.message" v-model="selectedValue[child._id]">
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="action-container">
+                    <button class="action" :disabled="!selectedValue" @click="submitResponse">Next</button>
+                </div> -->
+            </div>
+
+            <div class="footer-container">
+                <div class="restart">
+                    <p @click="restartCalculation" >Restart Calculation</p>
+                </div>
+                <hr>
+                <div class="copyright">
+                    <p class="text-center">Go back to <a href="https://qurex.in/">qurex.ai</a> </p>
+                </div>
+            </div>
+
+
+        </div>
+        
+
+    </div>
+
+    <div id="myModal" class="login-modal">
+        <div class="login-modal-content">
+            <div class="head">
+                <div class="logo">
+                    <img src="/public/images/logo.svg" alt="" srcset="">
+                </div>
+                <div>
+                    <p>Live consultation with Dr. Quro</p>
+                </div>
+            </div>
+            <hr>
+            
+            <form @submit.prevent="loginAuthUser()" class="">
+                <div class="form-group">
+                    <label for="email">Name:</label>
+                    <input type="text" v-model="userName" class="form-control" name="name" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="pwd">Email Address:</label>
+                    <input type="email" v-model="userEmail" class="form-control" name="email">
+                  </div>
+                  <br>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/public/scripts/main-vue.js"></script>
+
+</body>
+
+
+</html>

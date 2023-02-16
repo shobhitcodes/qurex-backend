@@ -1,0 +1,481 @@
+*{
+	box-sizing:border-box;
+}
+
+::-webkit-scrollbar{
+		width:6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #00000080; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000cc; 
+}
+
+html, body{
+	height:100%;
+	margin:0;
+}
+
+body{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	background:#ccceeb;
+	font-family:'Montserrat', sans-serif;
+	// letter-spacing: 1px;
+	padding:1em;
+	gap:1em;
+    background: url("../images/vuexy-login-bg.jpeg");
+
+}
+
+.flex-display {
+	display: flex;
+}
+
+
+
+.head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #000;
+	p {
+		margin: 0px !important;
+	}
+}
+
+.chat{
+	--bg:#fff;
+	--bg-secundary:#7367F0 !important;
+	--bg-highlight:#057ef7;
+	--color:#fff;
+	
+	&.dark{
+		--bg:#1f2024;
+		--bg-secundary:#292a30;
+		--color:#dde4f0;
+	}
+	&[data-color='red']{
+		--bg-highlight:#f70546; 
+	}
+	&[data-color='green']{
+		--bg-highlight:#10915c;
+	}
+	&[data-color='purple']{
+		--bg-highlight:#b600f2;
+	}
+	
+	// max-width:960px;
+	// width:100%;
+	height:95%;
+	
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:flex-start;
+	
+	position: absolute;
+    bottom: 0px;
+
+	
+	color:var(--color);
+	background:var(--bg);
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	overflow:hidden;
+	box-shadow:0 8px 8px -4px #00000020;
+	transition:all ease 0.5s;
+	
+	.conversation{
+		width:100%;
+		height:100%;
+		
+		display:flex;
+		flex-direction:column;
+		
+		transition:all ease 0.5s;
+		
+		.head{
+			width:100%;
+			min-height:6em;
+			
+			display:flex;
+			align-items:center;
+			gap:1em;
+			
+			background:#fff;
+			padding:1.4em;
+			
+			
+		}
+		
+		.messages{
+			background-color: #F2F7FF !important;
+			margin-top: -10px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			width:100%;
+			height:100%;
+			align-items: center;
+			display:flex;
+			flex-direction:column;
+			gap:0.25em;
+			
+			padding:1em;
+			overflow:auto;
+			
+			
+			
+			.msg-text{
+				width:fit-content;
+				font-size:1em;
+				width: 50vw;
+				animation:appear-msg ease 0.25s forwards;
+				font-weight: 300;
+				.float-right {
+					float: right;
+					display: flex;
+				}
+				.text{
+					background: #fff;
+					display:block;
+					padding:2em;
+					// border-radius:0.75em 0.75em 0.75em 0;
+					// box-shadow:0 2px 0 #00000020;
+					color: #000;
+
+					.label {
+					color: #000;
+
+					}
+
+					&.question {
+						// border-top-left-radius: 0.75em;
+						// border-top-right-radius: 0.75em;
+						// margin-bottom: 10px;
+						border-radius: 0.75em;
+						padding:10px;
+						/* border-top-right-radius: 0.75em; */
+						margin-bottom: 3px;
+						max-width: 70%;
+					}
+					&.answer {
+						border-bottom-left-radius: 0.75em;
+						border-bottom-right-radius: 0.75em;
+						display:flex !important;
+						img {
+							max-width: 10em !important;
+						}
+					}
+					&.reply {
+						// max-width: 70%;
+						display: inline-block;
+						text-align: end;
+						border-radius: 0.75em;
+						padding:10px;
+						background: #cae4d9;
+						margin: 10px
+					}
+					
+				}
+				
+				
+			}
+		}
+		
+	}
+	
+	
+}
+.loading-container{ 
+	margin: 20px;
+	align-self: flex-start;
+	@mixin flex($justify, $align) {
+		display: flex;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+	
+		justify-content: $justify;
+		-webkit-justify-content: $justify;
+		align-items: $align;
+		-webkit-align-items: $align;
+	}
+	
+	// SPINNER
+	.spinner { 
+		position: absolute;
+		
+		top: 50%;
+		left: 50%;
+	
+		width: 45px;
+		height: 9px;
+	
+		margin-left: -22px;
+		margin-top: -13px;
+	
+		// text-align: center;
+	}
+	.spinner > div { 
+		width: 9px;
+		height: 9px;
+		background-color: #dcdcdc;
+		border-radius: 100%;
+		display: inline-block;
+		-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+		animation: bouncedelay 1400ms ease-in-out infinite;
+		/* Prevent first frame from flickering when animation starts */ -webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	
+	}
+	.spinner .bounce1 { 
+		-webkit-animation-delay: -0.32s;
+		animation-delay: -0.32s;
+	}
+	.spinner .bounce2 { 
+		-webkit-animation-delay: -0.16s;
+		animation-delay: -0.16s;
+	}
+	
+	
+	//	Loading bubble
+	$chat-accent: #7e93a8;
+	$chat-light: #ffffff;
+	$chat-bg: #f5f7f8;
+	$chat-online: #99e67c;
+	$chat-away: #ffbf53;
+	$chat-dim: #a5b0b5;
+	$modifier: 0.5;
+	
+	#container {
+		position: absolute;
+		
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		margin: 20px;
+		@include flex( space-between, center );
+	}
+	#loading-bubble {
+		
+		@include flex( center, center );
+	
+		width: auto;
+		height: auto;
+		
+		min-width: 146px * $modifier;
+		min-height: 80px * $modifier;
+		border-radius: 10px * $modifier;
+	
+		box-sizing: border-box;
+	
+		position: relative;
+		
+		background-color: $chat-accent;
+		
+		&.grey {
+			background-color: $chat-dim;
+			
+			&:before {
+				border-color: transparent $chat-dim transparent transparent;
+			}
+		}
+	
+		&:before {
+			display: block;
+			content: " ";
+	
+			width: 0;
+			height: 0;
+			border-style: solid;
+	
+			$size: 16px * $modifier;
+			border-width: $size $size $size 0;
+			border-color: transparent $chat-accent transparent transparent;
+	
+			position: absolute;
+	
+			left: -14px * $modifier;
+	
+			top: 26px * $modifier;
+	
+		}
+		
+		.spinner {
+			position: static !important;
+			margin-top: -11px;
+			margin-left: 0px;
+			
+			div {
+				background-color: #fff;
+			}
+		}
+		
+		
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+	
+}
+
+.action-container {
+	padding: 20px;
+	justify-content: center;
+	display: flex;
+	.action {
+		background: #057ef7;
+		box-shadow: none;
+		border: 0px;
+		padding: 1em 4em;
+		color: #fff;
+		border-radius: 1.1em;
+		cursor: pointer;
+
+		&:disabled {
+			background: #057ef77a !important; 
+		}
+	}
+}
+.footer-container {
+	background-color: #F2F7FF !important;
+	padding: 0.1em 2em;
+
+	.restart {
+		text-align: right;
+		color: #057ef7;
+		cursor: pointer;
+	}
+	hr {
+		opacity: 1 !important;
+		border-color: #e3e4e4 !important;
+	}
+	color: #000;
+}
+@media screen and (max-width:768px){
+	.chat{
+		.conversation, .options{
+			width:100%;
+		}
+	}
+	.msg-text{ 
+		width: 70vw !important;
+	}
+}
+
+
+.select-group {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  .select-group .selection {
+	margin: 5px;
+  }
+  
+  .select-group .selection label {
+	display: inline-block;
+	background-color: #42b4d6;
+	border-radius: 25px;
+	color: #ffffff;
+	padding: 0.5em 1em;
+	cursor: pointer;
+  }
+  
+  .select-group .selection label:hover {
+	background-color: #5fc0dc;
+  }
+  
+  .select-group .selection input[type=radio] {
+	display: none;
+  }
+  
+  .select-group .selection input[type=radio]:checked ~ label {
+	background-color: #2a9ec2;
+  }
+
+
+  .checkbox-img {
+	max-width: 100px;
+  }
+
+  .edit-button {
+	border: none;
+	height: 30px;
+    width: 30px;
+	border-radius: 68%;
+	font-size: 12px;
+
+}
+
+.check-box-btn {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.login-modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .login-modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+.radio-image {
+	display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+
+@mixin bouncedelay() {
+	0%, 80%, 100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+	40% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
+}
+@-webkit-keyframes bouncedelay {
+	@include bouncedelay();
+}
+@keyframes bouncedelay {
+	@include bouncedelay();
+}
