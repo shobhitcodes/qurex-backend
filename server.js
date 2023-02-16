@@ -4,7 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-
+const path = require('path');
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
 const doctorRouter = require('./routes/doctor');
@@ -32,6 +32,11 @@ mongoose.connect(mongoString);
 const db = mongoose.connection;
 db.on('error', (error) => console.log('db err: ', error));
 db.once('open', () => console.log('mongoose connected'));
+
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+app.use('/public', express.static(path.join(__dirname, 'public')))
+
 
 app.use('/', indexRouter);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

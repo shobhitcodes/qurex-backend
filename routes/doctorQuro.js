@@ -12,6 +12,7 @@ router.get('/getChildrenByNode/:nodeId', drQuroController.getChildrenByNode);
 router.post('/startConversation',auth, drQuroController.startConversation);
 router.get('/getConversationById/:id',auth, drQuroController.getConversationById);
 router.post('/addToConversation/:id',auth, drQuroController.addToConversation);
+router.post('/updateConversation/:id',auth, drQuroController.updateConversation);
 router.get('/generateConversationResult/:id',auth, drQuroController.generateConversationResult);
 module.exports = router;
 

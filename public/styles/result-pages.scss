@@ -1,0 +1,45 @@
+body {
+    background: url("../images/vuexy-login-bg.jpeg");
+    --bs-body-font-family: "Montserrat", sans-serif !important;
+    background-size: cover;
+    .btn-primary {
+        border-color: #4839eb !important;
+        background-color: #7367f0 !important;
+        color: #ffffff;
+    }
+    .nav {
+        gap: 10px;
+        margin: 10px;
+        padding: 0px 10%;
+    }
+    .user-name {
+        text-transform: capitalize;
+    }
+    .page {
+        background: #fff;
+        padding: 2em;
+        width: 80%;
+        margin: 0px 10%;
+
+        .logo {
+            height: 3rem;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .heading {
+            text-decoration: underline;
+        }
+        .dia-box {
+            background: #eae8fd;
+            border: 1px solid #655af3;
+            margin: 10px;
+            max-width: 90%;
+            padding: 2em;
+        }
+        .legal {
+            font-size: 0.8em;
+        }
+    }
+}

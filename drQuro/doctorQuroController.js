@@ -15,6 +15,7 @@ module.exports.startConversation = startConversation;
 module.exports.getConversationById = getConversationById;
 module.exports.addToConversation = addToConversation;
 module.exports.generateConversationResult = generateConversationResult;
+module.exports.updateConversation = updateConversation;
 
 /**
  * @async
@@ -389,6 +390,7 @@ async function addToConversation(req, res) {
         let isCompleted = false;
 
         const srObj = _getNodeTypeSRValueFunctions(node);
+        conversation.isUrCheck = node.node_type.includes('ur') || conversation.isUrCheck;
         if(srObj.srValue) conversation.srCheckValue += srObj.srValue;
         if(srObj.isFinalSRCheck) {
             if(conversation.issue === 'PCOD') {
@@ -480,7 +482,7 @@ async function addToConversation(req, res) {
             if((conversation.gender === 'MALE' && conversation.issue === 'Premature Ejaculation') || conversation.issue === "Orgasmic Issues") {
                 
                 if(node.node_type.split('|').some(x => x === 'gchk')) {
-                    if(conversation.isORSelected && conversation.isAndSelected) {
+                    if(conversation.isUrCheck || (conversation.isORSelected && conversation.isAndSelected)) {
                         childNodes = childNodes.filter(x => x.node_type.includes('g1'));
                     } else {
                         childNodes = childNodes.filter(x => x.node_type.includes('g0'));
@@ -546,6 +548,19 @@ async function addToConversation(req, res) {
     }
 }
 
+async function updateConversation(req, res) {
+    try {
+        const conversationId = req.params.id;
+        const userName = req.body.userName;
+        const userEmail = req.body.userEmail;
+        const conversationUpdated = await drOuroConversation.updateOne({_id: conversationId }, {userName,  userEmail});
+        res.send(true);
+
+    } catch (error) {
+        console.error(error)
+        res.json(utils.formatResponse(0, error));
+    }
+}
 
 function _getInputType(node) {
     if (node.node_type) {

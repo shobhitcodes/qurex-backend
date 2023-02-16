@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/result-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body id="app">
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <button @click="print" class="btn btn-lg btn-primary">Print </button>
+        </li>
+        <li class="nav-item">
+            <button @click="back" class="btn btn-lg btn-primary">Back </button>
+        </li>
+
+    </ul>
+    <div class="page" id="printdivcontent" v-if="isLoaded">
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="logo" src="/public/images/qurex-logo.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="heading">Preliminary Assessment Report</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h4 class="sub-heading">Primary Issue: "<span id="issue">{{conversationResult.issue}}</span>"
+                </h4>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="user-name"><b>Name</b> : {{conversationResult.userName}}</p>
+                <p><b>Gender</b> : <span id="gender">{{conversationResult.gender}}</span> </p>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <p><b>Primary issue reported by patient</b></p>
+                <!-- <p> <span id="issue1">{{conversationResult.issue}}</span> </p> -->
+                <ol id="otherSymptoms">
+                    <li v-for="os in conversationResult.major_symptom">{{os}}</li>
+                 </ol>
+                <p v-if="conversationResult.major_symptom.length === 0">NA</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p><b>Other reported symptoms</b></p>
+                <ol id="otherSymptoms">
+                   <li v-for="os in conversationResult.other_symptoms">{{os}}</li>
+                </ol>
+                <p v-if="conversationResult.other_symptoms.length === 0">NA</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="dia-box">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><b>Diagnosis</b> </p>
+                            <!-- <ol id="otherSymptoms"> -->
+                                <p v-for="os in conversationResult.diagnosis">{{os}}</p>
+                                <p v-if="conversationResult.diagnosis.length === 0">NA</p>
+                                
+                             <!-- </ol> -->
+                            <!-- <p><span id="diagnosis">{{conversationResult.diagnosis}}</span></p> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><b>Recommended Sexual Health Expert</b> </p>
+                            <p v-for="os in conversationResult.recommended_doctor"> 
+                                {{os}}
+                            </p>
+                            <p v-if="conversationResult.recommended_doctor.length === 0">NA</p>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><b>Recommended Lab Test</b> </p>
+                            <ol  id="recommended_lab_test">
+                               <li v-for="os in conversationResult.recommended_lab_test">{{os}}</li>
+                            </ol>
+                            <p v-if="conversationResult.recommended_lab_test.length === 0">NA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <p><b>Causes</b></p>
+                <p v-if="conversationResult" v-for="os in conversationResult.causes">{{replace(os,'‚Ä¢',',')}}</p>
+                <p v-if="conversationResult.causes.length === 0">NA</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p><b>Details</b></p>
+                <ol  id="details">
+                    <li v-for="d in conversationResult.details">{{d}}</li>
+                 </ol>
+                 <p v-if="conversationResult.details.length === 0">NA</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p><b>Additional Information</b></p>
+                <p v-for="os in conversationResult.additional_information">{{os}}</p>     
+                <p v-if="conversationResult.additional_information.length === 0">NA</p>
+                  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p><b>General Advice</b></p>
+                <ol>
+                    <li v-for="os in conversationResult.general_advice">
+                        {{os}}
+                    </li>
+                </ol>
+                <p v-if="conversationResult.general_advice.length === 0">NA</p>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p><b>Legal Disclaimer</b></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 legal">
+                This report has been created by an Artificial Intelligence system named Dr. Quro using the information
+                provided by the user. No human doctors were involved in creating this report. Note that this report is
+                not a final Medical Diagnosis. You must visit and consult a human medical practitioner to get a
+                confirmation on your Diagnosis and to get further treatment advice. This report is for informational and
+                guidance purposes only.
+                <br>
+                <br>
+                Dr. Quro uses artificial intelligence to interact with the user, ask relevant questions based on his/her
+                initial complaints and come to some conclusions. Later Dr. Quro gives suggestions based on those
+                conclusions, but these conclusions and suggestions may not always be 100% accurate. Dr. Quro is still
+                learning & improving.
+                <br>
+                <br>
+
+                Lastly this report is not for any Medico-legal purposes and should be correlated clinically by
+                consulting a human physician. Thank you!
+                <br>
+
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-12 legal text-center">
+                This is a digitally generated diagnosis by Dr. Quro, India's first sexual health AI.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 legal text-center">
+                COPYRIGHT © qurex.ai           
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="public/scripts/result-vue.js"></script>
+</body>
+
+
+</html>
