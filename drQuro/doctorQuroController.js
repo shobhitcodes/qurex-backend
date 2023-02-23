@@ -496,9 +496,31 @@ async function addToConversation(req, res) {
                     }
                 }
 
+                
                 if(node.node_type.split('|').some(x => x === 'gchk') && node.node_type.split('|').some(x => x === 'drchk')) {
-                    childNodes = childNodes[0].children
+                    childNodes = childNodes[0].children;
+                    for (let i = 0; i < childNodes.length; i++) {    
+                        childNodes[i].children = await drOuroDB.aggregate(
+                            [
+                                {
+                                    $match: { _id: { $in: childNodes[i].childrenArr } }
+                                },
+                                {
+                                    $lookup:
+                                    {
+                                        from: 'drQuroNew',
+                                        localField: 'childrenArr',
+                                        foreignField: '_id',
+                                        as: 'children'
+                                    }
+                                },
+                            ]
+                        );
+                    }
+                } else if(node.node_type.split('|').some(x => x === 'drchk') && conversation.issue === "Orgasmic Issues") {
+                    childNodes = childNodes[0].children;
                 }
+
                 
             }
 
